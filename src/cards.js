@@ -1,0 +1,691 @@
+
+let cardnumber = 24;
+let cardspace = cardnumber / 2;
+let number = Math.PI / cardspace;
+
+const geometry1 = new THREE.BufferGeometry();
+geometry1.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
+geometry1.setAttribute('uv', new THREE.BufferAttribute(new Float32Array(uvs), 2));
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh1mat;
+                child.material.color = new THREE.Color(0xc2bfb8);
+                child.material.map = mesh1Texture;
+                child.material.emissive = new THREE.Color(0xc2bfb8);
+                child.material.emissiveMap = mesh1Texture;
+            }
+        });
+
+        mesh1 = object;
+        mesh1.scale.set(0.28, 0.25, 1);
+        mesh1.position.y += 2.5;
+        mesh1.position.z += 25;
+        mesh1.rotation.x -= 0.1;
+
+        mesh1.add(rectLight1);
+
+        group1 = new THREE.Group();
+        group1.position.z -= 25;
+        group1.add(mesh1);
+        scene.add(group1);
+
+        domEvents.addEventListener(mesh1, 'click', function (event) {
+
+            if (img1_focus == true) {
+                shrink1();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh2mat
+                child.material.color = new THREE.Color(0x108080);
+                child.material.map = mesh2Texture;
+                child.material.emissive = new THREE.Color(0x108080);
+                child.material.emissiveMap = mesh2Texture;
+            }
+        });
+
+        mesh2 = object;
+        mesh2.scale.set(0.28, 0.25, 1);
+        mesh2.position.y += 2.5;
+        mesh2.position.z += 25;
+        mesh2.rotation.x -= 0.1;
+
+        mesh2.add(rectLight2);
+
+        group2 = new THREE.Group();
+        group2.position.z -= 25;
+        group2.rotation.y = number;
+        group2.add(mesh2);
+        scene.add(group2);
+
+        domEvents.addEventListener(mesh2, 'click', function (event) {
+
+            if (img2_focus == true) {
+                shrink2();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh3mat
+                child.material.color = new THREE.Color(0xa81d00);
+                child.material.map = mesh3Texture;
+                child.material.emissive = new THREE.Color(0xa81d00);
+                child.material.emissiveMap = mesh3Texture;
+            }
+        });
+
+        mesh3 = object;
+        mesh3.scale.set(0.28, 0.25, 1);
+        mesh3.position.y += 2.5;
+        mesh3.position.z += 25;
+        mesh3.rotation.x -= 0.1;
+
+        mesh3.add(rectLight3);
+
+        group3 = new THREE.Group();
+        group3.position.z -= 25;
+        group3.rotation.y = number * 2;
+        group3.add(mesh3);
+        scene.add(group3);
+
+        domEvents.addEventListener(mesh3, 'click', function (event) {
+
+            if (img3_focus == true) {
+                shrink3();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh4mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh4Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh4Texture
+            }
+        });
+
+        mesh4 = object;
+        mesh4.scale.set(0.28, 0.25, 1);
+        mesh4.position.y += 2.5;
+        mesh4.position.z += 25;
+        mesh4.rotation.x -= 0.1;
+
+        mesh4.add(rectLight4);
+
+        group4 = new THREE.Group();
+        group4.position.z -= 25;
+        group4.rotation.y = number * 3;
+        group4.add(mesh4);
+        scene.add(group4);
+
+        domEvents.addEventListener(mesh4, 'click', function (event) {
+
+            if (img4_focus == true) {
+                shrink4();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh5mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh5Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh5Texture
+            }
+        });
+
+        mesh5 = object;
+        mesh5.scale.set(0.28, 0.25, 1);
+        mesh5.position.y += 2.5;
+        mesh5.position.z += 25;
+        mesh5.rotation.x -= 0.1;
+
+        mesh5.add(rectLight5);
+
+        group5 = new THREE.Group();
+        group5.position.z -= 25;
+        group5.rotation.y = number * 4;
+        group5.add(mesh5);
+        scene.add(group5);
+
+        domEvents.addEventListener(mesh5, 'click', function (event) {
+
+            if (img5_focus == true) {
+                shrink5();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh6mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh6Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh6Texture
+            }
+        });
+
+        mesh6 = object;
+        mesh6.scale.set(0.28, 0.25, 1);
+        mesh6.position.y += 2.5;
+        mesh6.position.z += 25;
+        mesh6.rotation.x -= 0.1;
+
+        mesh6.add(rectLight6);
+
+        group6 = new THREE.Group();
+        group6.position.z -= 25;
+        group6.rotation.y = number * 5;
+        group6.add(mesh6);
+        scene.add(group6);
+
+        domEvents.addEventListener(mesh6, 'click', function (event) {
+
+            if (img6_focus == true) {
+                shrink6();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh7mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh7Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh7Texture
+            }
+        });
+
+        mesh7 = object;
+        mesh7.scale.set(0.28, 0.25, 1);
+        mesh7.position.y += 2.5;
+        mesh7.position.z += 25;
+        mesh7.rotation.x -= 0.1;
+
+        mesh7.add(rectLight7);
+
+        group7 = new THREE.Group();
+        group7.position.z -= 25;
+        group7.rotation.y = number * 6;
+        group7.add(mesh7);
+        scene.add(group7);
+
+        domEvents.addEventListener(mesh7, 'click', function (event) {
+
+            if (img7_focus == true) {
+                shrink7();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh8mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh8Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh8Texture
+            }
+        });
+
+        mesh8 = object;
+        mesh8.scale.set(0.28, 0.25, 1);
+        mesh8.position.y += 2.5;
+        mesh8.position.z += 25;
+        mesh8.rotation.x -= 0.1;
+
+        mesh8.add(rectLight8);
+
+        group8 = new THREE.Group();
+        group8.position.z -= 25;
+        group8.rotation.y = number * 7;
+        group8.add(mesh8);
+        scene.add(group8);
+
+        domEvents.addEventListener(mesh8, 'click', function (event) {
+
+            if (img8_focus == true) {
+                shrink8();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh9mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh9Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh9Texture
+            }
+        });
+
+        mesh9 = object;
+        mesh9.scale.set(0.28, 0.25, 1);
+        mesh9.position.y += 2.5;
+        mesh9.position.z += 25;
+        mesh9.rotation.x -= 0.1;
+
+        mesh9.add(rectLight9);
+
+        group9 = new THREE.Group();
+        group9.position.z -= 25;
+        group9.rotation.y = - number;
+        group9.add(mesh9);
+        scene.add(group9);
+
+        domEvents.addEventListener(mesh9, 'click', function (event) {
+
+            if (img9_focus == true) {
+                shrink9();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh10mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh10Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh10Texture
+            }
+        });
+
+        mesh10 = object;
+        mesh10.scale.set(0.28, 0.25, 1);
+        mesh10.position.y += 2.5;
+        mesh10.position.z += 25;
+        mesh10.rotation.x -= 0.1;
+
+        mesh10.add(rectLight10);
+
+        group10 = new THREE.Group();
+        group10.position.z -= 25;
+        group10.rotation.y = - number * 2;
+        group10.add(mesh10);
+        scene.add(group10);
+
+        domEvents.addEventListener(mesh10, 'click', function (event) {
+
+            if (img10_focus == true) {
+                shrink10();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh11mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh11Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh11Texture
+            }
+        });
+
+        mesh11 = object;
+        mesh11.scale.set(0.28, 0.25, 1);
+        mesh11.position.y += 2.5;
+        mesh11.position.z += 25;
+        mesh11.rotation.x -= 0.1;
+
+        mesh11.add(rectLight11);
+
+        group11 = new THREE.Group();
+        group11.position.z -= 25;
+        group11.rotation.y = - number * 3;
+        group11.add(mesh11);
+        scene.add(group11);
+
+        domEvents.addEventListener(mesh11, 'click', function (event) {
+            if (img11_focus == true) {
+                shrink11();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh12mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh12Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh12Texture
+            }
+        });
+
+        mesh12 = object;
+        mesh12.scale.set(0.28, 0.25, 1);
+        mesh12.position.y += 2.5;
+        mesh12.position.z += 25;
+        mesh12.rotation.x -= 0.1;
+
+        mesh12.add(rectLight12);
+
+        group12 = new THREE.Group();
+        group12.position.z -= 25;
+        group12.rotation.y = - number * 4;
+        group12.add(mesh12);
+        scene.add(group12);
+
+        domEvents.addEventListener(mesh12, 'click', function (event) {
+
+            if (img12_focus == true) {
+                shrink12();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh13mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh13Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh13Texture
+            }
+        });
+
+        mesh13 = object;
+        mesh13.scale.set(0.28, 0.25, 1);
+        mesh13.position.y += 2.5;
+        mesh13.position.z += 25;
+        mesh13.rotation.x -= 0.1;
+
+        mesh13.add(rectLight13);
+
+        group13 = new THREE.Group();
+        group13.position.z -= 25;
+        group13.rotation.y = - number * 5;
+        group13.add(mesh13);
+        scene.add(group13);
+
+        domEvents.addEventListener(mesh13, 'click', function (event) {
+
+            if (img13_focus == true) {
+                shrink13();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh14mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh14Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh14Texture
+            }
+        });
+
+        mesh14 = object;
+        mesh14.scale.set(0.28, 0.25, 1);
+        mesh14.position.y += 2.5;
+        mesh14.position.z += 25;
+        mesh14.rotation.x -= 0.1;
+
+        mesh14.add(rectLight14);
+
+        group14 = new THREE.Group();
+        group14.position.z -= 25;
+        group14.rotation.y = - number * 6;
+        group14.add(mesh14);
+        scene.add(group14);
+
+        domEvents.addEventListener(mesh14, 'click', function (event) {
+
+            if (img14_focus == true) {
+                shrink14();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+loader.load(
+    './src/assets/card_uvs_low.obj', function (object) {
+
+        object.traverse(function (child) { child.castShadow = true; });
+        object.traverse(function (child) { child.receiveShadow = true; });
+
+        object.traverse(function (child) {
+            if (child instanceof THREE.Mesh) {
+                child.material = mesh15mat
+                child.material.color = new THREE.Color(0x808080);
+                child.material.map = mesh15Texture
+                child.material.emissive = new THREE.Color(0x808080);
+                child.material.emissiveMap = mesh15Texture
+            }
+        });
+
+        mesh15 = object;
+        mesh15.scale.set(0.28, 0.25, 1);
+        mesh15.position.y += 2.5;
+        mesh15.position.z += 25;
+        mesh15.rotation.x -= 0.1;
+
+        mesh15.add(rectLight15);
+
+        group15 = new THREE.Group();
+        group15.position.z -= 25;
+        group15.rotation.y = - number * 7;
+        group15.add(mesh15);
+        scene.add(group15);
+
+        domEvents.addEventListener(mesh15, 'click', function (event) {
+
+            if (img15_focus == true) {
+                shrink15();
+            } else {
+                return false;
+            }
+        }, false);
+    });
+
+/*const mesh16 = new THREE.Mesh(geometry1, material16);
+mesh16.add(rectLight16);
+
+mesh16.castShadow = true;
+mesh16.receiveShadow = false;
+mesh16.scale.set(0.28, 0.25, 0.01);
+mesh16.position.y += 2.5;
+mesh16.rotation.z = 0;
+mesh16.rotation.x -= 0.1;
+mesh16.position.z += 25;
+
+const group16 = new THREE.Group();
+group16.position.z -= 25;
+group16.rotation.y = number * 15;
+group16.add(mesh16);
+scene.add(group16);
+
+const mesh17 = new THREE.Mesh(geometry1, material17);
+mesh17.add(rectLight17);
+
+mesh17.castShadow = true;
+mesh17.receiveShadow = false;
+mesh17.scale.set(0.28, 0.25, 0.01);
+mesh17.position.y += 2.5;
+mesh17.rotation.z = 0;
+mesh17.rotation.x -= 0.1;
+mesh17.position.z += 25;
+
+const group17 = new THREE.Group();
+group17.position.z -= 25;
+group17.rotation.y = number * 16;
+group17.add(mesh17);
+scene.add(group17);
+
+const mesh18 = new THREE.Mesh(geometry1, material18);
+mesh18.add(rectLight18);
+
+mesh18.castShadow = true;
+mesh18.receiveShadow = false;
+mesh18.scale.set(0.28, 0.25, 0.01);
+mesh18.position.y += 2.5;
+mesh18.rotation.z = 0;
+mesh18.rotation.x -= 0.1;
+mesh18.position.z += 25;
+
+const group18 = new THREE.Group();
+group18.position.z -= 25;
+group18.rotation.y = number * 17;
+group18.add(mesh18);
+scene.add(group18);
+
+const mesh19 = new THREE.Mesh(geometry1, material19);
+mesh19.add(rectLight19);
+
+mesh19.castShadow = true;
+mesh19.receiveShadow = false;
+mesh19.scale.set(0.28, 0.25, 0.01);
+mesh19.position.y += 2.5;
+mesh19.rotation.z = 0;
+mesh19.rotation.x -= 0.1;
+mesh19.position.z += 25;
+
+const group19 = new THREE.Group();
+group19.position.z -= 25;
+group19.rotation.y = number * 18;
+group19.add(mesh19);
+scene.add(group19);
+
+const mesh20 = new THREE.Mesh(geometry1, material20);
+mesh20.add(rectLight20);
+
+mesh20.castShadow = true;
+mesh20.receiveShadow = false;
+mesh20.scale.set(0.28, 0.25, 0.01);
+mesh20.position.y += 2.5;
+mesh20.rotation.z = 0;
+mesh20.rotation.x -= 0.1;
+mesh20.position.z += 25;
+
+const group20 = new THREE.Group();
+group20.position.z -= 25;
+group20.rotation.y = number * 19;
+group20.add(mesh20);
+scene.add(group20);*/

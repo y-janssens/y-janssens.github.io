@@ -1,0 +1,145 @@
+!! Vérifier le contour des iframes avant déploiement !!
+
+Showcase 15 projets :
+
+3D
+ 🗸- Armure chaines - Position 0
+ 🗸 Piliers - Position 1
+- Scorpion - Position 2
+- Iso - Position 3
+- House - Position 4
+- Drakkar - Position 5
+- Tonnelle - Position 6
+ 🗸- Zangar - Position 7
+- Totem - Position -1
+
+2D
+- Nébuleuse - Position -2
+
+Real
+- Herse - Position -3
+- Space - Position -4
+- Sea - Position -5
+
+Dev
+- Battle - Position -6
+- Clock - Position -7
+
+
+################################################################################
+
+    <!-- <script src="./src/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="./src/three.js/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="./src/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="./src/three.js/examples/js/postprocessing/OutlinePass.js"></script>
+    <script src="./src/three.js/examples/js/postprocessing/SMAAPass.js"></script>
+    <script src="./src/three.js/examples/js/postprocessing/BokehPass.js"></script>
+    <script src="./src/three.js/examples/js/shaders/BokehShader.js"></script>
+    <script src="./src/three.js/examples/js/shaders/SMAAShader.js"></script>
+    <script src="./src/three.js/examples/js/shaders/FXAAShader.js"></script>
+    <script src="./src/three.js/examples/js/shaders/CopyShader.js"></script> -->
+    
+/* // PostProcessing
+
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const composer = new THREE.EffectComposer(renderer);
+composer.setSize(window.innerWidth, window.innerHeight);
+
+const renderPass = new THREE.RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+// SMAA
+
+const Smaa = new THREE.SMAAPass(window.innerWidth * renderer.getPixelRatio(), window.innerHeight * renderer.getPixelRatio());
+composer.addPass(Smaa);
+
+// DOF
+
+const bokehPass = new THREE.BokehPass(scene, camera, {
+    focus: 5.5,
+    aperture: 0.001,
+    maxblur: 0.01,
+
+    width: width,
+    height: height
+});
+composer.addPass(bokehPass); */
+
+function animate() {
+
+    renderer.render(scene, camera);
+    //composer.render(scene, camera);
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    //composer.setPixelRatio(window.devicePixelRatio);
+
+$(".switch").click(function () {
+    if (colorToggle) {
+        colorToggle = false;
+        scene.background = new THREE.Color(0xc2bfb8);
+        scene.fog = new THREE.Fog(0xc2bfb8, 10, 70);
+        hemilight.color = new THREE.Color(0xc2bfb8);
+        hemilight.intensity = 1;
+        material1.color = matcolor1;
+        material2.color = matcolor1;
+        material3.color = matcolor1;
+        material4.color = matcolor1;
+        material5.color = matcolor1;
+        material6.color = matcolor1;
+        material7.color = matcolor1;
+        material8.color = matcolor1;
+        material9.color = matcolor1;
+        material10.color = matcolor1;
+        material11.color = matcolor1;
+        material12.color = matcolor1;
+        material13.color = matcolor1;
+        material14.color = matcolor1;
+
+    } else {
+        colorToggle = true;
+        scene.background = new THREE.Color(0x182020);
+        scene.fog = new THREE.Fog(0x182020, 10, 75);
+        hemilight.color = new THREE.Color(0x83bfbf);
+        hemilight.intensity = 0.5;
+        material1.color = matcolor2;
+        material2.color = matcolor2;
+        material3.color = matcolor2;
+        material4.color = matcolor2;
+        material5.color = matcolor2;
+        material6.color = matcolor2;
+        material7.color = matcolor2;
+        material8.color = matcolor2;
+        material9.color = matcolor2;
+        material10.color = matcolor2;
+        material11.color = matcolor2;
+        material12.color = matcolor2;
+        material13.color = matcolor2;
+        material14.color = matcolor2;
+
+    }
+});
+
+.clear {
+  position: absolute;
+  top: 1.5em;
+  right: 0.5em;
+  width: 2.5em;
+  height: 2.5em;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #b84040;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 30! important;
+  transition: 250ms all;
+  visibility: hidden;
+}
+
+.clear:hover {
+  transform: scale(1.25);
+}

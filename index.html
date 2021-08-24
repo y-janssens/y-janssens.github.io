@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="./icon.ico" />
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./src/dependencies/jquery.mCustomScrollbar.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    <script src="./src/dependencies/jquery-3.6.0.js"></script>
+    <script src="./src/dependencies/jquery.mCustomScrollbar.js"></script>
+    <script src="./src/dependencies/threex.domevents.js"></script>
+
+    <script src="./src/three.js/build/three.js"></script>
+    <script src="./src/three.js/examples/js/controls/OrbitControls.js"></script>
+    <script src="./src/three.js/examples/js/loaders/OBJLoader.js"></script>
+    <script src="./src/dependencies/gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="ui">
+
+        <div id="header">
+            <!-- <button class="switch"></button> -->
+            <span class="title">Title</span>
+            <hr class="htitle">
+        </div>
+        <button class="toggle">≡</button>
+        <div id="blocleft">
+
+            <button class="close">X</button>
+
+            <div id="id">
+                <img id="picture1" src="./src/assets/ui/user1.jpg">
+                <img id="picture2" src="./src/assets/ui/user2.jpg">
+                <span class="infos">
+                    <span class="name">Name</span>
+                    <span class="function">Occupation</span>
+                    <span class="phone"><a href="tel:0000000000">00.00.00.00.00</a></span>
+                    <span class="mail"><a href="mailto: test.test@test.fr">e-mail</a></span>
+                    <span class="past"></span>
+                    <span class="dispo">Disponible</span>
+                </span>
+            </div>
+
+            <div id="menu">
+                <button class="title1">Profil</button>
+                <hr>
+                <div class="content1">
+                    <p>
+                        Adresse 1 :</br>
+                        Adresse 2 :</br>
+                        Date de naissance : Àge :</br>
+                    </p>
+                </div>
+                <button class="title2">Expériences</button>
+                <hr>
+                <div class="content2">
+                    <p>
+                        - Date / Date - Poste - Entreprise</br>
+                        - Date / Date - Poste - Entreprise</br>
+                        - Date / Date - Poste - Entreprise</br>
+                        - Date / Date - Poste - Entreprise</br>
+
+                    </p>
+                </div>
+                <button class="title3">Compétences</button>
+                <hr>
+                <div class="content3">
+                    <h1>Infographisme 3D :</h1>
+                    <p>- Modélisation</br>
+                        - Textures</br>
+                        - Animation</br>
+                        - Rendu</p>
+                    <h1>Infographisme 2D :</h1>
+                    <p>- Peinture numérique</br>
+                        - Retouches photos</br>
+                        - Création de textures</br>
+                        - Compositing</br>
+                        - Colorimétrie</p>
+                    <h1>Développement :</h1>
+                    <p>- Html/CSS</br>
+                        - Javascript</br>
+                        <p2>- JQuery</p2></br>
+                        <p2>- Node.js</p2></br>
+                        <p2>- Three.js</p2></br>
+                        <p2>- Electron.js</p2></br></br>
+                        - Python</br>
+                        <p2>- OpenCV</p2></br></br>
+                        - 3D temps réel</br>
+                        - Réalité augmentée</br>
+                        - Machine learning</br>
+                    </p>
+
+                    <h1>Logiciels :</h1>
+                    <p>- Autodesk Maya</br>
+                        - Adobe Photoshop</br>
+                        - Autodesk Mudbox</br>
+                        - Substance Designer</br>
+                        - VsCode</p>
+                    <h1>Environnements :</h1>
+                    <p>- Windows</br>
+                        - Linux</p>
+                    <h1>Langues :</h1>
+                    <p>- Français : natif</br>
+                        - Anglais : lu écrit parlé <p3>(CECRL C1)</p3>
+                    </p>
+                </div>
+                <button class="title4">Loisirs</button>
+                <hr>
+                <div class="content4">
+                    <p>
+                        - Lecture</br>
+                        - Écriture</br>
+                        - Illustration</br>
+                        - Administration d'un forum d'écriture</br>
+                    </p>
+                </div>
+                <button class="title5">Réseaux Sociaux</button>
+                <hr>
+                <div class="content5">
+                    <div class="socialcontent">
+                        <img id="logo" src="./src/assets/ui/fb.png" />
+                        <span class="social">- <a href="https://www.facebook.com/y.jnss/">Facebook</a><span></br>
+                    </div>
+                    <div class="socialcontent">
+                        <img id="logo" src="./src/assets/ui/artstation.png" />
+                        <span class="social">- <a href="https://www.artstation.com/yjanssens">Artstation</a><span></br>
+                    </div>
+                    <div class="socialcontent">
+                        <img id="logo" src="./src/assets/ui/cg.png" />
+                        <span class="social">- <a href="https://scorpiostyle.cgsociety.org/">CGSociety</a><span></br>
+                    </div>
+                    <div class="socialcontent">
+                        <img id="logo" src="./src/assets/ui/git.png" />
+                        <span class="social">- <a href="https://github.com/Srphy">GitHub</a><span></br></br>
+                    </div>
+                </div>
+                <button class="title6">À propos</button>
+                <hr>
+                <div class="content6">
+                    <p>Cette page est un reflet de mes compétences, puisque des exemples valent mieux que de longs
+                        discours, j'ai jugé bon de mettre en place ici un éventail de projets sur lesquels j'ai
+                        travaillé au cours de ces dernières années.</br></br>
+
+                        Si vous souhaitez en apprendre davantage, cliquez sur le lien suivant!<span class="plus">➜
+                            continuer</span></p>
+                </div>
+                <button class="mute" onclick="mute()"><img id="sound" src="./src/assets/ui/son.png"></button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="item0">
+
+            <div id="headbar">
+                <button class="clear">X</button>
+                <span class="htitle">Plus à propos</span>
+            </div>
+            <span class="content7">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                    amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                    amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+                    amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt.</p>
+            </span>
+        </div>
+        <div id="item1">
+            <img id="img1" src="./src/assets/ui/showcase/img1.jpg" />
+        </div>
+
+        <div id="item2">
+            <img id="img2" src="./src/assets/ui/showcase/img2.jpg" />
+        </div>
+
+        <div id="item3">
+            <img id="img3" src="./src/assets/ui/showcase/img3.jpg" />
+        </div>
+
+        <div id="item4">
+            <img id="img4" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item5">
+            <img id="img5" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item6">
+            <img id="img6" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item7">
+            <img id="img7" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item8">
+            <img id="img8" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item9">
+            <img id="img9" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item10">
+            <img id="img10" src="./src/assets/ui/showcase/img.jpg" />
+        </div>
+
+        <div id="item11">
+            <iframe id="iframe1" src="./src/assets/herse/index.html"></iframe>
+        </div>
+
+        <div id="item12">
+            <!-- <iframe id="iframe2" src=""></iframe> -->
+        </div>
+
+        <div id="item13">
+            <!-- <iframe id="iframe3" src=""></iframe> -->
+        </div>
+
+        <div id="item14">
+            <!-- <iframe id="iframe4" src=""></iframe> -->
+        </div>
+
+        <div id="item15">
+            <!-- <iframe id="iframe5" src=""></iframe> -->
+        </div>
+
+    </div>
+
+    <script src="./src/scene.js" defer></script>
+
+    <script src="./src/geometry.js" defer></script>
+    <script src="./src/materials.js" defer></script>
+    <script src="./src/lights.js" defer></script>
+    <script src="./src/shrink.js"></script>
+    <script src="./src/cards.js" defer></script>
+    <script src="./src/cubes.js" defer></script>
+
+    <script src="./src/functionsUI.js"></script>
+
+
+</body>
+
+</html>
