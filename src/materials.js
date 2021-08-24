@@ -41,7 +41,7 @@ mesh8Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
 mesh8Texture.wrapS = mesh8Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh9mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh9Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh9Texture = new THREE.TextureLoader().load('./src/assets/textures/mini5.png');
 mesh9Texture.wrapS = mesh9Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh10mat = new THREE.MeshStandardMaterial(commonAttributes);

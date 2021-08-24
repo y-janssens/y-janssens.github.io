@@ -238,7 +238,8 @@ function shrink9() {
 
     if (shrink_img9) {
         shrink_img9 == false;
-        $('#container').css('visibility', 'visible');
+        window.open('./site/battle/index.html');
+/*         $('#container').css('visibility', 'visible');
         $('#container').css('pointer-events', 'initial');
         $('#container').css('cursor', 'pointer');
         $('#iframe2').css('transition', '500ms all');
@@ -248,12 +249,12 @@ function shrink9() {
         $('#item9').css('transition', '500ms all');
         $('#item9').css('visibility', 'visible');
         $('#item9').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#item9').css('opacity', '1');
+        $('#item9').css('opacity', '1'); */
 
     } else {
         shrink_img9 == true;
     }
-    $('#container').on('touchstart click', function () {
+/*     $('#container').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
         $('#container').css('cursor', 'initial');
@@ -264,8 +265,8 @@ function shrink9() {
         $('#item9').css('transition', '500ms all');
         $('#item9').css('visibility', 'hidden');
         $('#item9').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#item9').css('opacity', '0');
-    });
+        $('#item9').css('opacity', '0'); */
+    //});
 }
 
 function shrink10() {
