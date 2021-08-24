@@ -1,0 +1,554 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #353535;
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "LCD";
+    src: url('./src/LCDAT&TPhoneTimeDate.ttf');
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    top: 0.55em;
+    cursor: pointer;
+}
+
+#all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#time {
+    visibility: visible;
+}
+
+#support {
+    position: absolute;
+    top: 6em;
+}
+
+#pied1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 8em;
+    background-color: #151515;
+    transform: translate(75%, 0%);
+    box-shadow: inset 10px 10px 15px rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+#pied2 {
+    position: absolute;
+    top: 7.25em;
+    left: 50%;
+    width: 2em;
+    height: 1em;
+    border-color: transparent;
+    border-radius: 0 0 3em 3em;
+    border: 1em solid #353535;
+    border-top: none;
+    transform: translate(12.5%, -15%) scaleY(0.65);
+    z-index: 2
+}
+
+#socle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 7em;
+    border-radius: 50%;
+    border: 0.1em inset rgba(255, 255, 255, 0.1);
+    background-color: #303030;
+    transform: translate(-50%, 65%) perspective(200px) rotateY(-10deg);
+    z-index: 1;
+    visibility: visible;
+}
+
+#socleglass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 7em;
+    border-radius: 50%;
+    background: linear-gradient(170deg, rgba(255, 255, 255, 1) 59%, rgba(0, 0, 0, 1) 63%);
+    transform: translate(-50%, 65%) perspective(200px) rotateY(-10deg);
+    filter: blur(2px);
+    opacity: 0.025;
+    z-index: 1;
+    visibility: visible;
+}
+
+#socleshadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 7em;
+    border-radius: 50%;
+    border: 1em solid #151515;
+    background-color: transparent;
+    transform: translate(-49.7%, 39%) perspective(200px) rotateY( -10deg) rotateX( 25deg) scaleY(0.9) scaleX(0.935);
+    z-index: 0;
+    visibility: visible;
+}
+
+#clockfond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.45em;
+    border-radius: 4em;
+    border: 1em solid #121212;
+    background-color: transparent;
+    transform: translate(-48%, -50.6%) perspective(200px) rotateY( -10deg) scaleY(0.99);
+    z-index: 2;
+    visibility: visible;
+}
+
+#buttonsfond {
+    position: absolute;
+    top: -2.6em;
+    left: 50%;
+    width: 15em;
+    height: 2em;
+    border-radius: 3em 1em 0 0;
+    border: 0.5em solid #121212;
+    background-color: transparent;
+    transform: translate(-49.5%, -3%) scaleX(0.9);
+    z-index: 7;
+}
+
+#clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.45em;
+    border-radius: 3em;
+    background-color: #303030;
+    transform: translate(-50%, -50%) perspective(200px) rotateY(-10deg);
+    z-index: 3;
+    visibility: visible;
+}
+
+#clock:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.45em;
+    border-radius: 3em;
+    background-color: transparent;
+    transform: translate(-49%, -49%) scaleY(0.99) scaleX(0.99);
+    box-shadow: inset 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+#glass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.45em;
+    border-radius: 3em;
+    background: linear-gradient(150deg, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 50%);
+    transform: translate(-50%, -50%) scale(1.01);
+    filter: blur(2px);
+    opacity: 0.025;
+    z-index: 3 !important;
+}
+
+#screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.45em;
+    border-radius: 3em;
+    background-image: linear-gradient(0deg, #000000 25%, #ffffff 25%, #ffffff 50%, #000000 50%, #000000 75%, #ffffff 75%, #ffffff 100%);
+    background-size: 0.5em 0.5em;
+    transform: translate(-50%, -50%) scale(1.01);
+    opacity: 0.01;
+    z-index: 3 !important;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+}
+
+#glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 31em;
+    height: 23.45em;
+    border-radius: 3em;
+    background-color: #d1ffb7;
+    transform: translate(-50%, -52%) perspective(200px) rotateY(-10deg);
+    z-index: 8;
+    filter: blur(3em);
+    opacity: 0.05;
+    pointer-events: none !important;
+    animation-duration: 5s;
+    animation-name: blink2;
+    animation-iteration-count: infinite;
+}
+
+#border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.3em;
+    border-radius: 4em;
+    border: 1em solid #202020;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 6;
+}
+
+#border:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.3em;
+    border-radius: 3.5em;
+    border: 0.15em solid rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scaleX(1.067) scaleY(1.115);
+}
+
+#bordershadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25em;
+    height: 15.3em;
+    border-radius: 4em;
+    border: 1em solid #151515;
+    background-color: transparent;
+    transform: translate(-49%, -49%) scale(0.98);
+    pointer-events: none;
+    z-index: 4 !important;
+}
+
+#buttons {
+    position: absolute;
+    top: -2.75em;
+    left: 50%;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em 1em 0 0;
+    background-color: #202020;
+    transform: translate(-50%, 0%);
+    z-index: 5;
+}
+
+#buttons:before {
+    content: " ";
+    position: absolute;
+    top: 1.2em;
+    left: 50%;
+    width: 15em;
+    height: 2em;
+    border-radius: 1em 1em 0 0;
+    border: 0.15em solid rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scaleX(0.98) scaleY(1.115);
+}
+
+.b1 {
+    position: absolute;
+    left: 2em;
+    color: #101010;
+    background-color: #101010;
+}
+
+.b1::after {
+    content: "-";
+    position: absolute;
+    width: 1.2em;
+    height: 1.3em;
+    color: transparent;
+    border-radius: 50%;
+    border: 0.15em solid rgba(255, 255, 255, 0.05);
+    transform: translate(-62%, -14%);
+}
+
+.b1b {
+    position: absolute;
+    left: 2em;
+    color: #101010;
+    background-color: #101010;
+    filter: blur(3px);
+    opacity: 0.75;
+    z-index: 8 !important;
+    pointer-events: none;
+}
+
+.b2 {
+    position: absolute;
+    left: 8.25em;
+    color: #101010;
+    background-color: #101010;
+}
+
+.b2::after {
+    content: "-";
+    position: absolute;
+    width: 1.2em;
+    height: 1.3em;
+    color: transparent;
+    border-radius: 50%;
+    border: 0.15em solid rgba(255, 255, 255, 0.05);
+    transform: translate(-62%, -14%);
+}
+
+.b2b {
+    position: absolute;
+    left: 8.25em;
+    color: #101010;
+    background-color: #101010;
+    filter: blur(3px);
+    opacity: 0.75;
+    z-index: 8 !important;
+    pointer-events: none;
+}
+
+.b3 {
+    position: absolute;
+    right: 2em;
+    color: #101010;
+    background-color: #101010;
+}
+
+.b3::after {
+    content: "-";
+    position: absolute;
+    width: 1.2em;
+    height: 1.3em;
+    color: transparent;
+    border-radius: 50%;
+    border: 0.15em solid rgba(255, 255, 255, 0.05);
+    transform: translate(-62%, -14%);
+}
+
+.b3b {
+    position: absolute;
+    right: 2em;
+    color: #101010;
+    background-color: #101010;
+    filter: blur(3px);
+    opacity: 0.75;
+    z-index: 8 !important;
+    pointer-events: none;
+}
+
+#time1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 0.15em;
+    font-family: 'LCD', monospace;
+    font-size: 6.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #5dff00;
+    -webkit-text-stroke: 4px #303030;
+    transform: translate(-48.75%, -50%);
+    z-index: 3 !important;
+}
+
+#time1b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 0.15em;
+    font-family: 'LCD', monospace;
+    font-size: 6.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #5dff00;
+    transform: translate(-48.75%, -50%);
+    filter: blur(2px);
+    opacity: 0.5;
+    z-index: 4 !important;
+}
+
+#time1s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 0.15em;
+    font-family: 'LCD', monospace;
+    font-size: 6.5rem;
+    text-align: center;
+    color: #202020;
+    -webkit-text-stroke: 4px #303030;
+    opacity: 0.25;
+    transform: translate(-48.75%, -50%);
+    z-index: 2 !important;
+}
+
+#time2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.65em;
+    margin-left: 1.35em;
+    font-family: 'LCD', monospace;
+    font-size: 3rem;
+    text-align: center;
+    color: #5dff00;
+    -webkit-text-stroke: 1px #303030;
+    transform: translate(-50%, -50%);
+    z-index: 3 !important;
+    visibility: hidden;
+}
+
+#time2s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.65em;
+    margin-left: 1.35em;
+    font-family: 'LCD', monospace;
+    font-size: 3rem;
+    text-align: center;
+    color: #202020;
+    -webkit-text-stroke: 1px #303030;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+    z-index: 2 !important;
+    visibility: hidden;
+}
+
+#time2b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.65em;
+    margin-left: 1.35em;
+    font-family: 'LCD', monospace;
+    font-size: 3rem;
+    text-align: center;
+    color: #5dff00;
+    transform: translate(-50%, -50%);
+    filter: blur(3px);
+    opacity: 0.5;
+    z-index: 4 !important;
+    visibility: hidden;
+}
+
+#time3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.75em;
+    font-family: 'LCD', monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: #5dff00;
+    -webkit-text-stroke: 2px #303030;
+    transform: translate(-50%, -50%);
+    z-index: 3 !important;
+}
+
+#time3s {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.75em;
+    font-family: 'LCD', monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: #202020;
+    -webkit-text-stroke: 2px #303030;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+    z-index: 2 !important;
+}
+
+#time3b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: 2.75em;
+    font-family: 'LCD', monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: #5dff00;
+    transform: translate(-50%, -50%);
+    filter: blur(3px);
+    opacity: 0.5;
+    z-index: 4 !important;
+}
+
+@keyframes blink {
+    from {
+        animation-timing-function: steps(1, start);
+        opacity: 0.01;
+    }
+    93.33% {
+        animation-timing-function: steps(2);
+        opacity: 0.01;
+    }
+    96.66% {
+        animation-timing-function: steps(3);
+        opacity: 0;
+    }
+    to {
+        animation-timing-function: steps(4, end);
+        opacity: 0.01;
+    }
+}
+
+@keyframes blink2 {
+    from {
+        animation-timing-function: steps(1, start);
+        opacity: 0.05;
+    }
+    96% {
+        animation-timing-function: steps(2);
+        opacity: 0.05;
+    }
+    98% {
+        animation-timing-function: steps(3);
+        opacity: 0;
+    }
+    to {
+        animation-timing-function: steps(4, end);
+        opacity: 0.05;
+    }
+}

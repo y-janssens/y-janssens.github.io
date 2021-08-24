@@ -4,13 +4,13 @@ Showcase 15 projets :
 
 3D
  🗸- Armure chaines - Position 0
- 🗸 Piliers - Position 1
-- Scorpion - Position 2
-- Iso - Position 3
+  🗸- Zangar - Position 1
+ 🗸 Piliers - Position 2
+- Scorpion - Position 3
 - House - Position 4
 - Drakkar - Position 5
 - Tonnelle - Position 6
- 🗸- Zangar - Position 7
+- Iso - Position 7
 - Totem - Position -1
 
 2D

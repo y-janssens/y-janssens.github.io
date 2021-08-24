@@ -240,10 +240,14 @@ function shrink9() {
         shrink_img9 == false;
         $('#container').css('visibility', 'visible');
         $('#container').css('pointer-events', 'initial');
-        $('#img9').css('transition', '500ms all');
-        $('#img9').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#img9').css('opacity', '1');
-        $('#img9').css('visibility', 'visible');
+        $('#iframe2').css('transition', '500ms all');
+        $('#iframe2').css('transform', 'translate(-50%, -50%)');
+        $('#iframe2').css('opacity', '1');
+        $('#iframe2').css('visibility', 'visible');
+        $('#item9').css('transition', '500ms all');
+        $('#item9').css('visibility', 'visible');
+        $('#item9').css('transform', 'translate(-50%, -50%) scale(1)');
+        $('#item9').css('opacity', '1');
 
     } else {
         shrink_img9 == true;
@@ -251,10 +255,14 @@ function shrink9() {
     $('#img9').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
-        $('#img9').css('transition', '250ms all');
-        $('#img9').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#img9').css('opacity', '0');
-        $('#img9').css('visibility', 'hidden');
+        $('#iframe2').css('transition', '250ms all');
+        $('#iframe2').css('transform', 'translate(-50%, -50%)');
+        $('#iframe2').css('opacity', '0');
+        $('#iframe2').css('visibility', 'hidden');
+        $('#item9').css('transition', '500ms all');
+        $('#item9').css('visibility', 'hidden');
+        $('#item9').css('transform', 'translate(-50%, -50%) scale(0)');
+        $('#item9').css('opacity', '0');
     });
 }
 

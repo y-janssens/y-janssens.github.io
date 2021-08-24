@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Clock</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+
+    <script src="./src/jquery.js"></script>
+
+
+</head>
+
+<body>
+    <div id="all">
+        <div id="clock">
+            <div id="border"></div>
+            <div id="bordershadow"></div>
+            <div id="buttons">
+                <button class="b1" onclick="off()">-</button>
+                <button class="b1b">-</button>
+                <button class="b2" onclick="start()">-</button>
+                <button class="b2b">-</button>
+                <button class="b3" onclick="reset()">-</button>
+                <button class="b3b">-</button>
+            </div>
+            <div id="glass"></div>
+            <div id="screen"></div>
+
+            <div id="time">
+
+                <div id="time1">00:00:00</div>
+                <div id="time1b">00:00:00</div>
+                <div id="time1s">00:00:00</div>
+
+                <div id="time2"></div>
+                <div id="time2s">0000000</div>
+                <div id="time2b"></div>
+
+                <div id="time3"></div>
+                <div id="time3b"></div>
+                <div id="time3s">00:00:0000</div>
+            </div>
+
+        </div>
+
+        <div id="clockfond">
+            <div id="buttonsfond">
+            </div>
+        </div>
+
+        <div id="support">
+            <div id="pied1"></div>
+            <div id="pied2"></div>
+            <div id="socle"></div>
+            <div id="socleglass"></div>
+            <div id="socleshadow"></div>
+        </div>
+        <div id="glow"></div>
+    </div>
+
+    <script src="./index.js" defer></script>
+</body>
+
+</html>
