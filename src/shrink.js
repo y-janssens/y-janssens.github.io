@@ -240,6 +240,7 @@ function shrink9() {
         shrink_img9 == false;
         $('#container').css('visibility', 'visible');
         $('#container').css('pointer-events', 'initial');
+        $('#container').css('cursor', 'pointer');
         $('#iframe2').css('transition', '500ms all');
         $('#iframe2').css('transform', 'translate(-50%, -50%)');
         $('#iframe2').css('opacity', '1');
@@ -252,9 +253,10 @@ function shrink9() {
     } else {
         shrink_img9 == true;
     }
-    $('#img9').on('touchstart click', function () {
+    $('#container').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
+        $('#container').css('cursor', 'initial');
         $('#iframe2').css('transition', '250ms all');
         $('#iframe2').css('transform', 'translate(-50%, -50%)');
         $('#iframe2').css('opacity', '0');
