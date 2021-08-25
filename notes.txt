@@ -11,19 +11,15 @@ Showcase 15 projets :
 - Drakkar - Position 5
 - Tonnelle - Position 6
 - Iso - Position 7
-- Totem - Position -1
-
-2D
-- Nébuleuse - Position -2
-
-Real
-- Herse - Position -3
-- Space - Position -4
-- Sea - Position -5
 
 Dev
-- Battle - Position -6
-- Clock - Position -7
+🗸 Battle - Position -1
+🗸 Clock - Position -2
+🗸 Detect - Position -3
+🗸 Herse - Position - 4
+- Keyboard - Position -5
+- Eyedropper - Position - 6
+- ??? - Position - 6
 
 
 ################################################################################

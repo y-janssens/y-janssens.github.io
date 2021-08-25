@@ -1,0 +1,353 @@
+#blocs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 16.25em;
+    bottom: 23.8em;
+    height: auto;
+    width: auto;
+    max-width: 30em !important;
+    min-width: 20em !important;
+    transform: translate(-40.5%, -50%);
+    z-index: 12;
+    visibility: hidden;
+}
+
+#blocLight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding-top: 90%;
+    transform: translate(-42.5%, -50%);
+    backdrop-filter: invert(0.75) contrast(2);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 9;
+}
+
+#blocFrame {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 100%;
+    height: 1.73em;
+    border-radius: 5px 5px 0px 0px;
+    transform: translate(-50%, 0%);
+    background-color: #17181c;
+    z-index: 8;
+}
+
+.blocTitle {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    width: 32em;
+    height: 1.73em;
+    margin-top: 0.5em;
+    border-radius: 5px 5px 0px 0px;
+    transform: translate(-50%, -50%);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1em;
+    color: #a0a6b8;
+    text-align: center;
+    z-index: 9;
+}
+
+.down {
+    position: absolute;
+    top: 50%;
+    right: 0.2em;
+    width: 1.3em;
+    height: 1.15em;
+    transform: translate(0%, -50%);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #4d5059;
+    color: #a0a6b8;
+    font-weight: 300;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    line-height: 10px;
+    letter-spacing: 0.5em;
+    z-index: 9;
+}
+
+#bloc1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding-top: 90%;
+    transform: translate(-42.5%, -50%);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);    
+    background-color:#4d5059;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    z-index: 7;
+}    
+    
+.mini1 {
+    position: absolute;
+    top: 3em;
+    left: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini2 {
+    position: absolute;
+    top: 3em;
+    left: 26.25%;
+    width: 22.5%;
+    height: 25%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini3 {
+    position: absolute;
+    top: 3em;
+    left: 51.25%;
+    width: 22.5%;
+    height: 25%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini4 {
+    position: absolute;
+    top: 3em;
+    right: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini5 {
+    position: absolute;
+    top: 40%;
+    left: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini6 {
+    position: absolute;
+    top: 40%;
+    left: 26.25%;
+    width: 22.5%;
+    height: 25%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini7 {
+    position: absolute;
+    top: 40%;
+    left: 51.25%;
+    width: 22.5%;
+    height: 25%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg7 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini8 {
+    position: absolute;
+    top: 40%;
+    right: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini9 {
+    position: absolute;
+    top: 72%;
+    left: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    filter: grayscale(0.5);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg9 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini10 {
+    position: absolute;
+    top: 72%;
+    left: 26.25%;
+    width: 22.5%;
+    height: 25%;
+    filter: grayscale(0.6);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg10 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini11 {
+    position: absolute;
+    top: 72%;
+    left: 51.25%;
+    width: 22.5%;
+    height: 25%;
+    filter: grayscale(0.6);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg11 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.mini12 {
+    position: absolute;
+    top: 72%;
+    right: 0.5em;
+    width: 22.5%;
+    height: 25%;
+    filter: grayscale(0.6);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#minimg12 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0em;
+    top: 0em;
+    object-fit: cover;
+    border-radius: 3px;
+}

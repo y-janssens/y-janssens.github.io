@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Détection V-1.0</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./blocs.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+    <script src="./src/jquery.js"></script>
+    <script src="./src/three/build/three.js"></script>
+    <script src="./src/tf.min.js"></script>
+    <script src="./src/coco-ssd.min.js"></script>
+
+    <script src="./src/three/examples/js/controls/OrbitControls.js"></script>
+    <script src="./src/three/examples/js/controls/TransformControls.js"></script>
+    <script src="./src/three/examples/js/loaders/OBJLoader.js"></script>
+    <script src="./src/three/examples/js/loaders/RGBELoader.js"></script>
+    <script src="./src/three/examples/js/objects/Water2.js"></script>
+    <script src='./src/three/examples/js/objects/Reflector.js'></script>
+    <script src="./src/three/examples/js/objects/Refractor.js"></script>
+    <script src="./src/three/examples/js/math/ImprovedNoise.js"></script>
+    <script src="./src/Cloud.js"></script>
+
+</head>
+
+<body>
+
+    <div id="blocs">
+        <div id="blocLight"></div>
+        <div id="bloc1">
+            <div id="blocFrame"><span class="blocTitle">Miniatures</span><button class="down" onclick="shutDown();">X</button></div>
+            <button class="mini1"><img id="minimg1" src="./assets/ui/test.jpg" onclick="changeBg1();"></button>
+            <button class="mini2"><img id="minimg2" src="./assets/images/dog-running.jpg" onclick="changeBg2();"></button>
+            <button class="mini3"><img id="minimg3" src="./assets/images/angry-cat.jpg" onclick="changeBg3();"></button>
+            <button class="mini4"><img id="minimg4" src="./assets/images/a lot of cars.jpg" onclick="changeBg4();"></button>
+            <button class="mini5"><img id="minimg5" src="./assets/images/Abbey road.jpg" onclick="changeBg5();"></button>
+            <button class="mini6"><img id="minimg6" src="./assets/images/Wine_Sommelier.jpg" onclick="changeBg6();"></button>
+            <button class="mini7"><img id="minimg7" src="./assets/images/Spitfire.jpg" onclick="changeBg7();"></button>
+            <button class="mini8"><img id="minimg8" src="./assets/images/Laptop.jpg" onclick="changeBg8();"></button>
+            <button class="mini9"><img id="minimg9" src="./assets/images/Blank.jpg" onclick="changeBg9();"></button>
+            <button class="mini10"><img id="minimg10" src="./assets/images/Blank.jpg" onclick="changeBg10();"></button>
+            <button class="mini11"><img id="minimg11" src="./assets/images/Blank.jpg" onclick="changeBg11();"></button>
+            <button class="mini12"><img id="minimg12" src="./assets/images/Blank.jpg" onclick="changeBg12();"></button>
+        </div>
+    </div>
+
+    <div id="ui">
+        <div id="light"></div>
+
+        <div id="bloctop">
+            <span class="title">Détection V-1.0</span>
+            <div id="switch"><input type="checkbox" class="toggle" checked></div>
+        </div>
+
+        <button class="button23" onclick="translateUI();">
+            <div id="icon5"><img src="./assets/ui/full.png" />
+            </div>
+        </button>
+
+        <div id="blocfond">
+            <div id="backfond">
+                <input type="file" id="dropzone" onchange="readURL(event)" onclick="shutDown()">
+                <img id="drag" src="./assets/ui/drag.png" />
+            </div>
+            <canvas id="canvas2" width="600px" height="1000px"></canvas>
+
+            <img id="fond" src="./assets/ui/test.jpg">
+
+            <div id="container"><button class="clear" id="clear" onclick="clearimg();">X</button></div>
+        </div>
+
+
+        <span class="controls">
+            <button class="turnL" onclick="rotateLeft();">TL</button>
+            <button class="turnR" onclick="rotateRight();">TR</button>
+            <button class="moveL" onclick="moveLeftward();">ML</button>
+            <button class="moveR" onclick="moveRightward();">MR</button>
+            <button class="moveC" onclick="moveBackward()">MC</button>
+            <button class="moveU" onclick="moveForward()">MU</button>
+        </span>
+
+        <div id="textarea">
+            <div id="area2"></div>
+        </div>
+
+        <div id="blocleft">
+            <div id="panel">
+                <div id="menu">
+
+                    <button class="button1">
+                        <div id="icon1"><img src="./assets/ui/button.png">
+                        </div>
+                    </button>
+
+                    <button class="button2">1</button>
+                    <button class="button3">2</button>
+                    <button class="button4">3</button>
+                    <button class="button5">4</button>
+                    <button class="button6">5</button>
+                    <button class="button7">6</button>
+
+                    <div id="item1">
+                        <button class="button14">-</button>
+                        <button class="button15">-</button>
+                        <button class="button16">-</button>
+                    </div>
+
+                    <div id="item2">
+                        <button class="button17">-</button>
+                        <button class="button18">-</button>
+                        <button class="button19">-</button>
+                    </div>
+
+                </div>
+
+                <div class="file-input">
+                    <input type="file" id="file" class="file" onchange="readURL(event)" onclick="shutDown()">
+                    <label for="file">Choisir un fichier</label>
+                    <button class="valid">Valider</button>
+                    <button class="mini" onclick="toggle();">Miniatures</button>
+                    <button class="reset" onclick="init();">Effacer</button>
+                </div>
+
+            </div>
+
+            <div id="item3">
+                <button class="button20" onclick="reset();">
+                    <div id="icon2"><img src="./assets/ui/axis.png"></div>
+                </button>
+
+                <button class="button21">
+                    <div id="icon3"><img src="./assets/ui/play.png"></div>
+                </button>
+
+                <button class="button22" onclick="reload();">
+                    <div id="icon4"><img src="./assets/ui/rewind.png"></div>
+                </button>
+            </div>
+        </div>
+        <!-- <div id="loader"><div id="loading"></div><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div> -->
+    </div>
+
+    <script src="./scene.js"></script>
+	<script src="./detection.js"></script>
+    <script src="./buttons.js"></script>
+    <script src="./fonctionsUI.js"></script>
+    <script src="./fonctions3D.js"></script>
+
+</body>
+
+</html>

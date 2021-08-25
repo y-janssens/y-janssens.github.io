@@ -49,11 +49,11 @@ mesh10Texture = new THREE.TextureLoader().load('./src/assets/textures/mini6.png'
 mesh10Texture.wrapS = mesh10Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh11mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh11Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh11Texture = new THREE.TextureLoader().load('./src/assets/textures/mini8.png');
 mesh11Texture.wrapS = mesh11Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh12mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh12Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh12Texture = new THREE.TextureLoader().load('./src/assets/textures/mini7.png');
 mesh12Texture.wrapS = mesh12Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh13mat = new THREE.MeshStandardMaterial(commonAttributes);
