@@ -259,34 +259,10 @@ function shrink11() {
 
     if (shrink_img11) {
         shrink_img11 == false;
-        $('#container').css('visibility', 'visible');
-        $('#container').css('pointer-events', 'initial');
-        $('#container').css('cursor', 'pointer');
-        $('#iframe1').css('transition', '500ms all');
-        $('#iframe1').css('transform', 'translate(-50%, -50%)');
-        $('#iframe1').css('opacity', '1');
-        $('#iframe1').css('visibility', 'visible');
-        $('#item11').css('transition', '500ms all');
-        $('#item11').css('visibility', 'visible');
-        $('#item11').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#item11').css('opacity', '1');
-
+        window.open('./site/Detection/index.html');
     } else {
         shrink_img11 == true;
     }
-    $('#container').on('touchstart click', function () {
-        $('#container').css('visibility', 'hidden');
-        $('#container').css('pointer-events', 'none');
-        $('#container').css('cursor', 'initial');
-        $('#iframe1').css('transition', '250ms all');
-        $('#iframe1').css('transform', 'translate(-50%, -50%)');
-        $('#iframe1').css('opacity', '0');
-        $('#iframe1').css('visibility', 'hidden');
-        $('#item11').css('transition', '500ms all');
-        $('#item11').css('visibility', 'hidden');
-        $('#item11').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#item11').css('opacity', '0');
-    });
 }
 
 function shrink12() {

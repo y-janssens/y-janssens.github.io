@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   background-color: #bbbbbb;
   overflow: hidden;
+  cursor: url(./src/cursor.png), auto !important;
 }
 
 canvas {
@@ -196,13 +197,12 @@ hr.htitle {
   outline: none! important;
   background-color: #303030;
   transition: all 500ms ease-in-out;
-  z-index: 4;
-  cursor: pointer;
+  z-index: 4;  
 }
 
-#picture1:hover {
+/* #picture1:hover {
   opacity: 0;
-}
+} */
 
 #picture2 {
   position: absolute;

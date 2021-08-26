@@ -16,10 +16,10 @@ Dev
 🗸 Battle - Position -1
 🗸 Clock - Position -2
 🗸 Detect - Position -3
-🗸 Herse - Position - 4
+🗸 Herse - Position -4
 - Keyboard - Position -5
-- Eyedropper - Position - 6
-- ??? - Position - 6
+- Eyedropper - Position -6
+- ??? - Position -7
 
 
 ################################################################################
