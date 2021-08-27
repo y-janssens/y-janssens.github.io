@@ -55,7 +55,7 @@ function fileLoad() {
 
             //document.getElementById("area2").innerHTML = "Detection result : " + result[i].class;
 
-            if (result[i].class == "dog") {
+            /* if (result[i].class == "dog") {
                 document.getElementById("area2").innerHTML = "Success : " + result[i].class + "<br>" + "x : " + result[i].bbox[0].toFixed(2) + "<br>" + "y : " + result[i].bbox[1].toFixed(2);
 
                 testMesh = new THREE.Mesh(
@@ -77,7 +77,7 @@ function fileLoad() {
 
             } else {
                 document.getElementById("area2").innerHTML = "Failure : " + result[i].class;
-            }
+            } */
 
             context.fillText(
 
