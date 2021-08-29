@@ -1,5 +1,6 @@
 window.onload = resize();
 window.onload = scrollbar();
+//indow.setInterval(resize, 10);
 window.onresize = reportWindowSize;
 window.addEventListener('resize', reportWindowSize);
 
@@ -39,7 +40,7 @@ $('.close').on('touchstart click', function () {
     $('#img1').css('margin-left', '0em');
     $('#img2').css('margin-left', '0em');
     $('#img3').css('margin-left', '0em');
-    $('canvas').css('margin-left', '0em');    
+    $('canvas').css('margin-left', '0em');
     setTimeout("toggleOn()", 300);
 });
 
@@ -70,7 +71,7 @@ $(".title1").on('touchstart click', function () {
         panel1 = true;
         $(".content1").addClass;
         $(".content1").slideDown(500);
-    }    
+    }
 });
 
 $(".title2").on('touchstart click', function () {
@@ -177,9 +178,10 @@ function mute() {
 
 function reportWindowSize() {
     resize();
+    
 }
 
- function resize() {
+function resize() {
     var height = document.getElementById('item0').offsetHeight;
     var width = document.getElementById('item0').offsetWidth;
 
@@ -190,6 +192,7 @@ function reportWindowSize() {
     $('canvas').css('max-height', '80%');
     $('canvas').css('height', '100%');
     $('canvas').css('width', 'auto')
+    tooltip();
 }
 
 function scrollbar() {
@@ -200,3 +203,10 @@ function scrollbar() {
         scrollInertia: 200
     });
 }
+
+function tooltip(){
+    let imgWidth = document.getElementById('img1').offsetWidth;
+
+    $('.descri1').css('width', imgWidth);
+}
+

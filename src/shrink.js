@@ -53,17 +53,24 @@ function shrink1() {
         $('#img1').css('transform', 'translate(-50%, -50%) scale(1)');
         $('#img1').css('opacity', '1');
         $('#img1').css('visibility', 'visible');
+        $('.descri1').css('transition', '500ms all');
+        $('.descri1').css('transform', 'translate(-50%, -50%) scale(1)');
+        $('.descri1').css('visibility', 'visible');
+        tooltip();
 
     } else {
         shrink_img1 == true;
     }
-    $('#img1').on('touchstart click', function () {
+    $('#container').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
         $('#img1').css('transition', '250ms all');
         $('#img1').css('transform', 'translate(-50%, -50%) scale(0)');
         $('#img1').css('opacity', '0');
         $('#img1').css('visibility', 'hidden');
+        $('.descri1').css('transition', '250ms all');
+        $('.descri1').css('transform', 'translate(-50%, -50%) scale(0)');
+        $('.descri1').css('visibility', 'hidden');
     });
 }
 
