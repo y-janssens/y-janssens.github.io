@@ -640,8 +640,8 @@ hr.htitle {
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 80% !important;
-  max-height: 80% !important;
+  /* height: 80% !important;
+  max-height: 80% !important; */
   margin-top: 1em;
   margin-left: 9em;
   border-radius: 0.8em;
@@ -681,6 +681,29 @@ hr.htitle {
   visibility: hidden;
 }
 
+.descri2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri2:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
 #img3 {
   position: absolute;
   left: 50%;
@@ -698,7 +721,30 @@ hr.htitle {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  visibility: h;
+}
+
+.descri3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
   visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri3:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
 }
 
 #img4 {
@@ -721,6 +767,29 @@ hr.htitle {
   visibility: hidden;
 }
 
+.descri4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri4:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
 #img5 {
   position: absolute;
   left: 50%;
@@ -739,6 +808,29 @@ hr.htitle {
   transform: translate(-50%, -50%) scale(0);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   visibility: hidden;
+}
+
+.descri5 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri5:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
 }
 
 #img6 {
@@ -761,6 +853,29 @@ hr.htitle {
   visibility: hidden;
 }
 
+.descri6 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri6:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
 #img7 {
   position: absolute;
   left: 50%;
@@ -781,6 +896,29 @@ hr.htitle {
   visibility: hidden;
 }
 
+.descri7 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri7:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
 #img8 {
   position: absolute;
   left: 50%;
@@ -799,6 +937,29 @@ hr.htitle {
   transform: translate(-50%, -50%) scale(0);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
   visibility: hidden;
+}
+
+.descri8 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: 1em;
+  margin-left: 9em;
+  border-radius: 0.8em;
+  border: none;
+  background: none;
+  cursor: url(./src/cursor.png), auto !important;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  visibility: hidden;
+  transition: 250ms all;
+}
+
+.descri8:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
 }
 
 #item9 {

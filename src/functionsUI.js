@@ -1,6 +1,6 @@
 window.onload = resize();
 window.onload = scrollbar();
-//indow.setInterval(resize, 10);
+//window.setInterval(resize, 10);
 window.onresize = reportWindowSize;
 window.addEventListener('resize', reportWindowSize);
 
@@ -40,6 +40,11 @@ $('.close').on('touchstart click', function () {
     $('#img1').css('margin-left', '0em');
     $('#img2').css('margin-left', '0em');
     $('#img3').css('margin-left', '0em');
+    $('#img4').css('margin-left', '0em');
+    $('#img5').css('margin-left', '0em');
+    $('#img6').css('margin-left', '0em');
+    $('#img7').css('margin-left', '0em');
+    $('#img8').css('margin-left', '0em');
     $('canvas').css('margin-left', '0em');
     setTimeout("toggleOn()", 300);
 });
@@ -56,6 +61,11 @@ $('.toggle').on('touchstart click', function () {
     $('#img1').css('margin-left', '9em');
     $('#img2').css('margin-left', '9em');
     $('#img3').css('margin-left', '9em');
+    $('#img4').css('margin-left', '9em');
+    $('#img5').css('margin-left', '9em');
+    $('#img6').css('margin-left', '9em');
+    $('#img7').css('margin-left', '9em');
+    $('#img8').css('margin-left', '9em');
     $('canvas').css('margin-left', '9em');
     $('.toggle').css('transform', 'translateX(1.4em) scale(0.8)');
     $('.toggle').css('transition', '500ms ease-in-out');
@@ -205,8 +215,38 @@ function scrollbar() {
 }
 
 function tooltip(){
-    let imgWidth = document.getElementById('img1').offsetWidth;
+    let img1Width = document.getElementById('img1').offsetWidth;
+    let img1Height = document.getElementById('img1').offsetHeight;
+    let img2Width = document.getElementById('img2').offsetWidth;
+    let img2Height = document.getElementById('img2').offsetHeight;
+    let img3Width = document.getElementById('img3').offsetWidth;
+    let img3Height = document.getElementById('img3').offsetHeight;
+    let img4Width = document.getElementById('img4').offsetWidth;
+    let img4Height = document.getElementById('img4').offsetHeight;
+    let img5Width = document.getElementById('img5').offsetWidth;
+    let img5Height = document.getElementById('img5').offsetHeight;
+    let img6Width = document.getElementById('img6').offsetWidth;
+    let img6Height = document.getElementById('img6').offsetHeight;
+    let img7Width = document.getElementById('img7').offsetWidth;
+    let img7Height = document.getElementById('img7').offsetHeight;
+    let img8Width = document.getElementById('img8').offsetWidth;
+    let img8Height = document.getElementById('img8').offsetHeight;
 
-    $('.descri1').css('width', imgWidth);
+    $('.descri1').css('width', img1Width);
+    $('.descri1').css('height', img1Height);
+    $('.descri2').css('width', img2Width);
+    $('.descri2').css('height', img2Height);
+    $('.descri3').css('width', img3Width);
+    $('.descri3').css('height', img3Height);
+    $('.descri4').css('width', img4Width);
+    $('.descri4').css('height', img4Height);
+    $('.descri5').css('width', img5Width);
+    $('.descri5').css('height', img5Height);
+    $('.descri6').css('width', img6Width);
+    $('.descri6').css('height', img6Height);
+    $('.descri7').css('width', img7Width);
+    $('.descri7').css('height', img7Height);
+    $('.descri8').css('width', img8Width);
+    $('.descri8').css('height', img8Height);
 }
 
