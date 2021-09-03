@@ -74,6 +74,10 @@ h1 {
     transition: 500ms all;
 }
 
+h1:hover {
+    letter-spacing: 20px;
+}
+
 .header_desc {
     position: absolute;
     left: 50%;
@@ -105,13 +109,6 @@ h1 {
     transition: 250ms all;
 }
 
-/* .bh:hover {
-    color: #e0dfdae8;
-    box-shadow:inset 0px 0px 0px 1px #e0dfda2b;
-    border-radius: 0.25em;
-    background-color: #303030;
-} */
-
 #user {
     position: absolute;
     top: 1em;
@@ -124,7 +121,7 @@ h1 {
     width: 7em;
     height: 7em;
     border-radius: 50%;
-    transition: 500ms all;
+    transition: 1000ms all;
 }
 
 #pic:hover {
