@@ -1,4 +1,9 @@
 window.onload = init();
+function reportWindowSize() {
+    resize();
+}
+window.onresize = reportWindowSize;
+window.addEventListener('resize', reportWindowSize);
 
 let ui_toggle = true;
 let portfolio_toggle = true;
@@ -16,6 +21,29 @@ let slide7_focus = false;
 let slide8_focus = false;
 let slide9_focus = false;
 let slide10_focus = false;
+
+function resize() {
+    var height = document.getElementById('card1').offsetHeight;
+    var height_l = document.getElementById('card_large1').offsetHeight;
+
+    s_width = height / 1.5;
+    s_width_l = height_l / 1.75;
+
+    $('#card1').css('width', s_width);
+    $('#card2').css('width', s_width);
+    $('#card3').css('width', s_width);
+    $('#card4').css('width', s_width);
+    $('#card5').css('width', s_width);
+    $('#card6').css('width', s_width);
+    $('#card7').css('width', s_width);
+    $('#card8').css('width', s_width);
+    $('#card9').css('width', s_width);
+    $('#card10').css('width', s_width);
+
+    $('#card_large1').css('width', s_width_l);
+    $('#card_large2').css('width', s_width_l);
+    $('#card_large3').css('width', s_width_l);
+}
 
 $(".slide1").click(function () {
     if (slide1_focus == false) {
@@ -122,10 +150,6 @@ function init() {
     $('.slider').css('transform', 'translateY(0%)');
 }
 
-function link() {
-    window.open("https://www.yoann-janssens.fr");
-}
-
 function portfolio() {
     if (portfolio_toggle == true) {
         portfolio_toggle = false;
@@ -138,7 +162,8 @@ function portfolio() {
         $('.slider').css('display', 'initial');
     }
     shutdown_2();
-    shutdown_3()
+    shutdown_3();
+    resize();
 }
 
 function galery() {
@@ -153,7 +178,8 @@ function galery() {
         $('.galery').css('display', 'initial');
     }
     shutdown_1();
-    shutdown_3()
+    shutdown_3();
+    resize();
 }
 
 function real() {
@@ -169,6 +195,7 @@ function real() {
     }
     shutdown_1();
     shutdown_2();
+    resize();
 }
 
 function shutdown_1() {
@@ -190,7 +217,6 @@ function shutdown_3() {
 }
 
 function switch_ui() {
-
     if (ui_toggle == false) {
         ui_toggle = true;
         $('body').css('background-color', '#bbbbbb');
@@ -199,20 +225,20 @@ function switch_ui() {
         $('h1').css('color', '#77787B');
         $('button').css('color', '#77787B');
         $('.header_desc').css('color', '#77787B');
-        $('.card1').css('background-color', '#e8e7e3');
-        $('.card2').css('background-color', '#e8e7e3');
-        $('.card3').css('background-color', '#e8e7e3');
-        $('.card4').css('background-color', '#e8e7e3');
-        $('.card5').css('background-color', '#e8e7e3');
-        $('.card6').css('background-color', '#e8e7e3');
-        $('.card7').css('background-color', '#e8e7e3');
-        $('.card8').css('background-color', '#e8e7e3');
-        $('.card9').css('background-color', '#e8e7e3');
-        $('.card10').css('background-color', '#e8e7e3');
-        $('.card_large1').css('background-color', '#e8e7e3');
-        $('.card_large2').css('background-color', '#e8e7e3');
-        $('.card_large3').css('background-color', '#e8e7e3');
-    } else if (ui_toggle == true){
+        $('#card1').css('background-color', '#e8e7e3');
+        $('#card2').css('background-color', '#e8e7e3');
+        $('#card3').css('background-color', '#e8e7e3');
+        $('#card4').css('background-color', '#e8e7e3');
+        $('#card5').css('background-color', '#e8e7e3');
+        $('#card6').css('background-color', '#e8e7e3');
+        $('#card7').css('background-color', '#e8e7e3');
+        $('#card8').css('background-color', '#e8e7e3');
+        $('#card9').css('background-color', '#e8e7e3');
+        $('#card10').css('background-color', '#e8e7e3');
+        $('#card_large1').css('background-color', '#e8e7e3');
+        $('#card_large2').css('background-color', '#e8e7e3');
+        $('#card_large3').css('background-color', '#e8e7e3');
+    } else if (ui_toggle == true) {
         ui_toggle = false;
         $('body').css('background-color', '#171717');
         $('header').css('background-color', '#252525');
@@ -220,19 +246,24 @@ function switch_ui() {
         $('h1').css('color', '#e0dfda87');
         $('button').css('color', '#e0dfda87');
         $('.header_desc').css('color', '#e0dfda87');
-        $('.card1').css('background-color', '#303030');
-        $('.card2').css('background-color', '#303030');
-        $('.card3').css('background-color', '#303030');
-        $('.card4').css('background-color', '#303030');
-        $('.card5').css('background-color', '#303030');
-        $('.card6').css('background-color', '#303030');
-        $('.card7').css('background-color', '#303030');
-        $('.card8').css('background-color', '#303030');
-        $('.card9').css('background-color', '#303030');
-        $('.card10').css('background-color', '#303030');
-        $('.card_large1').css('background-color', '#303030');
-        $('.card_large2').css('background-color', '#303030');
-        $('.card_large3').css('background-color', '#303030');
+        $('#card1').css('background-color', '#303030');
+        $('#card2').css('background-color', '#303030');
+        $('#card3').css('background-color', '#303030');
+        $('#card4').css('background-color', '#303030');
+        $('#card5').css('background-color', '#303030');
+        $('#card6').css('background-color', '#303030');
+        $('#card7').css('background-color', '#303030');
+        $('#card8').css('background-color', '#303030');
+        $('#card9').css('background-color', '#303030');
+        $('#card10').css('background-color', '#303030');
+        $('#card_large1').css('background-color', '#303030');
+        $('#card_large2').css('background-color', '#303030');
+        $('#card_large3').css('background-color', '#303030');
     }
-
 }
+
+/* $("#contact").click(function () {
+    $("#contact").attr('href',"mailto:yoann.janssens@live.fr");
+//<a href="mailto: yoann.janssens@live.fr">e-mail</a>
+
+}); */

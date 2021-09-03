@@ -9,7 +9,7 @@ Showcase 15 projets :
  🗸 Scorpion - Position 3
  🗸 Tonnelle - Position 4
 - Drakkar - Position 5
-- House - Position 6
+- Totem - Position 6
 - Iso - Position 7
 
 Dev

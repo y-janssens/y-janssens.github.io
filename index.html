@@ -17,20 +17,20 @@
 </head>
 
 <body>
-
     <header>
-        <h1>Titre</h1>
+        <h1>Yoann Janssens</h1>
         <span class="header_desc">
             <p>Infographiste & Webdesigner</p>
         </span>
-        <img src="./src/assets/ui/user1.jpg" alt="" id="pic" onclick="switch_ui()">
+        <div id="user">
+            <img src="./cv/src/assets/ui/u2.jpg" alt="" id="pic" onclick="switch_ui()">
+        </div>
         <div class="header_buttons">
             <button class="bh" onclick=portfolio();>Portfolio</button>
             <button class="bh" onclick=galery();>Galerie</button>
-            <button class="bh" onclick=real();>Real Time</button>
+            <button class="bh" onclick=real();>Real-Time</button>
             <button class="bh">Developpement</button>
         </div>
-
     </header>
 
     <div class="slider">
@@ -48,38 +48,37 @@
 
     <div class="galery">
         <div class="row1">
-            <button class="card1"></button>
-            <button class="card2"></button>
-            <button class="card3"></button>
-            <button class="card4"></button>
-            <button class="card5"></button>
+            <button id="card1"></button>
+            <button id="card2"></button>
+            <button id="card3"></button>
+            <button id="card4"></button>
+            <button id="card5"></button>
         </div>
         <div class="row2">
-            <button class="card6"></button>
-            <button class="card7"></button>
-            <button class="card8"></button>
-            <button class="card9"></button>
-            <button class="card10"></button>
+            <button id="card6"></button>
+            <button id="card7"></button>
+            <button id="card8"></button>
+            <button id="card9"></button>
+            <button id="card10"></button>
         </div>
     </div>
 
     <div class="real">
         <div class="container">
-            <button class="card_large1"></button>
-            <button class="card_large2"></button>
-            <button class="card_large3"></button>
+            <button id="card_large1"></button>
+            <button id="card_large2"></button>
+            <button id="card_large3"></button>
         </div>
     </div>
 
     <footer>
         <div class="footer_buttons">
-            <button class="bf">À propos</button>
-            <button class="bf">Contact</button>
-            <button class="bf">© [ ] 2021 Tous droits réservés</button>
+            <button class="bf"><a href="https://www.yoann-janssens.fr/cv">À propos</a></button>
+            <button class="bf" id="contact"><a href="mailto: yoann.janssens@live.fr">Contact</a></button>
+            <button class="bf" style="pointer-events: none;">© Yoann Janssens 2021 Tous droits réservés</button>
         </div>
     </footer>
 
     <script src="./index.js" defer></script>
 </body>
-
 </html>
