@@ -1,0 +1,238 @@
+.galery {
+    position: absolute;
+    top: 12em;
+    left: 3em;
+    right: 3em;
+    bottom: 5em;
+    display: none;
+}
+
+.row1 {
+    position: absolute;
+    top: -8em;
+    left: 50%;
+    margin-left: 8em;
+    width: 60em;
+    height: 100%;
+    transform: translate(-50%, 0%);
+}
+
+.row2 {
+    position: absolute;
+    top: 9em;
+    left: 50%;
+    margin-left: 8em;
+    width: 60em;
+    height: 100%;
+    transform: translate(-50%, 0%);
+}
+
+.card1:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card1 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card2 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card2:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card3 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card3:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card4 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card4:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card5 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card5:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card6 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card6:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card7 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card7:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card8 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card8:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card9 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card9:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
+
+.card10 {
+    position: relative;
+    top: 50%;
+    width: 10.5em;
+    height: 50%;
+    max-height: 18em;
+    min-height: 18em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    border-radius: 1em;
+    background-color: #e8e7e3;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    transition: 500ms all;
+}
+
+.card10:hover {
+    transform: translate(-50%, -50%) translateY(-5%);
+}
