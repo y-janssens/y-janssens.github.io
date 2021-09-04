@@ -6,6 +6,7 @@ window.onresize = reportWindowSize;
 window.addEventListener('resize', reportWindowSize);
 
 let ui_toggle = true;
+let img_toggle = false;
 let portfolio_toggle = true;
 let galery_toggle = false;
 let real_toggle = false;
@@ -25,7 +26,7 @@ let slide10_focus = false;
 function resize() {
     var height = document.getElementById('card1').offsetHeight;
     var height_l = document.getElementById('card_large1').offsetHeight;
-    var height_d = document.getElementById('card11').offsetHeight;
+    var height_d = document.getElementById('card16').offsetHeight;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
@@ -41,16 +42,21 @@ function resize() {
     $('#card8').css('width', s_width);
     $('#card9').css('width', s_width);
     $('#card10').css('width', s_width);
+    $('#card11').css('width', s_width);
+    $('#card12').css('width', s_width);
+    $('#card13').css('width', s_width);
+    $('#card14').css('width', s_width);
+    $('#card15').css('width', s_width);
 
     $('#card_large1').css('width', s_width_l);
     $('#card_large2').css('width', s_width_l);
     $('#card_large3').css('width', s_width_l);
 
-    $('#card11').css('width', s_width_d);
-    $('#card12').css('width', s_width_d);
-    $('#card13').css('width', s_width_d);
-    $('#card14').css('width', s_width_d);
-    $('#card15').css('width', s_width_d);
+    $('#card16').css('width', s_width_d);
+    $('#card17').css('width', s_width_d);
+    $('#card18').css('width', s_width_d);
+    $('#card19').css('width', s_width_d);
+    $('#card20').css('width', s_width_d);
 }
 
 $(".slide1").click(function () {
@@ -306,8 +312,19 @@ function switch_ui() {
     }
 }
 
-/* $("#contact").click(function () {
-    $("#contact").attr('href',"mailto:yoann.janssens@live.fr");
-//<a href="mailto: yoann.janssens@live.fr">e-mail</a>
+$(".img").click(function (event) {
+    let img_src = event.target.src;
+    if (img_toggle == false) {
+        img_toggle = true;
+        $('#show_img').css('display', 'initial');
+        document.getElementById('show_img').src = img_src;
+    } else {
+        img_toggle = false;
+        $('#show_img').css('display', 'none');
+    }
+});
 
-}); */
+$("#show_img").click(function () {
+    img_toggle = false;
+    $('#show_img').css('display', 'none');
+});

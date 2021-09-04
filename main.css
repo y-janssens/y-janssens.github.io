@@ -124,10 +124,6 @@ h1:hover {
     transition: 1000ms all;
 }
 
-#pic:hover {
-    transform: rotateZ(360deg);
-}
-
 footer {
     position: fixed;
     width: 100%;
