@@ -7,6 +7,7 @@ window.addEventListener('resize', reportWindowSize);
 
 let ui_toggle = true;
 let img_toggle = false;
+let vid_toggle = false;
 let portfolio_toggle = true;
 let galery_toggle = false;
 let real_toggle = false;
@@ -327,4 +328,23 @@ $(".img").click(function (event) {
 $("#show_img").click(function () {
     img_toggle = false;
     $('#show_img').css('display', 'none');
+});
+
+$(".vid").click(function (event) {
+    let vid_src = event.target.src;
+    if (vid_toggle == false) {
+        vid_toggle = true;
+        $('#show_vid').css('display', 'initial');
+        document.getElementById('show_vid').src = vid_src;
+        document.getElementById('show_vid').play();
+    } else {
+        vid_toggle = false;
+        $('#show_vid').css('display', 'none');
+    }
+});
+
+$("#show_vid").click(function () {
+    vid_toggle = false;
+    //document.getElementById('show_vid').stop();
+    $('#show_vid').css('display', 'none');
 });
