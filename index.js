@@ -9,6 +9,7 @@ let ui_toggle = true;
 let img_toggle = false;
 let vid_toggle = false;
 let battle_toggle = false;
+let clock_toggle = false;
 let portfolio_toggle = true;
 let galery_toggle = false;
 let real_toggle = false;
@@ -31,14 +32,15 @@ function resize() {
     let height_d = document.getElementById('card16').offsetHeight;
     let height_if = document.getElementById('container').offsetHeight;
 
-    let pos_top = document.getElementById('battler').offsetTop;
-    let pos_left = document.getElementById('battler').offsetLeft;
+    let pos_top1 = document.getElementById('battler').offsetTop;
+    let pos_left1 = document.getElementById('battler').offsetLeft;
+    top1 = pos_top1 / 100;
+    left1 = pos_left1 + 250;
 
-    top = pos_top /100 + "em";
-    left = pos_left + 250;
-
-    $('.clear').css('top', top);
-    $('.clear').css('left', left);
+    let pos_top2 = document.getElementById('clock').offsetTop;
+    let pos_left2 = document.getElementById('clock').offsetLeft;
+    top2 = pos_top2 / 100;
+    left2 = pos_left2 + 250;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
@@ -71,7 +73,12 @@ function resize() {
     $('#card19').css('width', s_width_d);
     $('#card20').css('width', s_width_d);
 
+    $('#clear_1').css('top', top1);
+    $('#clear_1').css('left', left1);
+    $('#clear_2').css('top', top2);
+    $('#clear_2').css('left', left2);
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
+    $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
 }
 
 $(".slide1").click(function () {
@@ -375,18 +382,37 @@ $("#show_vid").click(function () {
 $("#card18").click(function () {
     if (battle_toggle == true) {
         battle_toggle = false;
-    $('#battler').css('display', 'visible');
-    $('#clear1').css('display', 'visible');
+        $('#battler').css('display', 'visible');
+        $('#clear_1').css('display', 'visible');
     } else {
         battle_toggle = true;
         $('#battler').css('display', 'initial');
-        $('#clear1').css('display', 'initial');
+        $('#clear_1').css('display', 'initial');
     }
     resize();
 });
 
-$("#clear1").click(function () {
+$("#clear_1").click(function () {
     battle_toggle = false;
     $('#battler').css('display', 'none');
-    $('#clear1').css('display', 'none');
+    $('#clear_1').css('display', 'none');
+});
+
+$("#card19").click(function () {
+    if (clock_toggle == true) {
+        clock_toggle = false;
+        $('#clock').css('display', 'visible');
+        $('#clear_2').css('display', 'visible');
+    } else {
+        clock_toggle = true;
+        $('#clock').css('display', 'initial');
+        $('#clear_2').css('display', 'initial');
+    }
+    resize();
+});
+
+$("#clear_2").click(function () {
+    clock_toggle = false;
+    $('#clock').css('display', 'none');
+    $('#clear_2').css('display', 'none');
 });

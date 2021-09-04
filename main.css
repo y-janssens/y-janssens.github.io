@@ -36,21 +36,12 @@ button {
     cursor: pointer;
 }
 
-hr {
-    margin: -0.1em;
-    opacity: 0.25;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 1em;
-    transform: scaleX(2);
-}
-
 .bf {
     width: auto;
-    font-size: 0.6rem;
-    padding-left: 3em;
-    padding-right: 3em;
+    font-family: 'Rokkitt', serif;
+    font-size: 0.65rem;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
 }
 
 header {
@@ -66,7 +57,7 @@ header {
 h1 {
     position: absolute;
     left: 50%;
-    width: auto;
+    width: auto;    
     transform: translate(-50%, 0%);
     color: #77787B;
     letter-spacing: 0.4em;
@@ -81,11 +72,13 @@ h1:hover {
 .header_desc {
     position: absolute;
     left: 50%;
-    top: 5em;
+    top: 4.5em;
     color: #77787B;
     font-weight: 400;
+    font-style: italic;
     font-size: 0.8rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.35em;
+    font-family: 'Rokkitt', serif;
     transform: translate(-50%, 0%);
     transition: 500ms all;
 }
@@ -102,7 +95,8 @@ h1:hover {
     width: auto;
     font-weight: 400;
     letter-spacing: 0.3em;
-    font-size: 0.8rem;
+    font-family: 'Rokkitt', serif;
+    font-size: 0.85rem;
     line-height: 1.9em;
     padding-left: 3em;
     padding-right: 3em;
@@ -139,4 +133,13 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 7px;    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(120, 120, 120, 0.5);    
+    border-radius: 0.2em;    
 }
