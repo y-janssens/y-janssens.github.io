@@ -12,7 +12,7 @@
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transform: translateY(-125%);
     overflow: hidden;
-    display: none;
+    display: visible;
 }
 
 .slide1, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7, .slide8, .slide9, .slide10 {
