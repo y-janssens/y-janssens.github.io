@@ -18,7 +18,7 @@
 #card_large1 {
     position: absolute;
     width: 17%;
-    height: 80%;
+    height: 60%;
     top: 50%;
     left: 10%;
      
@@ -37,7 +37,7 @@
 #card_large2 {
     position: absolute;
     width: 17%;
-    height: 80%;
+    height: 60%;
     top: 50%;
     left: 50%;
      
@@ -56,7 +56,7 @@
 #card_large3 {
     position: absolute;
     width: 17%;
-    height: 80%;
+    height: 60%;
     top: 50%;
     right: 10%;     
     margin-bottom: 3em;

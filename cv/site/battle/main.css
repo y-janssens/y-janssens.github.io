@@ -3,8 +3,8 @@ body {
   width: 670px;
   height: 1120px;
   margin: 0 auto !important;
-  background-color: transparent;
-  background-color: #303030;
+  background-color: transparent !important;
+  
 }
 
 button {

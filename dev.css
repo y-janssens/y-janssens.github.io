@@ -15,6 +15,16 @@
     transform: translate(-50%, -50%);
 }
 
+.img2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    border-radius: 1em;
+    transform: translate(-50%, -42%) scale(1.2);  
+}
+
 #show_vid {
     position: absolute;
     top: 50%;
@@ -39,11 +49,30 @@
     transform: translate(-50%, -50%) scale(1.1);  
 }
 
+#container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+#battler {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1em;
+    transform: translate(-50%, -50%) scale(0.64);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    display: none;
+    pointer-events: all !important;
+}
+
+
 #card16 {
     position: absolute;
     top: 50%;
     left: 12%;
-    width: 12%;
+    width: 14%;
     height: 75%;
     margin-top: 1em;
     margin-bottom: 3em;
@@ -63,7 +92,7 @@
     position: absolute;
     top: 50%;
     left: 31%;
-    width: 12%;
+    width: 14%;
     height: 75%;
     margin-top: 1em;   
     margin-bottom: 3em;
@@ -82,7 +111,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 12%;
+    width: 14%;
     height: 75%;
     margin-top: 1em;       
     margin-bottom: 3em;
@@ -91,6 +120,7 @@
     transform: translate(-50%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
+    overflow: hidden;
 }
 
 #card18:hover {
@@ -101,7 +131,7 @@
     position: absolute;
     top: 50%;
     left: 69%;
-    width: 12%;
+    width: 14%;
     height: 75%;
     margin-top: 1em;       
     margin-bottom: 3em;
@@ -120,7 +150,7 @@
     position: absolute;
     top: 50%;
     left: 88%;
-    width: 12%;
+    width: 14%;
     height: 75%;
     margin-top: 1em;       
     margin-bottom: 3em;

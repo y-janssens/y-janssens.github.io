@@ -8,6 +8,7 @@ window.addEventListener('resize', reportWindowSize);
 let ui_toggle = true;
 let img_toggle = false;
 let vid_toggle = false;
+let battle_toggle = false;
 let portfolio_toggle = true;
 let galery_toggle = false;
 let real_toggle = false;
@@ -28,10 +29,12 @@ function resize() {
     var height = document.getElementById('card1').offsetHeight;
     var height_l = document.getElementById('card_large1').offsetHeight;
     var height_d = document.getElementById('card16').offsetHeight;
+    var height_if = document.getElementById('container').offsetHeight;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
+    s_width_if = height_if / 1250;
 
     $('#card1').css('width', s_width);
     $('#card2').css('width', s_width);
@@ -58,6 +61,8 @@ function resize() {
     $('#card18').css('width', s_width_d);
     $('#card19').css('width', s_width_d);
     $('#card20').css('width', s_width_d);
+
+    $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
 }
 
 $(".slide1").click(function () {
@@ -345,6 +350,21 @@ $(".vid").click(function (event) {
 
 $("#show_vid").click(function () {
     vid_toggle = false;
-    //document.getElementById('show_vid').stop();
     $('#show_vid').css('display', 'none');
+});
+
+$("#card18").click(function () {
+    if (battle_toggle == true) {
+        battle_toggle = false;
+    $('#battler').css('display', 'visible');
+    } else {
+        battle_toggle = true;
+        $('#battler').css('display', 'initial');
+    }
+});
+
+$("#battler").click(function () {
+/*     battle_toggle = false;
+    $('#battler').css('display', 'initial'); */
+    console.log("shut");
 });
