@@ -26,10 +26,19 @@ let slide9_focus = false;
 let slide10_focus = false;
 
 function resize() {
-    var height = document.getElementById('card1').offsetHeight;
-    var height_l = document.getElementById('card_large1').offsetHeight;
-    var height_d = document.getElementById('card16').offsetHeight;
-    var height_if = document.getElementById('container').offsetHeight;
+    let height = document.getElementById('card1').offsetHeight;
+    let height_l = document.getElementById('card_large1').offsetHeight;
+    let height_d = document.getElementById('card16').offsetHeight;
+    let height_if = document.getElementById('container').offsetHeight;
+
+    let pos_top = document.getElementById('battler').offsetTop;
+    let pos_left = document.getElementById('battler').offsetLeft;
+
+    top = pos_top /100 + "em";
+    left = pos_left + 250;
+
+    $('.clear').css('top', top);
+    $('.clear').css('left', left);
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
@@ -289,6 +298,11 @@ function switch_ui() {
         $('#card13').css('background-color', '#e8e7e3');
         $('#card14').css('background-color', '#e8e7e3');
         $('#card15').css('background-color', '#e8e7e3');
+        $('#card16').css('background-color', '#e8e7e3');
+        $('#card17').css('background-color', '#e8e7e3');
+        $('#card18').css('background-color', '#e8e7e3');
+        $('#card19').css('background-color', '#e8e7e3');
+        $('#card20').css('background-color', '#e8e7e3');
     } else if (ui_toggle == true) {
         ui_toggle = false;
         $('body').css('background-color', '#171717');
@@ -315,6 +329,11 @@ function switch_ui() {
         $('#card13').css('background-color', '#303030');
         $('#card14').css('background-color', '#303030');
         $('#card15').css('background-color', '#303030');
+        $('#card16').css('background-color', '#303030');
+        $('#card17').css('background-color', '#303030');
+        $('#card18').css('background-color', '#303030');
+        $('#card19').css('background-color', '#303030');
+        $('#card20').css('background-color', '#303030');
     }
 }
 
@@ -357,14 +376,17 @@ $("#card18").click(function () {
     if (battle_toggle == true) {
         battle_toggle = false;
     $('#battler').css('display', 'visible');
+    $('#clear1').css('display', 'visible');
     } else {
         battle_toggle = true;
         $('#battler').css('display', 'initial');
+        $('#clear1').css('display', 'initial');
     }
+    resize();
 });
 
-$("#battler").click(function () {
-/*     battle_toggle = false;
-    $('#battler').css('display', 'initial'); */
-    console.log("shut");
+$("#clear1").click(function () {
+    battle_toggle = false;
+    $('#battler').css('display', 'none');
+    $('#clear1').css('display', 'none');
 });

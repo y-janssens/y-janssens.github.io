@@ -3,7 +3,7 @@
     top: 9em;
     bottom: 2em;
     width: 100%;
-    display: none;
+    display: visible;
 }
 
 .row4 {
@@ -22,7 +22,7 @@
     width: auto;
     height: 100%;
     border-radius: 1em;
-    transform: translate(-50%, -42%) scale(1.2);  
+    transform: translate(-50%, -43%) scale(1.2);  
 }
 
 #show_vid {
@@ -54,6 +54,23 @@
     height: 100%;
     width: 100%;
     pointer-events: none;
+}
+
+#clear1 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #b84040;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 30 !important;
+    display: none;
+    cursor: pointer;
+    pointer-events: all;
 }
 
 #battler {
@@ -101,6 +118,7 @@
     transform: translate(-50%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
+    overflow: hidden;
 }
 
 #card17:hover {
