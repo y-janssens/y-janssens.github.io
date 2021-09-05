@@ -183,7 +183,7 @@ $(".slide10").click(function () {
 
 function init() {
     $('.slider').css('transition', '1500ms all');
-    $('.slider').css('transform', 'translateY(0%)');
+    $('.slider').css('transform', 'translateY(-50%)');
 }
 
 function portfolio() {
