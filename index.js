@@ -1,4 +1,5 @@
 window.onload = init();
+window.onload = texture();
 function reportWindowSize() {
     resize();
 }
@@ -191,11 +192,19 @@ function portfolio() {
         portfolio_toggle = false;
         $('.slider').css('transition', '500ms all');
         $('.slider').css('display', 'none');
+        $('#bh1').css('transition', '250ms all');
+        $('#bh1').css('background-color', 'transparent');
+        $('#bh1').css('box-shadow', 'none');
+        $('#bh1').css('transform', 'translateY(0px) scaleY(1.1)');
 
     } else if (portfolio_toggle == false) {
         portfolio_toggle = true;
         $('.slider').css('transition', '500ms all');
         $('.slider').css('display', 'initial');
+        $('#bh1').css('transition', '250ms all');
+        $('#bh1').css('background-color', '#DCDBD7');
+        $('#bh1').css('box-shadow', 'inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05)');
+        $('#bh1').css('transform', 'translateY(-3px) scaleY(1.1)');
     }
     shutdown_2();
     shutdown_3();
@@ -208,11 +217,19 @@ function galery() {
         galery_toggle = false;
         $('.galery').css('transition', '500ms all');
         $('.galery').css('display', 'none');
+        $('#bh2').css('transition', '250ms all');
+        $('#bh2').css('background-color', 'transparent');
+        $('#bh2').css('box-shadow', 'none');
+        $('#bh2').css('transform', 'translateY(0px) scaleY(1.1)');
 
     } else if (galery_toggle == false) {
         galery_toggle = true;
         $('.galery').css('transition', '500ms all');
         $('.galery').css('display', 'initial');
+        $('#bh2').css('transition', '250ms all');
+        $('#bh2').css('background-color', '#DCDBD7');
+        $('#bh2').css('box-shadow', 'inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05)');
+        $('#bh2').css('transform', 'translateY(-3px) scaleY(1.1)');
     }
     shutdown_1();
     shutdown_3();
@@ -225,11 +242,19 @@ function real() {
         real_toggle = false;
         $('.real').css('transition', '500ms all');
         $('.real').css('display', 'none');
+        $('#bh3').css('transition', '250ms all');
+        $('#bh3').css('background-color', 'transparent');
+        $('#bh3').css('box-shadow', 'none');
+        $('#bh3').css('transform', 'translateY(0px) scaleY(1.1)');
 
     } else if (real_toggle == false) {
         real_toggle = true;
         $('.real').css('transition', '500ms all');
         $('.real').css('display', 'initial');
+        $('#bh3').css('transition', '250ms all');
+        $('#bh3').css('background-color', '#DCDBD7');
+        $('#bh3').css('box-shadow', 'inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05)');
+        $('#bh3').css('transform', 'translateY(-3px) scaleY(1.1)');
     }
     shutdown_1();
     shutdown_2();
@@ -242,11 +267,19 @@ function dev() {
         dev_toggle = false;
         $('.dev').css('transition', '500ms all');
         $('.dev').css('display', 'none');
+        $('#bh4').css('transition', '250ms all');
+        $('#bh4').css('background-color', 'transparent');
+        $('#bh4').css('box-shadow', 'none');
+        $('#bh4').css('transform', 'translateY(0px) scaleY(1.1)');
 
     } else if (dev_toggle == false) {
         dev_toggle = true;
         $('.dev').css('transition', '500ms all');
         $('.dev').css('display', 'initial');
+        $('#bh4').css('transition', '250ms all');
+        $('#bh4').css('background-color', '#DCDBD7');
+        $('#bh4').css('box-shadow', 'inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05)');
+        $('#bh4').css('transform', 'translateY(-3px) scaleY(1.1)');
     }
     shutdown_1();
     shutdown_2();
@@ -258,24 +291,36 @@ function shutdown_1() {
     portfolio_toggle = false;
     $('.slider').css('transition', '500ms all');
     $('.slider').css('display', 'none');
+    $('#bh1').css('background-color', 'transparent');
+    $('#bh1').css('box-shadow', 'none');
+    $('#bh1').css('transform', 'translateY(0px) scaleY(1.1)');
 }
 
 function shutdown_2() {
     galery_toggle = false;
     $('.galery').css('transition', '500ms all');
     $('.galery').css('display', 'none');
+    $('#bh2').css('background-color', 'transparent');
+    $('#bh2').css('box-shadow', 'none');
+    $('#bh2').css('transform', 'translateY(0px) scaleY(1.1)');
 }
 
 function shutdown_3() {
     real_toggle = false;
     $('.real').css('transition', '500ms all');
     $('.real').css('display', 'none');
+    $('#bh3').css('background-color', 'transparent');
+    $('#bh3').css('box-shadow', 'none');
+    $('#bh3').css('transform', 'translateY(0px) scaleY(1.1)');
 }
 
 function shutdown_4() {
     dev_toggle = false;
     $('.dev').css('transition', '500ms all');
     $('.dev').css('display', 'none');
+    $('#bh4').css('background-color', 'transparent');
+    $('#bh4').css('box-shadow', 'none');
+    $('#bh4').css('transform', 'translateY(0px) scaleY(1.1)');
 }
 
 function switch_ui() {
@@ -416,3 +461,30 @@ $("#clear_2").click(function () {
     $('#clock').css('display', 'none');
     $('#clear_2').css('display', 'none');
 });
+
+function texture() {
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+    document.getElementById("texture").innerHTML = lorem.repeat(20);
+
+    function randomXToY(minVal, maxVal, floatVal) {
+        var randVal = minVal + (Math.random() * (maxVal - minVal));
+        return typeof floatVal == 'undefined' ? Math.round(randVal) : randVal.toFixed(floatVal);
+    }
+
+    var exploded = $('#texture').text().split('');
+    var count = 100;
+    var rdmltr = [];
+
+    while (count--) {
+        rdmltr[count] = randomXToY(0, exploded.length);
+        while (exploded[rdmltr[count]] == ' ') {
+            rdmltr[count] = randomXToY(0, exploded.length);
+        }
+    }
+    while (count++ < 100) {
+        exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
+    }
+
+    $('#texture').html(exploded.join(''));
+}

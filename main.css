@@ -59,7 +59,7 @@ header {
 h1 {
     position: absolute;
     left: 50%;
-    width: auto;    
+    width: auto;
     color: rgba(120, 120, 120, 0.9);
     letter-spacing: 0.5em;
     font-family: 'Cinzel', serif;
@@ -72,7 +72,7 @@ h1 {
 hr {
     position: relative;
     top: -0.55em;
-    opacity: 0.35;
+    opacity: 0.75;
     margin-right: 0.75em;
     color: inherit;
     border-bottom: none;
@@ -116,13 +116,19 @@ hr {
     padding-right: 2em;
     margin-left: 1em;
     margin-right: 1em;
-    border-radius: 0.2em;
+    border-radius: 0.1em;
     transition: 250ms all;
     transform: scaleY(1.1);
 }
 
-.bh:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+#bh1 {
+    background-color: #DCDBD7;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px) scaleY(1.1);
+}
+
+/* .bh:hover {
+    background-color: #DCDBD7;
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
     transform: translateY(-3px) scaleY(1.1);
 }
@@ -130,7 +136,7 @@ hr {
 .bh:active {
     background-color: rgba(0, 0, 0, 0.15);
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
-}
+} */
 
 #user {
     position: absolute;
@@ -144,6 +150,28 @@ hr {
     width: 7em;
     height: 7em;
     border-radius: 50%;
+    border: 0.1em solid rgba(120, 120, 120, 0.25);
+}
+
+#texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(120, 120, 120, 0.1);
+    letter-spacing: 0.2em;
+    font-size: 0.45rem;
+    text-align: justify;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.boldify {
+    font-size: 0.55rem;
+    font-weight: 900;
 }
 
 footer {
