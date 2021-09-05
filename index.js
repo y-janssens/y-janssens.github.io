@@ -486,5 +486,9 @@ function texture() {
         exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
     }
 
+    while (count++ < 100) {
+        exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
+    }
+
     $('#texture').html(exploded.join(''));
 }

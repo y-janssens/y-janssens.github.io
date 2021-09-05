@@ -14,7 +14,7 @@ body {
     margin: 0 !important;
     border: none;
     outline: none;
-    background-color: #bbbbbb;
+    background-color: #dcdcdc;
     font-family: 'Share Tech Mono', monospace;
     color: #E0DFDA;
     overflow: hidden;
@@ -142,7 +142,7 @@ hr {
     position: absolute;
     top: 1em;
     right: 1em;
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     z-index: 10;
 }
 
@@ -150,7 +150,20 @@ hr {
     width: 7em;
     height: 7em;
     border-radius: 50%;
-    border: 0.1em solid rgba(120, 120, 120, 0.25);
+}
+
+#body {
+    position: absolute;
+    top: 9em;
+    bottom: 2em;
+    width: 100%;
+    color: rgba(120, 120, 120, 0.1);
+    letter-spacing: 0.2em;
+    font-size: 0.45rem;
+    text-align: justify;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    pointer-events: none;
 }
 
 #texture {
@@ -179,7 +192,7 @@ footer {
     width: 100%;
     height: 2em;
     bottom: 0;
-    border-top: 0.02em solid rgba(120, 120, 120, 0.75);
+    border-top: 0.02em solid rgba(120, 120, 120, 0.25);
     background-color: #e8e7e3;
     transition: 500ms all;
 }
