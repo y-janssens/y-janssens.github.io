@@ -27,10 +27,21 @@
     transform: translate(0%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
+    overflow: hidden;
 }
 
 #card_large1:hover {
     transform: translate(0%, -55%);
+}
+
+.imgr1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    border-radius: 1em;
+    transform: translate(-80%, -51%) scale(1.1);
 }
 
 #card_large2 {
@@ -45,10 +56,21 @@
     transform: translate(-50%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
+    overflow: hidden;
 }
 
 #card_large2:hover {
     transform: translate(-50%, -55%);
+}
+
+.imgr2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    border-radius: 1em;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 #card_large3 {
