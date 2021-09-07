@@ -69,6 +69,16 @@ h1 {
     transition: 500ms all;
 }
 
+h2 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: rgba(120, 120, 120, 0.8);
+    font-family: 'Rokkitt', serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 hr {
     position: relative;
     top: -0.55em;
@@ -79,6 +89,19 @@ hr {
     border-left: none;
     border-right: none;
     transform: scaleX(1.15) scaleY(2);
+}
+
+hr.hr2 {
+    position: absolute;
+    top: 1.75em;
+    left: 50%;
+    width: 60%;
+    opacity: 0.75;
+    color: inherit;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    transform: translate(-50%, 0%);
 }
 
 .header_desc {
@@ -185,6 +208,161 @@ hr {
 .boldify {
     font-size: 0.55rem;
     font-weight: 900;
+}
+
+#contact_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20em;
+    height: 25em;
+    margin-top: 3.5em;
+    background-color: #e8e7e3;
+    border-radius: 0.5em;
+    line-height: 0.9em;
+    transform: translate(-50%, -50%) scale(1.15);
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+    transition: 500ms all;
+    overflow: hidden;
+    display: none;
+}
+
+.infos {
+    position: relative;
+    top: 4.75em;
+    left: 3.75em;
+    color: rgba(120, 120, 120, 0.85);
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+}
+
+#form {
+    position: absolute;
+    top: 8em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#c_name {
+    position: relative;
+    height: 2.75em;
+    width: 150%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    border-radius: 0.25em;
+    padding: 0.75em;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+    color: rgba(120, 120, 120, 0.75);
+    border: none;
+    outline: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+#c_mail {
+    position: relative;
+    height: 2.75em;
+    width: 150%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    border-radius: 0.25em;
+    padding: 0.75em;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+    color: rgba(120, 120, 120, 0.75);
+    border: none;
+    outline: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+#c_msg {
+    position: relative;
+    height: 8.5em;
+    width: 150%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    border-radius: 0.25em;
+    padding: 0.75em;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+    color: rgba(120, 120, 120, 0.75);
+    border: none;
+    outline: none;
+    resize: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+#submit {
+    position: relative;
+    height: 2.75em;
+    width: 150%;
+    left: 50%;
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+    background-color: #DCDBD7;
+    border: none;
+    border-radius: 0.25em;
+    color: rgba(120, 120, 120, 0.85);
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, 0%);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+    transition: 750ms all;
+}
+
+#submit:hover {
+    filter: brightness(0.95) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+}
+
+#c_msg::placeholder {
+    position: absolute;
+    top: 1.5em;
+    margin-left: 0.25em;
+    color: rgba(120, 120, 120, 0.5);
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
+}
+
+::placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin-left: 0.25em;
+    color: rgba(120, 120, 120, 0.5);
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    line-height: 10px;
+    font-family: 'Rokkitt', serif;
 }
 
 footer {

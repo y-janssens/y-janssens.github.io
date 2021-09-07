@@ -15,6 +15,7 @@ let portfolio_toggle = true;
 let galery_toggle = false;
 let real_toggle = false;
 let dev_toggle = false;
+let contact_toggle = true;
 
 let slide1_focus = false;
 let slide2_focus = false;
@@ -323,7 +324,19 @@ function shutdown_4() {
     $('#bh4').css('transform', 'translateY(0px) scaleY(1.1)');
 }
 
-function switch_ui() {
+function contact() {
+    if (contact_toggle) {
+        contact_toggle = false;
+        $('#contact_form').css('display', 'initial');
+        console.log('on');
+    } else if (contact_toggle == false) {
+        contact_toggle = true;
+        $('#contact_form').css('display', 'none');
+        console.log('off');
+    }
+}
+
+/* function switch_ui() {
     if (ui_toggle == false) {
         ui_toggle = true;
         $('body').css('background-color', '#bbbbbb');
@@ -387,7 +400,7 @@ function switch_ui() {
         $('#card19').css('background-color', '#303030');
         $('#card20').css('background-color', '#303030');
     }
-}
+} */
 
 $(".img").click(function (event) {
     let img_src = event.target.src;
@@ -499,4 +512,32 @@ function texture() {
     }
 
     $('#texture').html(exploded.join(''));
+    //$('#contact_form').html(exploded.join(''));
+}
+
+function submit() {
+    form_name = document.getElementById('c_name').value;
+    form_mail = document.getElementById('c_mail').value;
+    form_msg = document.getElementById('c_msg').value;
+    send_msg = "Message envoyé!"
+    document.getElementById("c_name").value = "";
+    document.getElementById("c_mail").value = "";
+    document.getElementById("c_msg").value = "";
+
+    Email.send({
+        SecureToken: "ec9d1734-5c56-46be-a914-35fa6286fa1d",
+        To: 'yoann.janssens@live.fr',
+        From: "skorpiostyle@gmail.com",
+        Subject: "Un nouveau message de " + form_name,
+        Body: "Un nouveau message de " + form_name + " vient d'arriver." + "</br>" +
+            "E-mail: " + form_mail + "</br>" + "</br>" +
+            form_msg
+    }).then(
+        $('#submit').css('color', '#4CC417'),
+        document.getElementById('submit').value = "Message envoyé!",
+        setTimeout(function () {
+            $('#submit').css('color', 'rgba(120, 120, 120, 0.85)');
+            document.getElementById('submit').value = "Envoyer";
+        }, 2000)
+    );
 }

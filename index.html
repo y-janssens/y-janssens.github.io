@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="./real.css">
     <link rel="stylesheet" href="./dev.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Rokkitt:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Rokkitt:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="./src/jquery-3.6.0.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Yoann Janssens<hr></h1>
+        <h1>Yoann Janssens
+            <hr>
+        </h1>
         <span class="header_desc">
             <p>Infographiste & Webdesigner</p>
         </span>
@@ -33,7 +38,7 @@
         <div id="texture"></div>
     </header>
 
-    <div class="slider">        
+    <div class="slider">
         <button class="slide1"><img id="img1" src="./src/assets/textures/img1.jpg"></button>
         <button class="slide2"><img id="img2" src="./src/assets/textures/img2.jpg"></button>
         <button class="slide3"><img id="img3" src="./src/assets/textures/img3.jpg"></button>
@@ -61,13 +66,13 @@
             <button id="card9"><img class="img" src="./cv/src/assets/ui/showcase/img9.jpg"></button>
             <button id="card10"><img class="img" src="./cv/src/assets/ui/showcase/img10.jpg"></button>
         </div>
-        <div class="row3">
+        <!-- <div class="row3">
             <button id="card11"></button>
             <button id="card12"></button>
             <button id="card13"></button>
             <button id="card14"></button>
             <button id="card15"></button>
-        </div>
+        </div> -->
         <img id="show_img" src="" />
     </div>
 
@@ -99,10 +104,25 @@
         </div>
     </div>
 
+    <div id="contact_form">
+        <h2>Me contacter</h2>
+        <hr class="hr2">
+        <span class="infos">Yoann Janssens</span></br>
+        <span class="infos">4 Avenue des Bleuets</br>
+            60110 Méru</span></br>
+        <span class="infos"><a href="tel:0621414125">06.21.41.41.25</a></span></br>
+        <div id="form">
+            <input type="text" id="c_name" placeholder="Nom">
+            <input type="text" id="c_mail" placeholder="E-mail">
+            <textarea id="c_msg" placeholder="Message"></textarea>
+            <input type="submit" id="submit" value="Envoyer" onclick="submit()">
+        </div>
+    </div>
+
     <footer>
         <div class="footer_buttons">
             <button class="bf"><a href="https://www.yoann-janssens.fr/cv">À propos</a></button>
-            <button class="bf" id="contact"><a href="mailto: yoann.janssens@live.fr">Contact</a></button>
+            <button class="bf" id="contact" onclick="contact()">Contact</button>
             <button class="bf" style="pointer-events: none;">© Yoann Janssens 2021 Tous droits réservés</button>
         </div>
     </footer>
