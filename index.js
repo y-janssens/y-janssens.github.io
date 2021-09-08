@@ -328,95 +328,36 @@ function contact() {
     if (contact_toggle) {
         contact_toggle = false;
         $('#contact_form').css('display', 'initial');
-        console.log('on');
+        $('#clear_3').css('display', 'initial');
     } else if (contact_toggle == false) {
         contact_toggle = true;
         $('#contact_form').css('display', 'none');
-        console.log('off');
+        $('#clear_3').css('display', 'none');
     }
 }
 
-/* function switch_ui() {
-    if (ui_toggle == false) {
-        ui_toggle = true;
-        $('body').css('background-color', '#bbbbbb');
-        $('header').css('background-color', '#e8e7e3');
-        $('footer').css('background-color', '#e8e7e3');
-        $('h1').css('color', '#77787B');
-        $('button').css('color', '#77787B');
-        $('.header_desc').css('color', '#77787B');
-        $('#card1').css('background-color', '#e8e7e3');
-        $('#card2').css('background-color', '#e8e7e3');
-        $('#card3').css('background-color', '#e8e7e3');
-        $('#card4').css('background-color', '#e8e7e3');
-        $('#card5').css('background-color', '#e8e7e3');
-        $('#card6').css('background-color', '#e8e7e3');
-        $('#card7').css('background-color', '#e8e7e3');
-        $('#card8').css('background-color', '#e8e7e3');
-        $('#card9').css('background-color', '#e8e7e3');
-        $('#card10').css('background-color', '#e8e7e3');
-        $('#card_large1').css('background-color', '#e8e7e3');
-        $('#card_large2').css('background-color', '#e8e7e3');
-        $('#card_large3').css('background-color', '#e8e7e3');
-        $('#card11').css('background-color', '#e8e7e3');
-        $('#card12').css('background-color', '#e8e7e3');
-        $('#card13').css('background-color', '#e8e7e3');
-        $('#card14').css('background-color', '#e8e7e3');
-        $('#card15').css('background-color', '#e8e7e3');
-        $('#card16').css('background-color', '#e8e7e3');
-        $('#card17').css('background-color', '#e8e7e3');
-        $('#card18').css('background-color', '#e8e7e3');
-        $('#card19').css('background-color', '#e8e7e3');
-        $('#card20').css('background-color', '#e8e7e3');
-    } else if (ui_toggle == true) {
-        ui_toggle = false;
-        $('body').css('background-color', '#171717');
-        $('header').css('background-color', '#252525');
-        $('footer').css('background-color', '#252525');
-        $('h1').css('color', '#e0dfda87');
-        $('button').css('color', '#e0dfda87');
-        $('.header_desc').css('color', '#e0dfda87');
-        $('#card1').css('background-color', '#303030');
-        $('#card2').css('background-color', '#303030');
-        $('#card3').css('background-color', '#303030');
-        $('#card4').css('background-color', '#303030');
-        $('#card5').css('background-color', '#303030');
-        $('#card6').css('background-color', '#303030');
-        $('#card7').css('background-color', '#303030');
-        $('#card8').css('background-color', '#303030');
-        $('#card9').css('background-color', '#303030');
-        $('#card10').css('background-color', '#303030');
-        $('#card_large1').css('background-color', '#303030');
-        $('#card_large2').css('background-color', '#303030');
-        $('#card_large3').css('background-color', '#303030');
-        $('#card11').css('background-color', '#303030');
-        $('#card12').css('background-color', '#303030');
-        $('#card13').css('background-color', '#303030');
-        $('#card14').css('background-color', '#303030');
-        $('#card15').css('background-color', '#303030');
-        $('#card16').css('background-color', '#303030');
-        $('#card17').css('background-color', '#303030');
-        $('#card18').css('background-color', '#303030');
-        $('#card19').css('background-color', '#303030');
-        $('#card20').css('background-color', '#303030');
-    }
-} */
+$("#clear_3").click(function () {
+    contact_toggle = true;
+    $('#contact_form').css('display', 'none');
+    $('#clear_3').css('display', 'none');
+});
 
 $(".img").click(function (event) {
     let img_src = event.target.src;
     if (img_toggle == false) {
         img_toggle = true;
         $('#show_img').css('display', 'initial');
+        $('.g_container').css('display', 'initial');
+        $('.g_container').css('pointer-events', 'all');
         document.getElementById('show_img').src = img_src;
-    } else {
-        img_toggle = false;
-        $('#show_img').css('display', 'none');
-    }
+    } 
 });
 
-$("#show_img").click(function () {
+$(".g_container").click(function () {
     img_toggle = false;
     $('#show_img').css('display', 'none');
+    $('.g_container').css('display', 'none');
+    $('.g_container').css('pointer-events', 'none');
 });
 
 $(".vid").click(function (event) {
@@ -507,10 +448,6 @@ function texture() {
         exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
     }
 
-    while (count++ < 100) {
-        exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
-    }
-
     $('#texture').html(exploded.join(''));
     //$('#contact_form').html(exploded.join(''));
 }
@@ -526,13 +463,12 @@ function submit() {
 
     if (form_name !== "" || form_mail !== "" || form_msg !== "") {
         Email.send({
-            SecureToken: "ec9d1734-5c56-46be-a914-35fa6286fa1d",
+            SecureToken: "8b7345b9-8abe-4224-a3c6-6b6b24c3d059",
             To: 'y.janssens@protonmail.com',
             From: "skorpiostyle@gmail.com",
             Subject: "Un nouveau message de " + form_name,
             Body: "Un nouveau message de " + form_name + " vient d'arriver." + "</br>" +
-                "E-mail: " + form_mail + "</br>" + "</br>" +
-                form_msg
+                "E-mail: " + form_mail + "</br>" + "</br>" + form_msg
         }).then(
             $('#submit').css('color', '#4CC417'),
             document.getElementById('submit').value = "Message envoyé!",

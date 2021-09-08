@@ -227,6 +227,25 @@ hr.hr2 {
     display: none;
 }
 
+#clear_3 {
+    position: absolute;
+    top: 0;
+    right: -0.35em;
+    width: 35px;
+    height: 35px;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #b84040bf;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 30 !important;
+    display: visible;
+    cursor: pointer;
+    pointer-events: all;
+}
+
 .infos {
     position: relative;
     top: 4.75em;
