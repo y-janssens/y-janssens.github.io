@@ -527,7 +527,7 @@ function submit() {
     if (form_name !== "" || form_mail !== "" || form_msg !== "") {
         Email.send({
             SecureToken: "ec9d1734-5c56-46be-a914-35fa6286fa1d",
-            To: 'yoann.janssens@live.fr',
+            To: 'y.janssens@protonmail.com',
             From: "skorpiostyle@gmail.com",
             Subject: "Un nouveau message de " + form_name,
             Body: "Un nouveau message de " + form_name + " vient d'arriver." + "</br>" +
