@@ -33,11 +33,13 @@ function resize() {
     let height_l = document.getElementById('card_large1').offsetHeight;
     let height_d = document.getElementById('card16').offsetHeight;
     let height_if = document.getElementById('container').offsetHeight;
+    let height_f = document.getElementById('block').offsetHeight;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
     s_width_if = height_if / 1250;
+    s_width_f = height_f / 650;
 
     $('#card1').css('width', s_width);
     $('#card2').css('width', s_width);
@@ -67,6 +69,7 @@ function resize() {
 
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
+    $('#contact_form').css('transform', 'translate(-50%, -50%) scale(' + s_width_f + ')');
 }
 
 $(".slide1").click(function () {
@@ -320,6 +323,7 @@ function contact() {
         $('#contact_form').css('display', 'none');
         $('#clear_3').css('display', 'none');
     }
+    resize();
 }
 
 $("#clear_3").click(function () {
