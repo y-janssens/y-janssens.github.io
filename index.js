@@ -39,7 +39,7 @@ function resize() {
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
     s_width_if = height_if / 1250;
-    s_width_f = height_f / 650;
+    s_width_f = height_f / 800;
 
     $('#card1').css('width', s_width);
     $('#card2').css('width', s_width);
