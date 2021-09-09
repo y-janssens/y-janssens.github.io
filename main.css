@@ -59,12 +59,13 @@ header {
 h1 {
     position: absolute;
     left: 50%;
-    width: auto;
+    width: fit-content;
     color: rgba(120, 120, 120, 0.9);
     letter-spacing: 0.5em;
     font-family: 'Cinzel', serif;
     font-weight: 500;
     font-size: 2rem;
+    text-align: center;
     transform: translate(-50%, 0%) scaleY(1.1);
     transition: 500ms all;
 }
@@ -106,6 +107,7 @@ hr.hr2 {
 
 .header_desc {
     position: absolute;
+    width: fit-content;
     left: 50%;
     top: 4.25em;
     color: rgba(120, 120, 120, 0.75);
@@ -117,8 +119,9 @@ hr.hr2 {
     transition: 500ms all;
 }
 
-.header_buttons {
+#header_buttons {
     position: relative;
+    width: auto;
     left: 50%;
     top: 7.7em;
     transform: translateX(-50%);
@@ -132,7 +135,7 @@ hr.hr2 {
     letter-spacing: 0.3em;
     font-family: 'Rokkitt', serif;
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: 0.75em;
     color: rgba(120, 120, 120, 0.85);
     line-height: 1.5em;
     padding-left: 2.5em;
@@ -149,17 +152,6 @@ hr.hr2 {
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
     transform: translateY(-3px) scaleY(1.1);
 }
-
-/* .bh:hover {
-    background-color: #DCDBD7;
-    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
-    transform: translateY(-3px) scaleY(1.1);
-}
-
-.bh:active {
-    background-color: rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
-} */
 
 #user {
     position: absolute;

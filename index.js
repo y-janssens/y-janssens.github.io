@@ -34,12 +34,17 @@ function resize() {
     let height_d = document.getElementById('card16').offsetHeight;
     let height_if = document.getElementById('container').offsetHeight;
     let height_f = document.getElementById('block').offsetHeight;
+    let width_h = document.getElementById('block').offsetWidth;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
     s_width_if = height_if / 1250;
     s_width_f = height_f / 800;
+    s_width_h = width_h / 50 ;
+    s_width_h1 = width_h / 1000;
+
+    console.log(width_h);
 
     $('#card1').css('width', s_width);
     $('#card2').css('width', s_width);
@@ -70,6 +75,37 @@ function resize() {
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('#contact_form').css('transform', 'translate(-50%, -50%) scale(' + s_width_f + ')');
+    $('.bh').css('padding-left', s_width_h);
+    $('.bh').css('padding-right', s_width_h);
+    $('.bh').css('margin-left', s_width_h / 2);
+    $('.bh').css('margin-right', s_width_h / 2);
+    $('.bf').css('padding-left', s_width_h);
+    $('.bf').css('padding-right', s_width_h);
+    $('.bf').css('margin-left', s_width_h / 2);
+    $('.bf').css('margin-right', s_width_h / 2);
+
+    if (width_h <= 700) {
+        $('h1').css('font-size', '1.25rem');
+        $('h1').css('top', '1.5em');
+        $('h1').css('left', '40%');
+        $('.header_desc').css('font-size', '0.7rem');
+        $('.header_desc').css('top', '5.5em');
+        $('.header_desc').css('left', '40%');
+        $('#pic').css('width', '6em'); 
+        $('#pic').css('height', '6em');  
+        $('#user').css('top', '1.5em'); 
+        $('#user').css('right', '1.5em');
+    } else {
+        $('h1').css('font-size', '2rem'); 
+        $('h1').css('top', '0');
+        $('h1').css('left', '50%');
+        $('.header_desc').css('font-size', '0.8rem');
+        $('.header_desc').css('top', '4.5em');
+        $('.header_desc').css('left', '50%');
+        $('#pic').css('width', '7em'); 
+        $('#pic').css('height', '7em'); 
+        $('#user').css('top', '1em');  
+    }
 }
 
 $(".slide1").click(function () {
