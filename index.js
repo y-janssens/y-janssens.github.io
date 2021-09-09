@@ -1,4 +1,5 @@
 window.onload = init();
+window.onload = resize();
 window.onload = texture();
 function reportWindowSize() {
     resize();
@@ -41,10 +42,8 @@ function resize() {
     s_width_d = height_d / 1.5;
     s_width_if = height_if / 1250;
     s_width_f = height_f / 800;
-    s_width_h = width_h / 50 ;
+    s_width_h = width_h / 50;
     s_width_h1 = width_h / 1000;
-
-    console.log(width_h);
 
     $('#card1').css('width', s_width);
     $('#card2').css('width', s_width);
@@ -91,20 +90,20 @@ function resize() {
         $('.header_desc').css('font-size', '0.7rem');
         $('.header_desc').css('top', '5.5em');
         $('.header_desc').css('left', '40%');
-        $('#pic').css('width', '6em'); 
-        $('#pic').css('height', '6em');  
-        $('#user').css('top', '1.5em'); 
+        $('#pic').css('width', '6em');
+        $('#pic').css('height', '6em');
+        $('#user').css('top', '1.5em');
         $('#user').css('right', '1.5em');
     } else {
-        $('h1').css('font-size', '2rem'); 
+        $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
         $('h1').css('left', '50%');
         $('.header_desc').css('font-size', '0.8rem');
         $('.header_desc').css('top', '4.5em');
         $('.header_desc').css('left', '50%');
-        $('#pic').css('width', '7em'); 
-        $('#pic').css('height', '7em'); 
-        $('#user').css('top', '1em');  
+        $('#pic').css('width', '7em');
+        $('#pic').css('height', '7em');
+        $('#user').css('top', '1em');
     }
 }
 
@@ -376,7 +375,7 @@ $(".img").click(function (event) {
         $('.g_container').css('display', 'initial');
         $('.g_container').css('pointer-events', 'all');
         document.getElementById('show_img').src = img_src;
-    } 
+    }
 });
 
 $(".g_container").click(function () {
@@ -425,7 +424,7 @@ $("#card19").click(function () {
         $('#clock').css('display', 'initial');
         $('.d_container').css('display', 'initial');
         $('.d_container').css('pointer-events', 'all');
-    } 
+    }
     resize();
 });
 
