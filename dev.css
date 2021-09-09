@@ -6,6 +6,19 @@
     display: none;
 }
 
+.d_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    pointer-events: none;
+    display: none;
+    z-index: 5;
+}
+
 .row4 {
     position: absolute;
     top: 50%;
@@ -56,23 +69,6 @@
     pointer-events: none;
 }
 
-#clear_1 {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #b84040;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    z-index: 30 !important;
-    display: none;
-    cursor: pointer;
-    pointer-events: all;
-}
-
 #battler {
     position: absolute;
     top: 50%;
@@ -82,23 +78,6 @@
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     display: none;
     pointer-events: all !important;
-}
-
-#clear_2 {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #b84040;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    z-index: 30 !important;
-    display: none;
-    cursor: pointer;
-    pointer-events: all;
 }
 
 #clock {
