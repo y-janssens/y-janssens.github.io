@@ -1,6 +1,6 @@
 window.onload = resize();
 window.onload = scrollbar();
-//window.setInterval(resize, 10);
+window.onload = texture();
 window.onresize = reportWindowSize;
 window.addEventListener('resize', reportWindowSize);
 
@@ -250,3 +250,30 @@ function tooltip(){
     $('.descri8').css('height', img8Height);
 }
 
+function texture() {
+    let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+    document.getElementById("texture").innerHTML = lorem.repeat(20);
+
+    function randomXToY(minVal, maxVal, floatVal) {
+        var randVal = minVal + (Math.random() * (maxVal - minVal));
+        return typeof floatVal == 'undefined' ? Math.round(randVal) : randVal.toFixed(floatVal);
+    }
+
+    var exploded = $('#texture').text().split('');
+    var count = 100;
+    var rdmltr = [];
+
+    while (count--) {
+        rdmltr[count] = randomXToY(0, exploded.length);
+        while (exploded[rdmltr[count]] == ' ') {
+            rdmltr[count] = randomXToY(0, exploded.length);
+        }
+    }
+    while (count++ < 100) {
+        exploded[rdmltr[count]] = '<span class="boldify">' + exploded[rdmltr[count]] + '</span>';
+    }
+
+    $('#texture').html(exploded.join(''));
+    $('#texture2').html(exploded.join(''));
+}

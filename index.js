@@ -37,6 +37,8 @@ function resize() {
     let height_f = document.getElementById('block').offsetHeight;
     let width_h = document.getElementById('block').offsetWidth;
 
+    console.log(width_h);
+
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
@@ -55,11 +57,6 @@ function resize() {
     $('#card8').css('width', s_width);
     $('#card9').css('width', s_width);
     $('#card10').css('width', s_width);
-    $('#card11').css('width', s_width);
-    $('#card12').css('width', s_width);
-    $('#card13').css('width', s_width);
-    $('#card14').css('width', s_width);
-    $('#card15').css('width', s_width);
 
     $('#card_large1').css('width', s_width_l);
     $('#card_large2').css('width', s_width_l);
@@ -96,6 +93,27 @@ function resize() {
         $('#user').css('right', '1.5em');
         $('.bf').css('font-size', '0.5rem');
         $('.bh').css('font-size', '0.6rem');
+/*         $('#card1').css('height', '30%');
+        $('#card2').css('height', '30%');
+        $('#card3').css('height', '30%');
+        $('#card4').css('height', '30%');
+        $('#card5').css('height', '30%');
+        $('#card6').css('height', '30%');
+        $('#card7').css('height', '30%');
+        $('#card8').css('height', '30%');
+        $('#card9').css('height', '30%');
+        $('#card10').css('height', '30%'); */
+    } else if (width_h <= 1200) {
+        $('#card1').css('height', '60%');
+        $('#card2').css('height', '60%');
+        $('#card3').css('height', '60%');
+        $('#card4').css('height', '60%');
+        $('#card5').css('height', '60%');
+        $('#card6').css('height', '60%');
+        $('#card7').css('height', '60%');
+        $('#card8').css('height', '60%');
+        $('#card9').css('height', '60%');
+        $('#card10').css('height', '60%');
     } else {
         $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
@@ -108,8 +126,20 @@ function resize() {
         $('#user').css('top', '1em');
         $('.bf').css('font-size', '0.65rem');
         $('.bh').css('font-size', '0.75rem');
+        $('#card1').css('height', '75%');
+        $('#card2').css('height', '75%');
+        $('#card3').css('height', '75%');
+        $('#card4').css('height', '75%');
+        $('#card5').css('height', '75%');
+        $('#card6').css('height', '75%');
+        $('#card7').css('height', '75%');
+        $('#card8').css('height', '75%');
+        $('#card9').css('height', '75%');
+        $('#card10').css('height', '75%');
     }
 }
+
+
 
 $(".slide1").click(function () {
     if (slide1_focus == false) {
