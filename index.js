@@ -357,6 +357,10 @@ function contact() {
         contact_toggle = false;
         $('#contact_form').css('display', 'initial');
         $('#clear_3').css('display', 'initial');
+        $('.slider').css('pointer-events', 'none');
+        $('.galery').css('pointer-events', 'none');
+        $('.real').css('pointer-events', 'none');
+        $('.dev').css('pointer-events', 'none');
     } else if (contact_toggle == false) {
         contact_toggle = true;
         $('#contact_form').css('display', 'none');
@@ -369,6 +373,10 @@ $("#clear_3").click(function () {
     contact_toggle = true;
     $('#contact_form').css('display', 'none');
     $('#clear_3').css('display', 'none');
+    $('.slider').css('pointer-events', 'initial');
+    $('.galery').css('pointer-events', 'initial');
+    $('.real').css('pointer-events', 'initial');
+    $('.dev').css('pointer-events', 'initial');
 });
 
 $(".img").click(function (event) {
