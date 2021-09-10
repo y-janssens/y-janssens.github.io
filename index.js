@@ -95,6 +95,7 @@ function resize() {
         $('#user').css('top', '1.5em');
         $('#user').css('right', '1.5em');
         $('.bf').css('font-size', '0.5rem');
+        $('.bh').css('font-size', '0.6rem');
     } else {
         $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
@@ -106,6 +107,7 @@ function resize() {
         $('#pic').css('height', '7em');
         $('#user').css('top', '1em');
         $('.bf').css('font-size', '0.65rem');
+        $('.bh').css('font-size', '0.75rem');
     }
 }
 
