@@ -78,22 +78,23 @@ function resize() {
     $('.bh').css('padding-right', s_width_h);
     $('.bh').css('margin-left', s_width_h / 2);
     $('.bh').css('margin-right', s_width_h / 2);
-    $('.bf').css('padding-left', s_width_h);
-    $('.bf').css('padding-right', s_width_h);
-    $('.bf').css('margin-left', s_width_h / 2);
-    $('.bf').css('margin-right', s_width_h / 2);
+    $('.bf').css('padding-left', s_width_h * 0.8);
+    $('.bf').css('padding-right', s_width_h * 0.8);
+    $('.bf').css('margin-left', s_width_h / 2.5); //  / 2
+    $('.bf').css('margin-right', s_width_h / 2.5); // / 2
 
-    if (width_h <= 700) {
-        $('h1').css('font-size', '1.25rem');
+    if (width_h <= 800) {
+        $('h1').css('font-size', '1.1rem'); // 1.25
         $('h1').css('top', '1.5em');
         $('h1').css('left', '40%');
         $('.header_desc').css('font-size', '0.7rem');
         $('.header_desc').css('top', '5.5em');
         $('.header_desc').css('left', '40%');
-        $('#pic').css('width', '6em');
-        $('#pic').css('height', '6em');
+        $('#pic').css('width', '5.5em');
+        $('#pic').css('height', '5.5em');
         $('#user').css('top', '1.5em');
         $('#user').css('right', '1.5em');
+        $('.bf').css('font-size', '0.5rem');
     } else {
         $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
@@ -104,6 +105,7 @@ function resize() {
         $('#pic').css('width', '7em');
         $('#pic').css('height', '7em');
         $('#user').css('top', '1em');
+        $('.bf').css('font-size', '0.65rem');
     }
 }
 
