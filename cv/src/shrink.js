@@ -253,36 +253,6 @@ function shrink7() {
     });
 }
 
-function shrink8() {
-
-    if (shrink_img8) {
-        shrink_img8 == false;
-        $('#container').css('visibility', 'visible');
-        $('#container').css('pointer-events', 'initial');
-        $('#img8').css('transition', '500ms all');
-        $('#img8').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#img8').css('opacity', '1');
-        $('#img8').css('visibility', 'visible');
-        $('.descri8').css('transition', '500ms all');
-        $('.descri8').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('.descri8').css('visibility', 'visible');
-        tooltip();
-    } else {
-        shrink_img8 == true;
-    }
-    $('#container').on('touchstart click', function () {
-        $('#container').css('visibility', 'hidden');
-        $('#container').css('pointer-events', 'none');
-        $('#img8').css('transition', '250ms all');
-        $('#img8').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#img8').css('opacity', '0');
-        $('#img8').css('visibility', 'hidden');
-        $('.descri8').css('transition', '250ms all');
-        $('.descri8').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('.descri8').css('visibility', 'hidden');
-    });
-}
-
 function shrink9() {
 
     if (shrink_img9) {
@@ -395,28 +365,3 @@ function shrink14() {
         $('#img14').css('visibility', 'hidden');
     });
 }
-
-function shrink15() {
-
-    if (shrink_img15) {
-        shrink_img15 == false;
-        $('#container').css('visibility', 'visible');
-        $('#container').css('pointer-events', 'initial');
-        $('#img15').css('transition', '500ms all');
-        $('#img15').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#img15').css('opacity', '1');
-        $('#img15').css('visibility', 'visible');
-
-    } else {
-        shrink_img15 == true;
-    }
-    $('#img15').on('touchstart click', function () {
-        $('#container').css('visibility', 'hidden');
-        $('#container').css('pointer-events', 'none');
-        $('#img15').css('transition', '250ms all');
-        $('#img15').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#img15').css('opacity', '0');
-        $('#img15').css('visibility', 'hidden');
-    });
-}
-

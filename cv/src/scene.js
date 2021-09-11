@@ -80,14 +80,12 @@ function animate() {
     mesh5.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh6.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh7.position.y = Math.sin(time) * 0.25 + 2.5;
-    mesh8.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh9.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh10.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh11.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh12.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh13.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh14.position.y = Math.sin(time) * 0.25 + 2.5;
-    mesh15.position.y = Math.sin(time) * 0.25 + 2.5;
 
     const target1 = new THREE.Vector3();
     mesh1.getWorldPosition(target1);
@@ -117,10 +115,6 @@ function animate() {
     mesh7.getWorldPosition(target7);
     const distance7 = camera.position.distanceTo(target7);
 
-    const target8 = new THREE.Vector3();
-    mesh8.getWorldPosition(target8);
-    const distance8 = camera.position.distanceTo(target8);
-
     const target9 = new THREE.Vector3();
     mesh9.getWorldPosition(target9);
     const distance9 = camera.position.distanceTo(target9);
@@ -144,10 +138,6 @@ function animate() {
     const target14 = new THREE.Vector3();
     mesh14.getWorldPosition(target14);
     const distance14 = camera.position.distanceTo(target14);
-
-    const target15 = new THREE.Vector3();
-    mesh15.getWorldPosition(target15);
-    const distance15 = camera.position.distanceTo(target15);
 
     if (distance1 < 10) {
         img1_focus = true;
@@ -239,18 +229,6 @@ function animate() {
         gsap.to(mesh7mat, 1, { opacity: 0.15 })
     }
 
-    if (distance8 <= 10) {
-        img8_focus = true;
-        mesh8.position.lerp(cube15.position, 0.015);
-        gsap.to(rectLight8, 3, { intensity: 3 })
-        gsap.to(mesh8mat, 3, { opacity: 0.5 })
-    } else if (distance8 > 8) {
-        img8_focus = false;
-        mesh8.position.lerp(cube16.position, 0.015);
-        gsap.to(rectLight8, 1, { intensity: 1 })
-        gsap.to(mesh8mat, 1, { opacity: 0.15 })
-    }
-
     if (distance9 <= 10) {
         img9_focus = true;
         mesh9.position.lerp(cube17.position, 0.015);
@@ -321,18 +299,6 @@ function animate() {
         mesh14.position.lerp(cube28.position, 0.015);
         gsap.to(rectLight14, 1, { intensity: 1 })
         gsap.to(mesh14mat, 1, { opacity: 0.15 })
-    }
-
-    if (distance15 <= 10) {
-        img15_focus = true;
-        mesh15.position.lerp(cube29.position, 0.015);
-        gsap.to(rectLight15, 3, { intensity: 3 })
-        gsap.to(mesh15mat, 3, { opacity: 0.5 })
-    } else if (distance15 > 8) {
-        img15_focus = false;
-        mesh15.position.lerp(cube30.position, 0.015);
-        gsap.to(rectLight15, 1, { intensity: 1 })
-        gsap.to(mesh15mat, 1, { opacity: 0.15 })
     }
 
     controls.update();

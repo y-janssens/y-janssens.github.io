@@ -86,7 +86,6 @@ canvas {
 	rgbl.load( 'map.hdr', function ( texture ) {
 
 	const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
-	const bckground = new THREE.TextureLoader().load( './src/textures/Bannière.png' );
 	scene.environment = envMap;
 	//scene.background = new THREE.Color( 0xaca89f );
  })

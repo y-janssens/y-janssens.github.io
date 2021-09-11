@@ -32,9 +32,6 @@ rectLight6.lookAt(0, 0, 1);
 const rectLight7 = new THREE.RectAreaLight(0xFFFFFF, 1, 4, 2.5);
 rectLight7.lookAt(0, 0, 1);
 
-const rectLight8 = new THREE.RectAreaLight(0xFFFFFF, 1, 4, 2.5);
-rectLight8.lookAt(0, 0, 1);
-
 const rectLight9 = new THREE.RectAreaLight(0xBAA78F, 1, 4, 2.5);
 rectLight9.lookAt(0, 0, 1);
 
@@ -52,6 +49,3 @@ rectLight13.lookAt(0, 0, 1);
 
 const rectLight14 = new THREE.RectAreaLight(0xFFFFFF, 1, 4, 2.5);
 rectLight14.lookAt(0, 0, 1);
-
-const rectLight15 = new THREE.RectAreaLight(0xFFFFFF, 1, 4, 2.5);
-rectLight15.lookAt(0, 0, 1);

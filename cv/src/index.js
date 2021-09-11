@@ -44,7 +44,6 @@ $('.close').on('touchstart click', function () {
     $('#img5').css('margin-left', '0em');
     $('#img6').css('margin-left', '0em');
     $('#img7').css('margin-left', '0em');
-    $('#img8').css('margin-left', '0em');
     $('canvas').css('margin-left', '0em');
     setTimeout("toggleOn()", 300);
 });
@@ -65,14 +64,13 @@ $('.toggle').on('touchstart click', function () {
     $('#img5').css('margin-left', '9em');
     $('#img6').css('margin-left', '9em');
     $('#img7').css('margin-left', '9em');
-    $('#img8').css('margin-left', '9em');
     $('canvas').css('margin-left', '9em');
     $('.toggle').css('transform', 'translateX(1.4em) scale(0.8)');
     $('.toggle').css('transition', '500ms ease-in-out');
     setTimeout("toggleOff()", 550);
 });
 
-$(".title1").on('touchstart click', function () {
+$(".title1").on('click', function () {
     if (panel1) {
         panel1 = false;
         $(".content1").removeClass;
@@ -229,8 +227,6 @@ function tooltip(){
     let img6Height = document.getElementById('img6').offsetHeight;
     let img7Width = document.getElementById('img7').offsetWidth;
     let img7Height = document.getElementById('img7').offsetHeight;
-    let img8Width = document.getElementById('img8').offsetWidth;
-    let img8Height = document.getElementById('img8').offsetHeight;
 
     $('.descri1').css('width', img1Width);
     $('.descri1').css('height', img1Height);
@@ -246,8 +242,6 @@ function tooltip(){
     $('.descri6').css('height', img6Height);
     $('.descri7').css('width', img7Width);
     $('.descri7').css('height', img7Height);
-    $('.descri8').css('width', img8Width);
-    $('.descri8').css('height', img8Height);
 }
 
 function texture() {

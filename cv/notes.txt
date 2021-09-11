@@ -9,8 +9,7 @@ Showcase 15 projets :
  🗸 Scorpion - Position 3
  🗸 Tonnelle - Position 4
 - Drakkar - Position 5
-- Totem - Position 6
-- Iso - Position 7
+- Iso - Position 6
 
 Dev
 🗸 Battle - Position -1
@@ -19,7 +18,6 @@ Dev
 🗸 Herse - Position -4
 - Keyboard - Position -5
 - Eyedropper - Position -6
-- ??? - Position -7
 
 
 ################################################################################
