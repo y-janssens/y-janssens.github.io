@@ -29,11 +29,11 @@ mesh5Texture = new THREE.TextureLoader().load('./src/assets/textures/mini9.png')
 mesh5Texture.wrapS = mesh5Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh6mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh6Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh6Texture = new THREE.TextureLoader().load('./src/assets/textures/mini10.png');
 mesh6Texture.wrapS = mesh6Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh7mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh7Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh7Texture = new THREE.TextureLoader().load('./src/assets/textures/mini11.png');
 mesh7Texture.wrapS = mesh7Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh9mat = new THREE.MeshStandardMaterial(commonAttributes);
@@ -53,9 +53,9 @@ mesh12Texture = new THREE.TextureLoader().load('./src/assets/textures/mini7.png'
 mesh12Texture.wrapS = mesh12Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh13mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh13Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh13Texture = new THREE.TextureLoader().load('./src/assets/textures/mini13.png');
 mesh13Texture.wrapS = mesh13Texture.wrapT = THREE.RepeatWrapping;
 
 const mesh14mat = new THREE.MeshStandardMaterial(commonAttributes);
-mesh14Texture = new THREE.TextureLoader().load('./src/assets/textures/mini.png');
+mesh14Texture = new THREE.TextureLoader().load('./src/assets/textures/mini14.png');
 mesh14Texture.wrapS = mesh14Texture.wrapT = THREE.RepeatWrapping;

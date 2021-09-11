@@ -29,8 +29,8 @@ const audioLoader1 = new THREE.AudioLoader();
 audioLoader1.load('./src/assets/ambiant.mp3', function (buffer) {
     sound1.setBuffer(buffer);
     sound1.setLoop(true);
-    sound1.setVolume(0.1);
-    //sound1.play();
+    sound1.setVolume(0.025);
+    sound1.play();
 });
 
 // Objects
@@ -47,8 +47,8 @@ scene.add(floor);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-let min = Math.PI / 0.71;
-let max = Math.PI * 0.59;
+let min = Math.PI / 0.67;
+let max = Math.PI * 0.51;
 
 controls.minPolarAngle = Math.PI / 2.25;
 controls.maxPolarAngle = Math.PI / 2.25;

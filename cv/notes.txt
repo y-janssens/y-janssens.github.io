@@ -1,6 +1,6 @@
 !! Vérifier le contour des iframes avant déploiement !!
 
-Showcase 15 projets :
+Showcase 13 projets :
 
 3D
  🗸- Armure chaines - Position 0
@@ -8,16 +8,16 @@ Showcase 15 projets :
  🗸 Piliers - Position 2
  🗸 Scorpion - Position 3
  🗸 Tonnelle - Position 4
-- Drakkar - Position 5
-- Iso - Position 6
+ 🗸 Drakkar - Position 5
+ 🗸 Iso - Position 6
 
 Dev
 🗸 Battle - Position -1
 🗸 Clock - Position -2
 🗸 Detect - Position -3
 🗸 Herse - Position -4
-- Keyboard - Position -5
-- Eyedropper - Position -6
+🗸 Keyboard - Position -5
+🗸 Eyedropper - Position -6
 
 
 ################################################################################

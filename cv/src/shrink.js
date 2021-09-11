@@ -19,9 +19,6 @@ let img6_focus = false;
 let shrink_img7 = true;
 let img7_focus = false;
 
-let shrink_img8 = true;
-let img8_focus = false;
-
 let shrink_img9 = true;
 let img9_focus = false;
 
@@ -39,9 +36,6 @@ let img13_focus = false;
 
 let shrink_img14 = true;
 let img14_focus = false;
-
-let shrink_img15 = true;
-let img15_focus = false;
 
 function shrink1() {
 
@@ -257,21 +251,34 @@ function shrink9() {
 
     if (shrink_img9) {
         shrink_img9 == false;
-        window.open('./site/battle/index.html');
+        $('#container').css('visibility', 'visible');
+        $('#container').css('pointer-events', 'initial');
+        $('#battler').css('display', 'initial');
     } else {
         shrink_img9 == true;
     }
+    $('#container').on('touchstart click', function () {
+        $('#container').css('visibility', 'hidden');
+        $('#container').css('pointer-events', 'none');
+        $('#battler').css('display', 'none');
+    });
 }
 
 function shrink10() {
 
     if (shrink_img10) {
         shrink_img10 == false;
-        window.open('./site/clock/index.html');
+        $('#container').css('visibility', 'visible');
+        $('#container').css('pointer-events', 'initial');
+        $('#clock').css('display', 'initial');
     } else {
         shrink_img10 == true;
-    }  
-  
+    }
+    $('#container').on('touchstart click', function () {
+        $('#container').css('visibility', 'hidden');
+        $('#container').css('pointer-events', 'none');
+        $('#clock').css('display', 'none');
+    });
 }
 
 function shrink11() {
@@ -319,49 +326,60 @@ function shrink12() {
 }
 
 function shrink13() {
+    let vid1 = document.getElementById('vid1');
 
     if (shrink_img13) {
         shrink_img13 == false;
         $('#container').css('visibility', 'visible');
         $('#container').css('pointer-events', 'initial');
-        $('#img13').css('transition', '500ms all');
-        $('#img13').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#img13').css('opacity', '1');
-        $('#img13').css('visibility', 'visible');
+        $('#vid1').css('transition', '500ms all');
+        $('#vid1').css('transform', 'translate(-50%, -50%) scale(1)');
+        $('#vid1').css('opacity', '1');
+        $('#vid1').css('visibility', 'visible');
+        vid1.play();
+        vid1.loop = true;
 
     } else {
         shrink_img13 == true;
     }
-    $('#img13').on('touchstart click', function () {
+    $('#container').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
-        $('#img13').css('transition', '250ms all');
-        $('#img13').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#img13').css('opacity', '0');
-        $('#img13').css('visibility', 'hidden');
+        $('#vid1').css('transition', '250ms all');
+        $('#vid1').css('transform', 'translate(-50%, -50%) scale(0)');
+        $('#vid1').css('opacity', '0');
+        $('#vid1').css('visibility', 'hidden');
+
+        vid1.pause();
+        vid1.currentTime = 0;
     });
 }
 
 function shrink14() {
+    let vid2 = document.getElementById('vid2');
 
     if (shrink_img14) {
         shrink_img14 == false;
         $('#container').css('visibility', 'visible');
         $('#container').css('pointer-events', 'initial');
-        $('#img14').css('transition', '500ms all');
-        $('#img14').css('transform', 'translate(-50%, -50%) scale(1)');
-        $('#img14').css('opacity', '1');
-        $('#img14').css('visibility', 'visible');
+        $('#vid2').css('transition', '500ms all');
+        $('#vid2').css('transform', 'translate(-50%, -50%) scale(1)');
+        $('#vid2').css('opacity', '1');
+        $('#vid2').css('visibility', 'visible');
+        vid2.play();
+        vid2.loop = true;
 
     } else {
         shrink_img14 == true;
     }
-    $('#img14').on('touchstart click', function () {
+    $('#container').on('touchstart click', function () {
         $('#container').css('visibility', 'hidden');
         $('#container').css('pointer-events', 'none');
-        $('#img14').css('transition', '250ms all');
-        $('#img14').css('transform', 'translate(-50%, -50%) scale(0)');
-        $('#img14').css('opacity', '0');
-        $('#img14').css('visibility', 'hidden');
+        $('#vid2').css('transition', '250ms all');
+        $('#vid2').css('transform', 'translate(-50%, -50%) scale(0)');
+        $('#vid2').css('opacity', '0');
+        $('#vid2').css('visibility', 'hidden');
+        vid2.pause();
+        vid2.currentTime = 0;
     });
 }

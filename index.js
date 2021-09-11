@@ -37,8 +37,6 @@ function resize() {
     let height_f = document.getElementById('block').offsetHeight;
     let width_h = document.getElementById('block').offsetWidth;
 
-    console.log(width_h);
-
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
