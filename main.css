@@ -17,8 +17,8 @@ body {
     background-color: #dcdcdc;
     font-family: 'Share Tech Mono', monospace;
     color: #E0DFDA;
-    overflow: hidden;
     transition: 500ms all;
+    overflow: hidden;
 }
 
 button {
@@ -414,10 +414,13 @@ footer {
 }
 
 ::-webkit-scrollbar {
+    position: absolute;
     width: 7px;
+    height: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
+    position: absolute;
     background-color: rgba(120, 120, 120, 0.5);
     border-radius: 0.2em;
 }

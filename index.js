@@ -1,6 +1,7 @@
 window.onload = init();
 window.onload = resize();
 window.onload = texture();
+
 function reportWindowSize() {
     resize();
 }
@@ -72,11 +73,34 @@ function resize() {
     $('.bh').css('margin-right', s_width_h / 2);
     $('.bf').css('padding-left', s_width_h * 0.8);
     $('.bf').css('padding-right', s_width_h * 0.8);
-    $('.bf').css('margin-left', s_width_h / 2.5); //  / 2
-    $('.bf').css('margin-right', s_width_h / 2.5); // / 2
+    $('.bf').css('margin-left', s_width_h / 2.5);
+    $('.bf').css('margin-right', s_width_h / 2.5);
 
     if (width_h <= 800) {
-        $('h1').css('font-size', '1.1rem'); // 1.25
+        $('#card1').css('left', '24%');
+        $('#card2').css('left', '62%');
+        $('#card3').css('left', '100%');
+        $('#card4').css('left', '138%');
+        $('#card5').css('left', '176%');
+        $('#card6').css('left', '24%');
+        $('#card7').css('left', '62%');
+        $('#card8').css('left', '100%');
+        $('#card9').css('left', '138%');
+        $('#card10').css('left', '176%');
+        $('#card1').css('height', '60%');
+        $('#card2').css('height', '60%');
+        $('#card3').css('height', '60%');
+        $('#card4').css('height', '60%');
+        $('#card5').css('height', '60%');
+        $('#card6').css('height', '60%');
+        $('#card7').css('height', '60%');
+        $('#card8').css('height', '60%');
+        $('#card9').css('height', '60%');
+        $('#card10').css('height', '60%'); 
+        $('#card_large1').css('left', '34%');
+        $('#card_large2').css('left', '100%');
+        $('#card_large3').css('left', '166%');
+        $('h1').css('font-size', '1.1rem');
         $('h1').css('top', '1.5em');
         $('h1').css('left', '40%');
         $('.header_desc').css('font-size', '0.7rem');
@@ -90,19 +114,35 @@ function resize() {
         $('.bh').css('font-size', '0.6rem');
         $('#contact_form').css('transform', 'translate(-50%, -50%) scale(0.85)');
     
-    } else if (width_h <= 1200) {
-        $('#card1').css('height', '60%');
-        $('#card2').css('height', '60%');
-        $('#card3').css('height', '60%');
-        $('#card4').css('height', '60%');
-        $('#card5').css('height', '60%');
-        $('#card6').css('height', '60%');
-        $('#card7').css('height', '60%');
-        $('#card8').css('height', '60%');
-        $('#card9').css('height', '60%');
-        $('#card10').css('height', '60%');        
+    } else if (width_h <= 1100) {
+        $('#card1').css('left', '18%');
+        $('#card2').css('left', '46.5%');
+        $('#card3').css('left', '75%');
+        $('#card4').css('left', '103.5%');
+        $('#card5').css('left', '132%');
+        $('#card6').css('left', '18%');
+        $('#card7').css('left', '46.5%');
+        $('#card8').css('left', '75%');
+        $('#card9').css('left', '103.5%');
+        $('#card10').css('left', '132%');
+        $('#card_large1').css('left', '25.5%');
+        $('#card_large2').css('left', '75%');
+        $('#card_large3').css('left', '124.5%');    
 
     } else {
+        $('#card1').css('left', '12%');
+        $('#card2').css('left', '31%');
+        $('#card3').css('left', '50%');
+        $('#card4').css('left', '69%');
+        $('#card5').css('left', '88%');
+        $('#card6').css('left', '12%');
+        $('#card7').css('left', '31%');
+        $('#card8').css('left', '50%');
+        $('#card9').css('left', '69%');
+        $('#card10').css('left', '88%');
+        $('#card_large1').css('left', '17%');
+        $('#card_large2').css('left', '50%');
+        $('#card_large3').css('left', '83%');
         $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
         $('h1').css('left', '50%');
@@ -114,7 +154,7 @@ function resize() {
         $('#user').css('top', '1em');
         $('.bf').css('font-size', '0.65rem');
         $('.bh').css('font-size', '0.75rem');
-        $('#card1').css('height', '75%');
+         $('#card1').css('height', '75%');
         $('#card2').css('height', '75%');
         $('#card3').css('height', '75%');
         $('#card4').css('height', '75%');

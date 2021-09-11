@@ -3,16 +3,14 @@
     top: 9em;
     bottom: 2em;
     width: 100%;
-    display: none;
+    display: visible;
 }
 
 .container {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, -50%);
+    overflow-x: scroll;
 }
 
 #card_large1 {
@@ -20,18 +18,18 @@
     width: 17%;
     height: 60%;
     top: 50%;
-    left: 10%;
+    left: 17%;
     margin-bottom: 3em;
     border-radius: 1em;
     background-color: #e8e7e3;
-    transform: translate(0%, -50%);
+    transform: translate(-50%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
     overflow: hidden;
 }
 
 #card_large1:hover {
-    transform: translate(0%, -55%);
+    transform: translate(-50%, -55%);
 }
 
 .imgr1 {
@@ -78,11 +76,11 @@
     width: 17%;
     height: 60%;
     top: 50%;
-    right: 10%;
+    left: 83%;
     margin-bottom: 3em;
     border-radius: 1em;
     background-color: #e8e7e3;
-    transform: translate(0%, -50%);
+    transform: translate(-50%, -50%);
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     transition: 500ms all;
 }
