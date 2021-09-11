@@ -285,7 +285,7 @@ function shrink11() {
 
     if (shrink_img11) {
         shrink_img11 == false;
-        window.open('./site/Detection/');
+        window.open('./site/Detection/index.html');
     } else {
         shrink_img11 == true;
     }

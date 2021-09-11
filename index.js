@@ -34,14 +34,12 @@ function resize() {
     let height_l = document.getElementById('card_large1').offsetHeight;
     let height_d = document.getElementById('card16').offsetHeight;
     let height_if = document.getElementById('container').offsetHeight;
-    let height_f = document.getElementById('block').offsetHeight;
     let width_h = document.getElementById('block').offsetWidth;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
     s_width_d = height_d / 1.5;
     s_width_if = height_if / 1250;
-    s_width_f = height_f / 800;
     s_width_h = width_h / 50;
     s_width_h1 = width_h / 1000;
 
@@ -67,8 +65,7 @@ function resize() {
     $('#card20').css('width', s_width_d);
 
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
-    $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
-    $('#contact_form').css('transform', 'translate(-50%, -50%) scale(' + s_width_f + ')');
+    $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');    
     $('.bh').css('padding-left', s_width_h);
     $('.bh').css('padding-right', s_width_h);
     $('.bh').css('margin-left', s_width_h / 2);
@@ -91,16 +88,8 @@ function resize() {
         $('#user').css('right', '1.5em');
         $('.bf').css('font-size', '0.5rem');
         $('.bh').css('font-size', '0.6rem');
-/*         $('#card1').css('height', '30%');
-        $('#card2').css('height', '30%');
-        $('#card3').css('height', '30%');
-        $('#card4').css('height', '30%');
-        $('#card5').css('height', '30%');
-        $('#card6').css('height', '30%');
-        $('#card7').css('height', '30%');
-        $('#card8').css('height', '30%');
-        $('#card9').css('height', '30%');
-        $('#card10').css('height', '30%'); */
+        $('#contact_form').css('transform', 'translate(-50%, -50%) scale(0.85)');
+    
     } else if (width_h <= 1200) {
         $('#card1').css('height', '60%');
         $('#card2').css('height', '60%');
@@ -111,7 +100,8 @@ function resize() {
         $('#card7').css('height', '60%');
         $('#card8').css('height', '60%');
         $('#card9').css('height', '60%');
-        $('#card10').css('height', '60%');
+        $('#card10').css('height', '60%');        
+
     } else {
         $('h1').css('font-size', '2rem');
         $('h1').css('top', '0');
@@ -134,10 +124,9 @@ function resize() {
         $('#card8').css('height', '75%');
         $('#card9').css('height', '75%');
         $('#card10').css('height', '75%');
+        $('#contact_form').css('transform', 'translate(-50%, -50%) scale(1)');
     }
 }
-
-
 
 $(".slide1").click(function () {
     if (slide1_focus == false) {
