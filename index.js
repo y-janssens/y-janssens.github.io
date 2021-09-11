@@ -96,7 +96,17 @@ function resize() {
         $('#card7').css('height', '60%');
         $('#card8').css('height', '60%');
         $('#card9').css('height', '60%');
-        $('#card10').css('height', '60%'); 
+        $('#card10').css('height', '60%');
+        $('#card16').css('height', '60%');
+        $('#card17').css('height', '60%');
+        $('#card18').css('height', '60%');
+        $('#card19').css('height', '60%');
+        $('#card20').css('height', '60%');
+        $('#card16').css('left', '24%');
+        $('#card17').css('left', '62%');
+        $('#card18').css('left', '100%');
+        $('#card19').css('left', '138%');
+        $('#card20').css('left', '176%'); 
         $('#card_large1').css('left', '34%');
         $('#card_large2').css('left', '100%');
         $('#card_large3').css('left', '166%');
@@ -125,6 +135,11 @@ function resize() {
         $('#card8').css('left', '75%');
         $('#card9').css('left', '103.5%');
         $('#card10').css('left', '132%');
+        $('#card16').css('left', '18%');
+        $('#card17').css('left', '46.5%');
+        $('#card18').css('left', '75%');
+        $('#card19').css('left', '103.5%');
+        $('#card20').css('left', '132%');
         $('#card_large1').css('left', '25.5%');
         $('#card_large2').css('left', '75%');
         $('#card_large3').css('left', '124.5%');    
@@ -140,6 +155,11 @@ function resize() {
         $('#card8').css('left', '50%');
         $('#card9').css('left', '69%');
         $('#card10').css('left', '88%');
+        $('#card16').css('left', '12%');
+        $('#card17').css('left', '31%');
+        $('#card18').css('left', '50%');
+        $('#card19').css('left', '69%');
+        $('#card20').css('left', '88%');
         $('#card_large1').css('left', '17%');
         $('#card_large2').css('left', '50%');
         $('#card_large3').css('left', '83%');
@@ -164,6 +184,11 @@ function resize() {
         $('#card8').css('height', '75%');
         $('#card9').css('height', '75%');
         $('#card10').css('height', '75%');
+        $('#card16').css('height', '75%');
+        $('#card17').css('height', '75%');
+        $('#card18').css('height', '75%');
+        $('#card19').css('height', '75%');
+        $('#card20').css('height', '75%');
         $('#contact_form').css('transform', 'translate(-50%, -50%) scale(1)');
     }
 }
