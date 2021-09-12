@@ -72,7 +72,7 @@ button {
   margin-top: 35px;
   margin-left: 25px;
   /*left: 50%;*/
-  visibility: visible;
+  display: none;
 }
 
 #corner1 {
