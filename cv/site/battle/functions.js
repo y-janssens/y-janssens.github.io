@@ -1,5 +1,5 @@
 window.onload = save();
-//window.onload = fight();
+window.onload = fight();
 
 let skillToggle1 = true;
 let skillToggle2 = true;
@@ -418,7 +418,7 @@ function save() {
         "Na Joueur 2: ", NA2.value, '\n',
         "Pv Joueur 2: ", PV2.value, '\n');
 
-    $('.reload').on('click', function() {
+    $('.reload').on('click', function () {
         document.getElementById("resultContent").innerHTML = "";
         document.getElementById("result2Content").innerHTML = "";
         $('h5').css('visibility', 'hidden');
@@ -458,7 +458,7 @@ function id() {
     console.log(idResult);
 }
 
-$('.save').click(function() {
+$('.save').click(function () {
     if (battleStart == true) {
         var blob = new Blob([document.getElementById("resultContent").innerText + document.getElementById("result2Content").innerText], {
             type: "text/html;charset=utf-8"

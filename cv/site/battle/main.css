@@ -3,8 +3,8 @@ body {
   width: 670px;
   height: 1120px;
   margin: 0 auto !important;
-  background-color: transparent !important;
-  
+  background-color: transparent;
+  /* background-color: #473d3d; */
 }
 
 button {
@@ -17,7 +17,6 @@ button {
   height: 1100px;
   margin-top: 35px;
   margin-left: 25px;
-  /*left: 50%;*/
   border: 1.5px solid rgba(147, 132, 113, 0.75);
   border-radius: 25px 25px 10px 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -26,31 +25,6 @@ button {
   background-size: 70%;
   cursor: url(./src/nfPYZtE.png), auto;
   z-index: 2;
-}
-
-#switch {
-  position: absolute;
-  right: -0.2rem;
-  top: 0.35rem;
-  z-index: 3;
-  transform: scale(0.65);
-}
-
-.toggle {
-  position: absolute;
-  top: 10px;
-  left: -68px;
-  height: 45px;
-  width: 45px;  
-  border: 1.5px solid rgba(147, 132, 113, 0.75);
-  border-radius: 100%;
-  background-color: rgba(92, 81, 81, 0.1);
-  transition: all 0.2s ease;
-}
-
-.toggle:hover {
-  filter: brightness(1.25);
-  background-color: rgba(92, 81, 81, 0.25);
 }
 
 #battlerF {
@@ -71,7 +45,6 @@ button {
   height: 1100px;
   margin-top: 35px;
   margin-left: 25px;
-  /*left: 50%;*/
   display: none;
 }
 
@@ -180,7 +153,7 @@ h1 {
   font-weight: 400;
   font-size: 30px;
   color: #938471;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);  
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 h1:hover {
@@ -194,7 +167,6 @@ h2 {
   font-family: Caudex;
   font-weight: 400;
   font-size: 18px;
-  /*color: #938471;*/
 }
 
 h3 {
@@ -204,7 +176,6 @@ h3 {
   font-family: Caudex;
   font-size: 14px;
   font-weight: 400;
-  /*color: #938471;*/
 }
 
 h4 {
@@ -214,7 +185,6 @@ h4 {
   font-family: Caudex;
   font-size: 12px;
   font-weight: 400;
-  /*color: #938471;*/
 }
 
 h5 {
@@ -224,7 +194,6 @@ h5 {
   font-family: Caudex;
   font-size: 15px;
   font-weight: 400;
-  /*color: #938471;*/
   visibility: hidden;
 }
 
@@ -247,27 +216,11 @@ input {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-input#c1,#c2 {
+input#c1, #c2 {
   filter: grayscale(1);
 }
 
-input#Tenue_en_linJ1,
-#CervelièreJ1,
-#CapuchonJ1,
-#GantsJ1,
-#JambièreJ1,
-#VesteJ1,
-#GambisonJ1,
-#acrobatieCombatJ1,
-#adresseTirJ1,
-#armePredJ1,
-#armePredDefJ1,
-#bararreJ1,
-#berserkerJ1,
-#coupsPuisJ1,
-#degainerJ1,
-#EsquiveJ1,
-#feinteJ1 {
+input#Tenue_en_linJ1, #CervelièreJ1, #CapuchonJ1, #GantsJ1, #JambièreJ1, #VesteJ1, #GambisonJ1, #acrobatieCombatJ1, #adresseTirJ1, #armePredJ1, #armePredDefJ1, #bararreJ1, #berserkerJ1, #coupsPuisJ1, #degainerJ1, #EsquiveJ1, #feinteJ1 {
   margin-right: -10px;
 }
 
@@ -395,12 +348,11 @@ td:hover {
 #d4:hover>#tooltip4 {
   transition-delay: 150ms;
   visibility: visible;
-
 }
 
 #tooltip4 {
   position: relative;
-  top: -25px;  
+  top: -25px;
   font-family: Caudex;
   font-size: 14px;
   text-align: center;
@@ -574,26 +526,17 @@ td:hover {
 }
 
 @keyframes shake {
-
-  10%,
-  90% {
-      transform: translate3d(-1px, 0, 0);
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
   }
-
-  20%,
-  80% {
-      transform: translate3d(2px, 0, 0);
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
   }
-
-  30%,
-  50%,
-  70% {
-      transform: translate3d(-2px, 0, 0);
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
   }
-
-  40%,
-  60% {
-      transform: translate3d(2px, 0, 0);
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
   }
 }
 
@@ -938,7 +881,6 @@ label {
   left: 50%;
   transform: translate(-50%, 0%);
   border: 1px solid rgba(147, 132, 113, 0.75);
-  /*border-radius: 15% 10% 2% 2% / 50% 50% 2% 2% ;*/ 
   border-radius: 5px;
   font-family: Caudex;
   font-size: 12px;
@@ -1096,7 +1038,6 @@ label {
   height: 1100px;
   margin-top: 36px;
   margin-left: 26px;
-  /*left: 50%;*/
   border-radius: 25px 25px 10px 10px;
   background-color: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(2px);
@@ -1139,8 +1080,7 @@ label {
   border-color: #fa9f50 !important;
 }
 
-.swal-icon--warning__body,
-.swal-icon--warning__dot {
+.swal-icon--warning__body, .swal-icon--warning__dot {
   background-color: #fa9f50 !important;
 }
 
@@ -1165,8 +1105,7 @@ label {
   font-size: 14px;
 }
 
-.swal-content__input,
-.swal-content__textarea {
+.swal-content__input, .swal-content__textarea {
   padding: 0px 5px;
 }
 
