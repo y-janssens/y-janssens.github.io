@@ -81,6 +81,7 @@
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     display: none;
     pointer-events: all !important;
+    z-index: 10;
 }
 
 #clock {
@@ -92,6 +93,7 @@
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     display: none;
     pointer-events: all !important;
+    z-index: 10;
 }
 
 #card16 {

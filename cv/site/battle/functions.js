@@ -1,5 +1,5 @@
 window.onload = save();
-window.onload = fight();
+//window.onload = fight();
 
 let skillToggle1 = true;
 let skillToggle2 = true;
