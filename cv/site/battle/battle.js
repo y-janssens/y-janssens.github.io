@@ -134,7 +134,7 @@ function fight() {
     }
 
     function att1() {
-
+        damage();
         let d1 = Math.floor(Math.random() * 20) + 1;
         let d2 = Math.floor(Math.random() * 20) + 1;
         let d3 = Math.floor(Math.random() * 20) + 1;
@@ -143,8 +143,8 @@ function fight() {
 
         let d7 = Math.floor(Math.random() * 8) + 1;
         let d8 = Math.floor(Math.random() * 8) + 1;
-        let d9 = (((FOR1.value * 2) + d5 + d7) - END2.value - d8); // Formule dégats avec parade réussie
-        let d10 = (((FOR1.value * 2) + d5 + d7) - END2.value - d8); // Formule dégats avec parade/esquive ratée
+        let d9 = (((FOR1.value * 2) + dmgJ1) - END2.value - d8); // Formule dégats avec parade réussie
+        let d10 = (((FOR1.value * 2) + dmgJ1) - END2.value - d8); // Formule dégats avec parade/esquive ratée
 
         let sucess1 = d1 + " réussi";
         var rSucess1 = sucess1.fontcolor("green");

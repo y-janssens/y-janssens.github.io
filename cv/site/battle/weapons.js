@@ -1,15 +1,22 @@
-function weapons() {
-    let d4 = Math.floor(Math.random() * 4) + 1; 
-    let d6 = Math.floor(Math.random() * 6) + 1; 
-    let d8 = Math.floor(Math.random() * 8) + 1; 
-    let d10 = Math.floor(Math.random() * 10) + 1; 
+
+function damage() {
+    let d4 = Math.floor(Math.random() * 4) + 1;
+    let d6 = Math.floor(Math.random() * 6) + 1;
+    let d8 = Math.floor(Math.random() * 8) + 1;
+    let d10 = Math.floor(Math.random() * 10) + 1;
 
     let shieldJ1 = false;
+    let weaponJ1;
+    let parweaponJ1;
+
+    let shieldJ2 = false;
+    let weaponJ2;
+    let parweaponJ2;
 
     let epee = [(14 + d8), 8];
     let epeelongue = [(16 + d8), 12];
-    let dague  = [(12 + d6), 6];
-    let gantelet  = [(6 + d6), 2];
+    let dague = [(12 + d6), 6];
+    let gantelet = [(6 + d6), 2];
     let marteau = [(10 + d8), 4];
     let pioche = [(10 + d6), 6];
     let fleau = [(16 + d6), 5];
@@ -67,7 +74,7 @@ function weapons() {
         weaponJ1 = pique;
     } else if (LanceJ1.checked == true) {
         weaponJ1 = lance;
-    }  else {
+    } else {
         weaponJ1 = poings;
     }
 
@@ -84,19 +91,7 @@ function weapons() {
         parJ1 = parseInt(weaponJ1[1]);
     }
 
- /*    if (shieldJ1 == true) {
-        parJ1 = parseInt(parweaponJ1[1]);
-    } else {
-        parJ1 = parseInt(weaponJ1[1]);
-    } */
-
-    dmgJ1 = parseInt(weaponJ1[0]);
-    parJ1 = parseInt(weaponJ1[1]);
-
-    console.log('Att: ' + dmgJ1);
-    console.log('Par: ' + parJ1);
-
-/*     if (epeeJ2.checked == true) {
+    if (epeeJ2.checked == true) {
         weaponJ2 = epee;
     } else if (epeelongueJ2.checked == true) {
         weaponJ2 = epeelongue;
@@ -134,19 +129,23 @@ function weapons() {
         weaponJ2 = pique;
     } else if (LanceJ2.checked == true) {
         weaponJ2 = lance;
-    } else if (rondacheJ2.checked == true) {
-        weaponJ2 = rondache;
-    } else if (BouclierJ2.checked == true) {
-        weaponJ2 = bouclier;
     } else {
         weaponJ2 = poings;
     }
- */
 
+    if (rondacheJ2.checked == true) {
+        shieldJ2 = true;
+        parweaponJ2 = rondache;
+        parJ2 = parseInt(parweaponJ2[1]);
+    } else if (BouclierJ2.checked == true) {
+        shieldJ2 = true;
+        parweaponJ2 = bouclier;
+        parJ2 = parseInt(parweaponJ2[1]);
+    } else {
+        shieldJ2 = false;
+        parJ2 = parseInt(weaponJ2[1]);
+    }
 
-/*     dmg2 = parseInt(weaponJ2[0]);    
-    par2 = parseInt(weaponJ2[1]); */
+    dmgJ1 = parseInt(weaponJ1[0]);
+    dmgJ2 = parseInt(weaponJ2[0]);
 }
-
-weapons();
-
