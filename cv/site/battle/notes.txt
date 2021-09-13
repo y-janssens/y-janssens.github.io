@@ -7,13 +7,13 @@ Compétences de combat :
     🗸 - Berserker : Si Pvs à 0, attaque gratuite.
     - Coups Puissants : + 1D3 points de dégâts.
     🗸 - Degainer L'Epee : +1 Ini 1er tour.
-    - Esquive : Remplace parade.
+    🗸 Esquive : Remplace parade.
     🗸 - Feinte : -1 Hab -1 Par pour l'adversaire.
     - Ambidextrie
 
 À faire :
 
-    - Localisation
+    🗸 - Localisation
     - Formule esquive
     - Dégats armes
     - Formule parade équipement
@@ -21,4 +21,4 @@ Compétences de combat :
 À vérifier :
 
     - Formules existantes (valeurs J1 et J2 mélangées)
-    - Redondance des dés
+    🗸 - Redondance des dés
