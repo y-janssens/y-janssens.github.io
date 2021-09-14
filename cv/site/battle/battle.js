@@ -134,7 +134,7 @@ function fight() {
     }
 
     function att1() {
-        damage();
+        damage1();
         let d1 = Math.floor(Math.random() * 20) + 1;
         let d2 = Math.floor(Math.random() * 20) + 1;
         let d3 = Math.floor(Math.random() * 20) + 1;
@@ -195,9 +195,9 @@ function fight() {
             if (EsquiveJ2.checked == true) {
                 $("#resultContent").append(cName2 + " tente d'esquiver: " + "HAB " + HAB2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 0.5)) + ")" + "<br>" + resultr3 + "<br>").slideDown(3000);
 
-                if (d3 < HAB2.value) {
+                if (d3 < HAB2.value) { // esquive réussie
                     void (0);
-                } else {
+                } else { // esquive ratée
                     $("#resultContent").append(cName2 + " perd " + d9 + " Pvs." + "<br>" +
                         " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
                 }
@@ -205,9 +205,10 @@ function fight() {
             } else if (EsquiveJ2.checked == false) {
                 $("#resultContent").append(cName2 + " tente de parer: " + "PAR " + PAR2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 0.5)) + ")" + "<br>" + resultr2 + "<br>").slideDown(3000);
 
-                if (d3 < PAR2.value) {
-                    void (0);
-                } else {
+                if (d3 < PAR2.value) { // parade réussie
+                    $("#resultContent").append(cName2 + " perd " + d9 + " Pvs." + "<br>" +
+                        " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
+                } else { // parade ratée
                     $("#resultContent").append(cName2 + " perd " + d9 + " Pvs." + "<br>" +
                         " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
                 }
