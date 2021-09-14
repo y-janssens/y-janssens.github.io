@@ -220,10 +220,6 @@ input#c1, #c2 {
   filter: grayscale(1);
 }
 
-input#Tenue_en_linJ1, #CervelièreJ1, #CapuchonJ1, #GantsJ1, #JambièreJ1, #VesteJ1, #GambisonJ1, #acrobatieCombatJ1, #adresseTirJ1, #armePredJ1, #armePredDefJ1, #bararreJ1, #berserkerJ1, #coupsPuisJ1, #degainerJ1, #EsquiveJ1, #feinteJ1 {
-  margin-right: -10px;
-}
-
 table {
   color: #938471;
   font-family: Caudex;

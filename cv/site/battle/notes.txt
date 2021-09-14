@@ -15,7 +15,7 @@ Compétences de combat :
 
     🗸 - Localisation
     - Formule esquive
-    - Dégats armes
+    🗸 Dégats armes
     - Formule parade équipement
 
 À vérifier :
