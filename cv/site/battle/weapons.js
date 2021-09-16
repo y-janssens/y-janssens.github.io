@@ -29,11 +29,9 @@ function weapons() {
     poings = [(4 + d4), 1];
 }
 
-function damage1() {
+function damage() {
     weapons();
     let shieldJ1 = false;
-    let weaponJ1;
-    let parweaponJ1;
 
     if (epeeJ1.checked == true) {
         weaponJ1 = epee;
@@ -91,13 +89,8 @@ function damage1() {
     }
 
     dmgJ1 = parseInt(weaponJ1[0]);
-}
 
-function damage2() {
-    weapons();
     let shieldJ2 = false;
-    let weaponJ2;
-    let parweaponJ2;
 
     if (epeeJ2.checked == true) {
         weaponJ2 = epee;

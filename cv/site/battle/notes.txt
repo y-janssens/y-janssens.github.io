@@ -4,6 +4,7 @@ Compétences de combat :
     🗸 - Arme De Predilection : +1 Att
     🗸 - Arme De Predilection - Defense : +1 Par
     - Bagarre : Arme dégâts 1D10, points de parade 1D6 lorsque sans armes.
+    - Griffes fangeux : 10+ 1d6
     🗸 - Berserker : Si Pvs à 0, attaque gratuite.
     - Coups Puissants : + 1D3 points de dégâts.
     🗸 - Degainer L'Epee : +1 Ini 1er tour.
@@ -14,11 +15,12 @@ Compétences de combat :
 À faire :
 
     🗸 - Localisation
-    - Formule esquive
+    🗸 Formule esquive
     🗸 Dégats armes
-    - Formule parade équipement
+    🗸 Formule parade équipement
 
 À vérifier :
 
-    - Formules existantes (valeurs J1 et J2 mélangées)
+    🗸 - Formules existantes (valeurs J1 et J2 mélangées)
     🗸 - Redondance des dés
+    - Esquive parade dégats Berserker
