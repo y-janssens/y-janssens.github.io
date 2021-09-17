@@ -63,7 +63,7 @@ function stuff() {
     } else {
         legsJ1 = lin;
     }
-    
+
     if (GantsJ2.checked == true) {
         handsJ2 = gants;
     } else {
@@ -121,7 +121,7 @@ function loc1() {
     let locresJ1_3 = ["les jambes", legsJ2];
     let locresJ1_4 = ["le torse", torsoJ2];
 
-     resultLoc1 = "Jet de localisation : " + dloc1 + "<br>";
+    resultLoc1 = "Jet de localisation : " + dloc1 + "<br>";
 
     if (dloc1 <= 2) {
         locresJ1 = locresJ1_1[0];

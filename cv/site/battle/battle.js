@@ -261,7 +261,7 @@ function fight() {
 
     function rounds() {
 
-        if ((parseInt(NA1.value) == 0) & (parseInt(NA2.value) == 0)) {
+        if ((parseInt(NA1.value) <= 0) & (parseInt(NA2.value) <= 0)) {
             $("#resultContent").append("<h3>Fin du tour</h3>" + "<h3>◈</h3>").slideDown(3000);
             NA1.value = iniNA1;
             NA2.value = iniNA2;

@@ -1,9 +1,10 @@
 
 function weapons() {
-    let d4 = Math.floor(Math.random() * 4) + 1;
-    let d6 = Math.floor(Math.random() * 6) + 1;
-    let d8 = Math.floor(Math.random() * 8) + 1;
-    let d10 = Math.floor(Math.random() * 10) + 1;
+    d3 = Math.floor(Math.random() * 3) + 1;
+    d4 = Math.floor(Math.random() * 4) + 1;
+    d6 = Math.floor(Math.random() * 6) + 1;
+    d8 = Math.floor(Math.random() * 8) + 1;
+    d10 = Math.floor(Math.random() * 10) + 1;
 
     epee = [(14 + d8), 8];
     epeelongue = [(16 + d8), 12];
@@ -24,14 +25,24 @@ function weapons() {
     hallebarde = [(18 + d8), 8];
     pique = [(18 + d8), 10];
     lance = [(22 + d10), 2];
+    griffes = [(10 + d6), 1]
     rondache = [(4 + d6), 14];
     bouclier = [(6 + d6), 16];
+    phalanges = [(d10), 6];
     poings = [(4 + d4), 1];
 }
 
 function damage() {
     weapons();
+    let Classe1 = document.getElementById("classeJ1").value;
+    let Classe2 = document.getElementById("classeJ2").value;
+    let bagarre1 = document.getElementById("bagarreJ1");
+    let bagarre2 = document.getElementById("bagarreJ2");
+    let coupsPuis1 = document.getElementById("coupsPuisJ1");
+    let coupsPuis2 = document.getElementById("coupsPuisJ2");
     let shieldJ1 = false;
+    let bareJ1 = false;
+    let bareJ2 = false;
 
     if (epeeJ1.checked == true) {
         weaponJ1 = epee;
@@ -72,7 +83,12 @@ function damage() {
     } else if (LanceJ1.checked == true) {
         weaponJ1 = lance;
     } else {
+        bareJ1 = true;
         weaponJ1 = poings;
+    }
+
+    if (Classe1 == "Fangeux") {
+        weaponJ1 = griffes;
     }
 
     if (rondacheJ1.checked == true) {
@@ -86,6 +102,15 @@ function damage() {
     } else {
         shieldJ1 = false;
         parJ1 = parseInt(weaponJ1[1]);
+    }
+
+    if (bagarre1.checked == true) {
+        bareJ1 = true;
+        weaponJ1 = phalanges;
+    }
+
+    if (coupsPuisJ1.checked == true) {
+        dmgJ1 = parseInt(weaponJ1[0]) + d3;
     }
 
     dmgJ1 = parseInt(weaponJ1[0]);
@@ -131,7 +156,12 @@ function damage() {
     } else if (LanceJ2.checked == true) {
         weaponJ2 = lance;
     } else {
+        bareJ2 = true;
         weaponJ2 = poings;
+    }
+
+    if (Classe2 == "Fangeux") {
+        weaponJ2 = griffes;
     }
 
     if (rondacheJ2.checked == true) {
@@ -145,6 +175,15 @@ function damage() {
     } else {
         shieldJ2 = false;
         parJ2 = parseInt(weaponJ2[1]);
+    }
+
+    if (bagarre2.checked == true) {
+        bareJ2 = true;
+        weaponJ2 = phalanges;
+    }
+
+    if (coupsPuisJ2.checked == true) {
+        dmgJ2 = parseInt(weaponJ2[0]) + d3;
     }
 
     dmgJ2 = parseInt(weaponJ2[0]);
