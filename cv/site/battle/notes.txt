@@ -24,3 +24,4 @@ Compétences de combat :
     🗸 - Formules existantes (valeurs J1 et J2 mélangées)
     🗸 - Redondance des dés
     - Esquive parade dégats Berserker
+    - Bugs NA
