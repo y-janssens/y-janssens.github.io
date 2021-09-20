@@ -1,5 +1,4 @@
 window.onload = save();
-//window.onload = fight();
 
 let skillToggle1 = true;
 let skillToggle2 = true;
@@ -7,30 +6,6 @@ let weaponToggle1 = true;
 let weaponToggle2 = true;
 let stuffToggle1 = true;
 let stuffToggle2 = true;
-
-function dice4(rand) {
-    this.rand = Math.floor(Math.random() * 4) + 1;
-}
-
-function dice6(rand) {
-    this.rand = Math.floor(Math.random() * 6) + 1;
-}
-
-function dice8(rand) {
-    this.rand = Math.floor(Math.random() * 8) + 1;
-}
-
-function dice10(rand) {
-    this.rand = Math.floor(Math.random() * 10) + 1;
-}
-
-function dice20(rand) {
-    this.rand = (Math.floor(Math.random() * 20) + 1);
-}
-
-function dice100(rand) {
-    this.rand = (Math.floor(Math.random() * 100) + 1);
-}
 
 function display2() {
 

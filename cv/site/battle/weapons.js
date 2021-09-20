@@ -1,35 +1,35 @@
 
 function weapons() {
-    d3 = Math.floor(Math.random() * 3) + 1;
-    d4 = Math.floor(Math.random() * 4) + 1;
-    d6 = Math.floor(Math.random() * 6) + 1;
-    d8 = Math.floor(Math.random() * 8) + 1;
-    d10 = Math.floor(Math.random() * 10) + 1;
+    dm3 = Math.floor(Math.random() * 3) + 1;
+    dm4 = Math.floor(Math.random() * 4) + 1;
+    dm6 = Math.floor(Math.random() * 6) + 1;
+    dm8 = Math.floor(Math.random() * 8) + 1;
+    dm10 = Math.floor(Math.random() * 10) + 1;
 
-    epee = [(14 + d8), 8];
-    epeelongue = [(16 + d8), 12];
-    dague = [(12 + d6), 6];
-    gantelet = [(6 + d6), 2];
-    marteau = [(10 + d8), 4];
-    pioche = [(10 + d6), 6];
-    fleau = [(16 + d6), 5];
-    gourdin = [(10 + d8), 4];
-    hache = [(14 + d6), 8];
-    masse = [(14 + d6), 8];
-    faux = [(10 + d6), 8];
-    marteauguerre = [(18 + d8), 6];
-    bec = [(18 + d10), 10];
-    hachedeux = [(22 + d10), 10];
-    estramacon = [(20 + d10), 10];
-    vouge = [(14 + d6), 8];
-    hallebarde = [(18 + d8), 8];
-    pique = [(18 + d8), 10];
-    lance = [(22 + d10), 2];
-    griffes = [(10 + d6), 1]
-    rondache = [(4 + d6), 14];
-    bouclier = [(6 + d6), 16];
-    phalanges = [(d10), 6];
-    poings = [(4 + d4), 1];
+    epee = [(14 + dm8), 8];
+    epeelongue = [(16 + dm8), 12];
+    dague = [(12 + dm6), 6];
+    gantelet = [(6 + dm6), 2];
+    marteau = [(10 + dm8), 4];
+    pioche = [(10 + dm6), 6];
+    fleau = [(16 + dm6), 5];
+    gourdin = [(10 + dm8), 4];
+    hache = [(14 + dm6), 8];
+    masse = [(14 + dm6), 8];
+    faux = [(10 + dm6), 8];
+    marteauguerre = [(18 + dm8), 6];
+    bec = [(18 + dm10), 10];
+    hachedeux = [(22 + dm10), 10];
+    estramacon = [(20 + dm10), 10];
+    vouge = [(14 + dm6), 8];
+    hallebarde = [(18 + dm8), 8];
+    pique = [(18 + dm8), 10];
+    lance = [(22 + dm10), 2];
+    griffes = [(10 + dm6), 1]
+    rondache = [(4 + dm6), 14];
+    bouclier = [(6 + dm6), 16];
+    phalanges = [(dm10), 6];
+    poings = [(4 + dm4), 1];
 }
 
 function damage() {
@@ -38,8 +38,8 @@ function damage() {
     let Classe2 = document.getElementById("classeJ2").value;
     let bagarre1 = document.getElementById("bagarreJ1");
     let bagarre2 = document.getElementById("bagarreJ2");
-    let coupsPuis1 = document.getElementById("coupsPuisJ1");
-    let coupsPuis2 = document.getElementById("coupsPuisJ2");
+    let coupsPuisJ1 = document.getElementById("coupsPuisJ1");
+    let coupsPuisJ2 = document.getElementById("coupsPuisJ2");
     let shieldJ1 = false;
     let bareJ1 = false;
     let bareJ2 = false;
@@ -110,7 +110,7 @@ function damage() {
     }
 
     if (coupsPuisJ1.checked == true) {
-        dmgJ1 = parseInt(weaponJ1[0]) + d3;
+        dmgJ1 = parseInt(weaponJ1[0]) + dm3;
     }
 
     dmgJ1 = parseInt(weaponJ1[0]);
@@ -183,7 +183,7 @@ function damage() {
     }
 
     if (coupsPuisJ2.checked == true) {
-        dmgJ2 = parseInt(weaponJ2[0]) + d3;
+        dmgJ2 = parseInt(weaponJ2[0]) + dm3;
     }
 
     dmgJ2 = parseInt(weaponJ2[0]);

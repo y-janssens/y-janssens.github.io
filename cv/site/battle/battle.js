@@ -97,39 +97,39 @@ function fight() {
         let d10 = (((FOR1.value * 2) + dmgJ1) - END2.value - locprotJ2); // Formule dégats avec parade/esquive ratée
 
         let sucess1 = d1 + " réussi";
-        var rSucess1 = sucess1.fontcolor("green");
+        let rSucess1 = sucess1.fontcolor("green");
 
         let failure1 = d1 + " échec";
-        var rFailure1 = failure1.fontcolor("red");
+        let rFailure1 = failure1.fontcolor("red");
 
         let sucess2 = d2 + " réussi";
-        var rSucess2 = sucess2.fontcolor("green");
+        let rSucess2 = sucess2.fontcolor("green");
 
         let failure2 = d2 + " échec";
-        var rFailure2 = failure2.fontcolor("red");
+        let rFailure2 = failure2.fontcolor("red");
 
         let sucess3 = d3 + " réussi";
-        var rSucess3 = sucess3.fontcolor("green");
+        let rSucess3 = sucess3.fontcolor("green");
 
         let failure3 = d3 + " échec";
-        var rFailure3 = failure3.fontcolor("red");
+        let rFailure3 = failure3.fontcolor("red");
 
         if (d1 < ATT1.value) {
-            var resultr1 = rSucess1;
+            resultr1 = rSucess1;
         } else {
-            var resultr1 = rFailure1;
+            resultr1 = rFailure1;
         }
 
         if (d2 < PAR2.value) {
-            var resultr2 = rSucess2;
+            resultr2 = rSucess2;
         } else {
-            var resultr2 = rFailure2;
+            resultr2 = rFailure2;
         }
 
         if (d3 < HAB2.value) {
-            var resultr3 = rSucess3;
+            resultr3 = rSucess3;
         } else {
-            var resultr3 = rFailure3;
+            resultr3 = rFailure3;
         }
 
         if (parseInt(PV1.value) <= 0) {
@@ -155,7 +155,7 @@ function fight() {
             } else if (EsquiveJ2.checked == false) {
                 $("#resultContent").append(cName2 + " tente de parer: " + "PAR " + PAR2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 0.5)) + ")" + "<br>" + resultr2 + "<br>").slideDown(3000);
 
-                if (d3 < PAR2.value) { // parade réussie
+                if (d2 < PAR2.value) { // parade réussie
                     $("#resultContent").append(cName2 + " perd " + d9 + " Pvs." + "<br>" +
                         " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
 
@@ -184,39 +184,39 @@ function fight() {
         let d10 = (((FOR2.value * 2) + dmgJ2) - END1.value - locprotJ1); // Formule dégats avec parade/esquive ratée
 
         let sucess1 = d1 + " réussi";
-        var rSucess1 = sucess1.fontcolor("green");
+        let rSucess1 = sucess1.fontcolor("green");
 
         let failure1 = d1 + " échec";
-        var rFailure1 = failure1.fontcolor("red");
+        let rFailure1 = failure1.fontcolor("red");
 
         let sucess2 = d2 + " réussi";
-        var rSucess2 = sucess2.fontcolor("green");
+        let rSucess2 = sucess2.fontcolor("green");
 
         let failure2 = d2 + " échec";
-        var rFailure2 = failure2.fontcolor("red");
+        let rFailure2 = failure2.fontcolor("red");
 
         let sucess3 = d3 + " réussi";
-        var rSucess3 = sucess3.fontcolor("green");
+        let rSucess3 = sucess3.fontcolor("green");
 
         let failure3 = d3 + " échec";
-        var rFailure3 = failure3.fontcolor("red");
+        let rFailure3 = failure3.fontcolor("red");
 
         if (d1 < ATT1.value) {
-            var resultr1 = rSucess1;
+            resultr1 = rSucess1;
         } else {
-            var resultr1 = rFailure1;
+            resultr1 = rFailure1;
         }
 
         if (d2 < PAR2.value) {
-            var resultr2 = rSucess2;
+            resultr2 = rSucess2;
         } else {
-            var resultr2 = rFailure2;
+            resultr2 = rFailure2;
         }
 
         if (d3 < HAB2.value) {
-            var resultr3 = rSucess3;
+            resultr3 = rSucess3;
         } else {
-            var resultr3 = rFailure3;
+            resultr3 = rFailure3;
         }
 
         if (parseInt(PV1.value) <= 0) {
@@ -242,7 +242,7 @@ function fight() {
             } else if (EsquiveJ1.checked == false) {
                 $("#resultContent").append(cName1 + " tente de parer: " + "PAR " + PAR1.value + " (NA restants : " + (NA1.value = ((NA1.value) - 0.5)) + ")" + "<br>" + resultr2 + "<br>").slideDown(3000);
 
-                if (d3 < PAR1.value) { // parade réussie
+                if (d2 < PAR1.value) { // parade réussie
                     $("#resultContent").append(cName1 + " perd " + d9 + " Pvs." + "<br>" +
                         " Pvs restants : " + (PV1.value = ((PV1.value) - d9)) + "<br>" + "<br>").slideDown(3000);
 
@@ -271,14 +271,37 @@ function fight() {
     }
 
     function last1() {
+        let d1 = Math.floor(Math.random() * 20) + 1;
+        let d2 = Math.floor(Math.random() * 20) + 1;
+        let d3 = Math.floor(Math.random() * 20) + 1;
         let berserker1 = document.getElementById("berserkerJ1");
 
         if ((berserker1.checked == true) & (parseInt(PV1.value) <= 0)) {
             $("#resultContent").append(cName1 + " tente d'attaquer une dernière fois: " + "ATT " + ATT1.value + " (NA restants : " + (NA1.value = ((NA1.value) - 1)) + ")" + "<br>" + resultr1 + "<br>").slideDown(3000);
             if (d1 < ATT1.value) {
-                $("#resultContent").append(cName2 + " tente de parer: " + "PAR " + PAR2.value + "<br>" + resultr2 + "<br>" +
-                    cName2 + " perd " + d9 + " Pvs." + "<br>" +
-                    " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
+                $("#resultContent").append(resultLoc1 + cName1 + " vise : " + locresJ1 + "<br>").slideDown(3000);
+                if (EsquiveJ2.checked == true) {
+                    $("#resultContent").append(cName2 + " tente d'esquiver: " + "HAB " + HAB2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 0.5)) + ")" + "<br>" + resultr3 + "<br>").slideDown(3000);
+
+                    if (d3 < HAB2.value) { // esquive réussie
+                        void (0);
+                    } else { // esquive ratée
+                        $("#resultContent").append(cName2 + " perd " + d10 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV2.value = ((PV2.value) - d10)) + "<br>" + "<br>").slideDown(3000);
+                    }
+
+                } else if (EsquiveJ2.checked == false) {
+                    $("#resultContent").append(cName2 + " tente de parer: " + "PAR " + PAR2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 0.5)) + ")" + "<br>" + resultr2 + "<br>").slideDown(3000);
+
+                    if (d2 < PAR2.value) { // parade réussie
+                        $("#resultContent").append(cName2 + " perd " + d9 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV2.value = ((PV2.value) - d9)) + "<br>" + "<br>").slideDown(3000);
+
+                    } else { // parade ratée
+                        $("#resultContent").append(cName2 + " perd " + d10 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV2.value = ((PV2.value) - d10)) + "<br>" + "<br>").slideDown(3000);
+                    }
+                }
             } else {
                 return;
             }
@@ -286,14 +309,37 @@ function fight() {
     }
 
     function last2() {
+        let d1 = Math.floor(Math.random() * 20) + 1;
+        let d2 = Math.floor(Math.random() * 20) + 1;
+        let d3 = Math.floor(Math.random() * 20) + 1;
         let berserker2 = document.getElementById("berserkerJ2");
 
         if ((berserker2.checked == true) & (parseInt(PV2.value) <= 0)) {
             $("#resultContent").append(cName2 + " tente d'attaquer une dernière fois: " + "ATT " + ATT2.value + " (NA restants : " + (NA2.value = ((NA2.value) - 1)) + ")" + "<br>" + resultr3 + "<br>").slideDown(3000);
-            if (d3 < ATT2.value) {
-                $("#resultContent").append(cName1 + " tente de parer: " + "PAR " + PAR1.value + "<br>" + resultr4 + "<br>" +
-                    cName1 + " perd " + d9 + " Pvs." + "<br>" +
-                    " Pvs restants : " + (PV1.value = ((PV1.value) - d9)) + "<br>" + "<br>").slideDown(3000);
+            if (d1 < ATT2.value) {
+                $("#resultContent").append(resultLoc2 + cName2 + " vise : " + locresJ2 + "<br>").slideDown(3000);
+                if (EsquiveJ1.checked == true) {
+                    $("#resultContent").append(cName1 + " tente d'esquiver: " + "HAB " + HAB1.value + " (NA restants : " + (NA1.value = ((NA1.value) - 0.5)) + ")" + "<br>" + resultr3 + "<br>").slideDown(3000);
+
+                    if (d3 < HAB1.value) { // esquive réussie
+                        void (0);
+                    } else { // esquive ratée
+                        $("#resultContent").append(cName1 + " perd " + d10 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV1.value = ((PV1.value) - d10)) + "<br>" + "<br>").slideDown(3000);
+                    }
+
+                } else if (EsquiveJ1.checked == false) {
+                    $("#resultContent").append(cName1 + " tente de parer: " + "PAR " + PAR1.value + " (NA restants : " + (NA1.value = ((NA1.value) - 0.5)) + ")" + "<br>" + resultr2 + "<br>").slideDown(3000);
+
+                    if (d2 < PAR1.value) { // parade réussie
+                        $("#resultContent").append(cName1 + " perd " + d9 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV1.value = ((PV1.value) - d9)) + "<br>" + "<br>").slideDown(3000);
+
+                    } else { // parade ratée
+                        $("#resultContent").append(cName1 + " perd " + d10 + " Pvs." + "<br>" +
+                            " Pvs restants : " + (PV1.value = ((PV1.value) - d10)) + "<br>" + "<br>").slideDown(3000);
+                    }
+                }
             } else {
                 return;
             }
@@ -301,9 +347,9 @@ function fight() {
     }
 
     start();
-    outcome();
     last1();
     last2();
+    outcome();
     console.timeEnd('time');
 }
 
