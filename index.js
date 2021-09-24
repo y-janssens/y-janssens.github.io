@@ -76,7 +76,7 @@ function resize() {
     $('.bf').css('margin-left', s_width_h / 2.5);
     $('.bf').css('margin-right', s_width_h / 2.5);
 
-    if (width_h <= 800) {
+    if (width_h <= 900) {
         $('#card1').css('left', '24%');
         $('#card2').css('left', '62%');
         $('#card3').css('left', '100%');
@@ -124,7 +124,7 @@ function resize() {
         $('.bh').css('font-size', '0.6rem');
         $('#contact_form').css('transform', 'translate(-50%, -50%) scale(0.85)');
     
-    } else if (width_h <= 1100) {
+    } else if (width_h <= 1200) {
         $('#card1').css('left', '18%');
         $('#card2').css('left', '46.5%');
         $('#card3').css('left', '75%');
