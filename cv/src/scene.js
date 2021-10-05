@@ -71,7 +71,7 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    /* const time = performance.now() * 0.001;
+    const time = performance.now() * 0.001;
 
     mesh1.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh2.position.y = Math.sin(time) * 0.25 + 2.5;
@@ -299,15 +299,15 @@ function animate() {
         mesh14.position.lerp(cube28.position, 0.015);
         gsap.to(rectLight14, 1, { intensity: 1 })
         gsap.to(mesh14mat, 1, { opacity: 0.15 })
-    } */
+    }
 
     controls.update();
 
-/*     if (resizeRendererToDisplaySize(renderer)) {
+    if (resizeRendererToDisplaySize(renderer)) {
         const canvas = renderer.domElement;
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
-    } */
+    }
 }
 
 animate();
