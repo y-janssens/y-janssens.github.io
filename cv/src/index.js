@@ -197,21 +197,36 @@ function reportWindowSize() {
 }
 
 function resize() {
+    var view_width = $(window).width();
+    var view_height = $(window).height();
     var height = document.getElementById('item0').offsetHeight;
     var width = document.getElementById('item0').offsetWidth;
     let height_if = document.getElementById('container').offsetHeight;
     s_width_if = height_if / 1250;
 
+    console.log(view_width);
+
     $('.content7').css('height', height);
     $('.content7').css('width', width)
     $('.content7').css('max-height', '80%');
-/*     $('canvas').css('transition', '500ms ease-in-out');
+    $('canvas').css('transition', '500ms ease-in-out');
     $('canvas').css('max-height', '80%');
     $('canvas').css('height', '100%');
-    $('canvas').css('width', 'auto'); */
+    $('canvas').css('width', 'auto');
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     tooltip();
+
+/*     if (view_width <= 800) {
+        $('body').css('top', '50%');
+        $('body').css('left', '50%');
+        $('body').css('width', view_height);
+        $('body').css('height', view_width);
+        $('canvas').css('width', view_height);
+        $('canvas').css('height', view_width);       
+        $('canvas').css('margin-left', '18em'); 
+        $('body').css('transform', 'translate(-50%, -50%) rotateZ(90deg)');
+} */
 }
 
 function scrollbar() {

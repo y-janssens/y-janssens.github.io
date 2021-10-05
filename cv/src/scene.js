@@ -312,7 +312,7 @@ function animate() {
 
 animate();
 
-/* function resizeRendererToDisplaySize(renderer) {
+function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -325,4 +325,4 @@ animate();
         renderer.setSize(width, height, true);
     }
     return needResize;
-} */
+}
