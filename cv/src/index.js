@@ -232,8 +232,6 @@ function resize() {
     let height_if = document.getElementById('container').offsetHeight;
     s_width_if = height_if / 1250;
 
-    console.log(view_width);
-
     $('.content7').css('height', height);
     $('.content7').css('width', width)
     $('.content7').css('max-height', '80%');
