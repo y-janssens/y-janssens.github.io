@@ -4,6 +4,7 @@ window.onload = texture();
 window.onresize = reportWindowSize;
 window.addEventListener('resize', reportWindowSize);
 
+
 let plus = true;
 let colorToggle = false;
 let muteSound = false;
@@ -204,10 +205,10 @@ function resize() {
     $('.content7').css('height', height);
     $('.content7').css('width', width)
     $('.content7').css('max-height', '80%');
-    $('canvas').css('transition', '500ms ease-in-out');
+/*     $('canvas').css('transition', '500ms ease-in-out');
     $('canvas').css('max-height', '80%');
     $('canvas').css('height', '100%');
-    $('canvas').css('width', 'auto');
+    $('canvas').css('width', 'auto'); */
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     tooltip();

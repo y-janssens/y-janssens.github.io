@@ -30,7 +30,7 @@ audioLoader1.load('./src/assets/ambiant.mp3', function (buffer) {
     sound1.setBuffer(buffer);
     sound1.setLoop(true);
     sound1.setVolume(0.025);
-    sound1.play();
+    //sound1.play();
 });
 
 // Objects
@@ -71,7 +71,7 @@ function animate() {
 
     requestAnimationFrame(animate);
 
-    const time = performance.now() * 0.001;
+    /* const time = performance.now() * 0.001;
 
     mesh1.position.y = Math.sin(time) * 0.25 + 2.5;
     mesh2.position.y = Math.sin(time) * 0.25 + 2.5;
@@ -299,20 +299,20 @@ function animate() {
         mesh14.position.lerp(cube28.position, 0.015);
         gsap.to(rectLight14, 1, { intensity: 1 })
         gsap.to(mesh14mat, 1, { opacity: 0.15 })
-    }
+    } */
 
     controls.update();
 
-    if (resizeRendererToDisplaySize(renderer)) {
+/*     if (resizeRendererToDisplaySize(renderer)) {
         const canvas = renderer.domElement;
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
-    }
+    } */
 }
 
 animate();
 
-function resizeRendererToDisplaySize(renderer) {
+/* function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -325,4 +325,4 @@ function resizeRendererToDisplaySize(renderer) {
         renderer.setSize(width, height, true);
     }
     return needResize;
-}
+} */

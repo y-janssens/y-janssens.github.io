@@ -1,4 +1,5 @@
-body {
+body, html {
+  position: absolute;
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -8,7 +9,9 @@ body {
 }
 
 canvas {
-  position: static;
+  position: relative;
+  height: 100% !important;
+  width: 100% !important;
   margin-left: 9em;
   z-index: 2;
 }
