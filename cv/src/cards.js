@@ -2,6 +2,13 @@
 let cardnumber = 24;
 let cardspace = cardnumber / 2;
 let number = Math.PI / cardspace;
+var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+if (supportsTouch) {
+    clics = 'touchstart';
+} else if (supportsTouch === undefined){
+    clics = 'click';
+}
 
 loader.load(
     './src/assets/card_uvs_low.obj', function (object) {
@@ -32,8 +39,8 @@ loader.load(
         group1.add(mesh1);
         scene.add(group1);
 
-        domEvents.addEventListener(mesh1, 'click', function (event) {
-            console.log('click');
+        domEvents.addEventListener(mesh1, clics , function(event){
+            console.log('you clicked on the mesh');
             if (img1_focus == true) {
                 shrink1();
             } else {
@@ -72,7 +79,7 @@ loader.load(
         group2.add(mesh2);
         scene.add(group2);
 
-        domEvents.addEventListener(mesh2, 'click', function (event) {
+        domEvents.addEventListener(mesh2, clics, function (event) {
 
             if (img2_focus == true) {
                 shrink2();
@@ -112,7 +119,7 @@ loader.load(
         group3.add(mesh3);
         scene.add(group3);
 
-        domEvents.addEventListener(mesh3, 'click', function (event) {
+        domEvents.addEventListener(mesh3, clics, function (event) {
 
             if (img3_focus == true) {
                 shrink3();
@@ -152,7 +159,7 @@ loader.load(
         group4.add(mesh4);
         scene.add(group4);
 
-        domEvents.addEventListener(mesh4, 'click', function (event) {
+        domEvents.addEventListener(mesh4, clics, function (event) {
 
             if (img4_focus == true) {
                 shrink4();
@@ -192,7 +199,7 @@ loader.load(
         group5.add(mesh5);
         scene.add(group5);
 
-        domEvents.addEventListener(mesh5, 'click', function (event) {
+        domEvents.addEventListener(mesh5, clics, function (event) {
 
             if (img5_focus == true) {
                 shrink5();
@@ -232,7 +239,7 @@ loader.load(
         group6.add(mesh6);
         scene.add(group6);
 
-        domEvents.addEventListener(mesh6, 'click', function (event) {
+        domEvents.addEventListener(mesh6, clics, function (event) {
 
             if (img6_focus == true) {
                 shrink6();
@@ -272,7 +279,7 @@ loader.load(
         group7.add(mesh7);
         scene.add(group7);
 
-        domEvents.addEventListener(mesh7, 'click', function (event) {
+        domEvents.addEventListener(mesh7, clics, function (event) {
 
             if (img7_focus == true) {
                 shrink7();
@@ -312,7 +319,7 @@ loader.load(
         group9.add(mesh9);
         scene.add(group9);
 
-        domEvents.addEventListener(mesh9, 'click', function (event) {
+        domEvents.addEventListener(mesh9, clics, function (event) {
 
             if (img9_focus == true) {
                 shrink9();
@@ -352,7 +359,7 @@ loader.load(
         group10.add(mesh10);
         scene.add(group10);
 
-        domEvents.addEventListener(mesh10, 'click', function (event) {
+        domEvents.addEventListener(mesh10, clics, function (event) {
 
             if (img10_focus == true) {
                 shrink10();
@@ -392,7 +399,7 @@ loader.load(
         group11.add(mesh11);
         scene.add(group11);
 
-        domEvents.addEventListener(mesh11, 'click', function (event) {
+        domEvents.addEventListener(mesh11, clics, function (event) {
             if (img11_focus == true) {
                 shrink11();
             } else {
@@ -431,7 +438,7 @@ loader.load(
         group12.add(mesh12);
         scene.add(group12);
 
-        domEvents.addEventListener(mesh12, 'click', function (event) {
+        domEvents.addEventListener(mesh12, clics, function (event) {
 
             if (img12_focus == true) {
                 shrink12();
@@ -471,7 +478,7 @@ loader.load(
         group13.add(mesh13);
         scene.add(group13);
 
-        domEvents.addEventListener(mesh13, 'click', function (event) {
+        domEvents.addEventListener(mesh13, clics, function (event) {
 
             if (img13_focus == true) {
                 shrink13();
@@ -511,7 +518,7 @@ loader.load(
         group14.add(mesh14);
         scene.add(group14);
 
-        domEvents.addEventListener(mesh14, 'click', function (event) {
+        domEvents.addEventListener(mesh14, clics, function (event) {
 
             if (img14_focus == true) {
                 shrink14();
