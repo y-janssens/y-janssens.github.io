@@ -5,7 +5,7 @@ const renderer = new THREE.WebGLRenderer({
     preserveDrawingBuffer: true,
     alpha: true
 });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize( innerWidth, innerHeight );
 document.body.appendChild(renderer.domElement);
 
 renderer.shadowMap.enabled = true;
