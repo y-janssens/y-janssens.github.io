@@ -32,7 +32,7 @@ loader.load(
         group1.add(mesh1);
         scene.add(group1);
 
-        domEvents.addEventListener(mesh1, 'touchstart', function (event) {
+        domEvents.addEventListener(mesh1, 'click', function (event) {
             console.log('click');
             if (img1_focus == true) {
                 shrink1();

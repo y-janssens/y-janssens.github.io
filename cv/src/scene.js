@@ -1,7 +1,7 @@
 // Scene Camera & Renderer
 
 const renderer = new THREE.WebGLRenderer({
-    antialias: true,
+    antialias: false,
     preserveDrawingBuffer: true,
     alpha: true
 });
@@ -9,7 +9,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 
 scene = new THREE.Scene();
 scene.background = new THREE.Color(0xc2bfb8);
