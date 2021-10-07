@@ -367,7 +367,7 @@ function save() {
     let iniNA2 = document.getElementById('NA2').value;
     let iniPV2 = document.getElementById('PV2').value;
 
-    console.log("Stats stored");
+    /* console.log("Stats stored");
     console.log(
         "For Joueur 1: ", FOR1.value, '\n',
         "End Joueur 1: ", END1.value, '\n',
@@ -391,7 +391,7 @@ function save() {
         "Par Joueur 2: ", PAR2.value, '\n',
         "Tir Joueur 2: ", TIR2.value, '\n',
         "Na Joueur 2: ", NA2.value, '\n',
-        "Pv Joueur 2: ", PV2.value, '\n');
+        "Pv Joueur 2: ", PV2.value, '\n'); */
 
     $('.reload').on('click', function () {
         document.getElementById("resultContent").innerHTML = "";

@@ -47,6 +47,8 @@ $('.close').on('click', function () {
     $('#img7').css('margin-left', '0em');
     $('#vid1').css('margin-left', '0em');
     $('#vid2').css('margin-left', '0em');
+    $('#battler').css('margin-left', '0em');
+    $('#clock').css('margin-left', '0em');
     $('canvas').css('left', '0em');
     $('.descri1').css('margin-left', '0em');
     $('.descri1').css('margin-left', '0em');
@@ -83,6 +85,8 @@ $('.toggle').on('click', function () {
     $('#img7').css('margin-left', '9em');
     $('#vid1').css('margin-left', '9em');
     $('#vid2').css('margin-left', '9em');
+    $('#battler').css('margin-left', '9em');
+    $('#clock').css('margin-left', '9em');
     $('canvas').css('left', '9em');
     $('.descri1').css('margin-left', '9em');
     $('.descri1').css('margin-left', '9em');

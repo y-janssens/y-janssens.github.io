@@ -2,12 +2,20 @@
 let cardnumber = 24;
 let cardspace = cardnumber / 2;
 let number = Math.PI / cardspace;
+window.onload = touch();
 var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
 if (supportsTouch) {
     clics = 'touchstart';
-} else if (supportsTouch === undefined){
+} else if (supportsTouch === undefined) {
     clics = 'click';
+}
+
+function touch() {
+    let check = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+    if (check) {
+        $('.close').trigger("click");
+    }
 }
 
 loader.load(
@@ -39,8 +47,7 @@ loader.load(
         group1.add(mesh1);
         scene.add(group1);
 
-        domEvents.addEventListener(mesh1, clics , function(event){
-            console.log('you clicked on the mesh');
+        domEvents.addEventListener(mesh1, clics, function (event) {            
             if (img1_focus == true) {
                 shrink1();
             } else {

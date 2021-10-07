@@ -957,6 +957,7 @@ hr.htitle {
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
   display: none;
   pointer-events: all !important;
+  transition: 500ms all;
 }
 
 #clock {
@@ -970,6 +971,7 @@ hr.htitle {
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
   display: none;
   pointer-events: all !important;
+  transition: 500ms all;
 }
 
 #vid1 {

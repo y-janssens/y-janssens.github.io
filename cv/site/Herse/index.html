@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-	
-	<script src="./src/Three.js"></script>	
-  	<script src="./src/OrbitControls.js"></script>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<script src="./src/Three.js"></script>
+	<script src="./src/OrbitControls.js"></script>
 	<script src="./src/OBJLoader.js"></script>
 	<script src="./src/RGBELoader.js"></script>
-	<script src="./src/EffectComposer.js"></script>
+<!-- 	<script src="./src/EffectComposer.js"></script>
 	<script src="./src/RenderPass.js"></script>
 	<script src="./src/CopyShader.js"></script>
 	<script src="./src/ShaderPass.js"></script>
 	<script src="./src/UnrealBloomPass.js"></script>
 	<script src="./src/LuminosityHighPassShader.js"></script>
-	<script src="./src/threex.domevents.js"></script>
+	<script src="./src/threex.domevents.js"></script> -->
 
-<style>
-	html, body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-	background-color: #bbbbbb;
-    position: absolute;
-    margin: 0 !important;
-    }
-   
-canvas {
-    position: absolute;
-	display: block;
-    border: none;
-    outline: none;
-}
-</style>
-  </head>
-  
-  <body>
-	  
-<script type=text/javascript>
+	<style>
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			background-color: #bbbbbb;
+			position: absolute;
+			margin: 0 !important;
+		}
+
+		canvas {
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			border: none;
+			outline: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<script type=text/javascript>
 
 // Scene Camera & Renderer
 
-	const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: true});
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true, alpha: true});
+	renderer.setSize( innerWidth, innerHeight );
 	renderer.setClearColor( 0x000000, 0 );
 	document.body.appendChild( renderer.domElement );
 	
 	renderer.shadowMap.enabled = true;
-	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+	renderer.shadowMap.type = THREE.PCFShadowMap;
 	renderer.outputEncoding = THREE.LinearEncoding;
 	
 	scene = new THREE.Scene();
@@ -56,8 +61,6 @@ canvas {
 	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );  
 	
 	camera.position.set( 0, 0, 20 );
-
-	let domEvents = new THREEx.DomEvents(camera, renderer.domElement);
 
 	const shield_material = new THREE.MeshPhysicalMaterial( {fog: false });
 	const bshield_material = new THREE.MeshPhysicalMaterial( {fog: false });
@@ -108,7 +111,7 @@ canvas {
 	light.position.set( 100, 100, 100 );   
 	light.castShadow = true;
 	
-	light.shadow.mapSize = new THREE.Vector2(4096, 4096);
+	light.shadow.mapSize = new THREE.Vector2(1024, 1024);
 	light.shadow.camera.near = 15;
 	light.shadow.focus = 0.165;
 	light.shadow.bias = 0.000001;
@@ -342,18 +345,18 @@ canvas {
 	
 // PostProcessing
 
-const width = window.innerWidth;
+	/* const width = window.innerWidth;
 	const height = window.innerHeight;
 
 	const composer = new THREE.EffectComposer( renderer );
 	composer.setSize(window.innerWidth, window.innerHeight);
 	
 	const renderPass = new THREE.RenderPass( scene, camera );
-	composer.addPass( renderPass );
+	composer.addPass( renderPass ); */
 
 // BLOOM		
 
-	const params = {
+/* 	const params = {
 	exposure: 1,
 	bloomStrength: 1.75,
 	bloomThreshold: 0.99,
@@ -365,7 +368,7 @@ const width = window.innerWidth;
 	bloomPass.strength = params.bloomStrength;
 	bloomPass.radius = params.bloomRadius;
 
-	composer.addPass( bloomPass );
+	composer.addPass( bloomPass ); */
 		
 // Animation & render
 
@@ -379,32 +382,32 @@ const width = window.innerWidth;
 
 	requestAnimationFrame(animate);
 
-	controls.update();
+    controls.update();
 
-	if (resizeRendererToDisplaySize(renderer, composer )) {
-	const canvas = renderer.domElement;
-	camera.aspect = canvas.clientWidth / canvas.clientHeight;
-	camera.updateProjectionMatrix();
-	}
+    if (resizeRendererToDisplaySize(renderer)) {
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+    }
+}
 
-	}
+animate();
 
-	animate();
-	
-	function resizeRendererToDisplaySize(renderer, composer) {
-	const canvas = renderer.domElement;
-	var width = window.innerWidth;
-	var height = window.innerHeight;
-	var canvasPixelWidth = canvas.width / window.devicePixelRatio;
-	var canvasPixelHeight = canvas.height / window.devicePixelRatio;
+function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var canvasPixelWidth = canvas.width / window.devicePixelRatio;
+    var canvasPixelHeight = canvas.height / window.devicePixelRatio;
 
-	const needResize = canvasPixelWidth !== width || canvasPixelHeight !== height;
-	if (needResize) {
+    const needResize = canvasPixelWidth !== width || canvasPixelHeight !== height;
+    if (needResize) {
 
-	renderer.setSize(width, height, true);
-		}
-		return needResize;
-	}
+        renderer.setSize(width, height, true);
+    }
+    return needResize;
+}
 	</script>
-  </body>
-  </html
+</body>
+
+</html
