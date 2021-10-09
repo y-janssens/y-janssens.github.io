@@ -1,13 +1,13 @@
 // Scene Camera & Renderer
 
-const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.toneMapping = THREE.LinearToneMapping;
 renderer.toneMappingExposure = 0.75;
 
@@ -31,7 +31,7 @@ pmremGenerator.compileEquirectangularShader();
 const rgbl = new THREE.RGBELoader();
 rgbl.setDataType(THREE.UnsignedByteType)
 rgbl.setPath('./assets/textures/')
-rgbl.load('greenwich_park_03_4k.hdr', function (texture) {
+rgbl.load('greenwich_park_03_1k.hdr', function (texture) {
 
 	const envMap = pmremGenerator.fromEquirectangular(texture).texture;
 
@@ -2380,7 +2380,7 @@ Perg1.load(
 
 // Pool
 
-const waterGeometry = new THREE.CircleGeometry(2.6, 8);
+/* const waterGeometry = new THREE.CircleGeometry(2.6, 8);
 
 water = new THREE.Water(waterGeometry, {
 	color: params.color,
@@ -2567,7 +2567,7 @@ loader.load(
 		});
 
 		ladder2 = object;
-	});
+	}); */
 
 loader.load(
 	'./assets/obj/sol.obj', function (object) {
@@ -2700,7 +2700,7 @@ light.position.set(100, 100, 100);
 light.castShadow = true;
 light.angle = 2.5;
 
-light.shadow.mapSize = new THREE.Vector2(4096, 4096);
+light.shadow.mapSize = new THREE.Vector2(2048, 2048);
 light.shadow.camera.near = 15;
 light.shadow.camera.far = 1000;
 light.shadow.focus = 0.065;

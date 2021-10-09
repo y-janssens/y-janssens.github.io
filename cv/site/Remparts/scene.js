@@ -1,6 +1,6 @@
 // Scene Camera & Renderer
 
-const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 renderer.setSize(window.innerWidth, window.innerHeight);

@@ -4,7 +4,7 @@ pmremGenerator.compileEquirectangularShader();
 const rgbl = new THREE.RGBELoader();
 rgbl.setDataType( THREE.UnsignedByteType )
 rgbl.setPath( './assets/textures/' )
-rgbl.load( 'goegap_4k.hdr', function ( texture ) {
+rgbl.load( 'goegap_1k.hdr', function ( texture ) {
 
 const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
 scene.environment = envMap;
@@ -19,7 +19,7 @@ const light = new THREE.DirectionalLight( 0xffffff, 1.5 );
 light.position.set( 50, 100, 50 );   
 light.castShadow = true;
 
-light.shadow.mapSize = new THREE.Vector2(2048, 2048);
+light.shadow.mapSize = new THREE.Vector2(1024, 1024);
 light.shadow.camera.near = 0.1;
 light.shadow.camera.far = 2000;
 light.shadow.focus = 0.105;

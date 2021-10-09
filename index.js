@@ -35,7 +35,7 @@ function resize() {
     let height_l = document.getElementById('card_large1').offsetHeight;
     let height_d = document.getElementById('card16').offsetHeight;
     let height_if = document.getElementById('container').offsetHeight;
-    let width_h = document.getElementById('block').offsetWidth;
+    let width_h = window.innerWidth;
 
     s_width = height / 1.5;
     s_width_l = height_l / 1.75;
@@ -66,7 +66,7 @@ function resize() {
     $('#card20').css('width', s_width_d);
 
     $('#battler').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
-    $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');    
+    $('#clock').css('transform', 'translate(-50%, -50%) scale(' + s_width_if + ')');
     $('.bh').css('padding-left', s_width_h);
     $('.bh').css('padding-right', s_width_h);
     $('.bh').css('margin-left', s_width_h / 2);
@@ -76,7 +76,21 @@ function resize() {
     $('.bf').css('margin-left', s_width_h / 2.5);
     $('.bf').css('margin-right', s_width_h / 2.5);
 
-    if (width_h <= 900) {
+    if (width_h <= 400) {
+        $('h1').css('font-size', '0.8rem');
+        $('h1').css('top', '1.5em');
+        $('h1').css('left', '40%');
+        $('.header_desc').css('font-size', '0.6rem');
+        $('.header_desc').css('top', '5.5em');
+        $('.header_desc').css('left', '40%');
+        $('#pic').css('width', '5.5em');
+        $('#pic').css('height', '5.5em');
+        $('#user').css('top', '1.5em');
+        $('#user').css('right', '1.5em');
+        $('.bf').css('font-size', '0.4rem');
+        $('.bh').css('font-size', '0.5rem');
+
+    } else if (width_h > 400 && width_h < 700) {
         $('#card1').css('left', '24%');
         $('#card2').css('left', '62%');
         $('#card3').css('left', '100%');
@@ -106,7 +120,7 @@ function resize() {
         $('#card17').css('left', '62%');
         $('#card18').css('left', '100%');
         $('#card19').css('left', '138%');
-        $('#card20').css('left', '176%'); 
+        $('#card20').css('left', '176%');
         $('#card_large1').css('left', '34%');
         $('#card_large2').css('left', '100%');
         $('#card_large3').css('left', '166%');
@@ -123,8 +137,8 @@ function resize() {
         $('.bf').css('font-size', '0.5rem');
         $('.bh').css('font-size', '0.6rem');
         $('#contact_form').css('transform', 'translate(-50%, -50%) scale(0.85)');
-    
-    } else if (width_h <= 1200) {
+
+    } else if (width_h > 700 && width_h < 1200) {
         $('#card1').css('left', '18%');
         $('#card2').css('left', '46.5%');
         $('#card3').css('left', '75%');
@@ -142,7 +156,7 @@ function resize() {
         $('#card20').css('left', '132%');
         $('#card_large1').css('left', '25.5%');
         $('#card_large2').css('left', '75%');
-        $('#card_large3').css('left', '124.5%');    
+        $('#card_large3').css('left', '124.5%');
 
     } else {
         $('#card1').css('left', '12%');
@@ -174,7 +188,7 @@ function resize() {
         $('#user').css('top', '1em');
         $('.bf').css('font-size', '0.65rem');
         $('.bh').css('font-size', '0.75rem');
-         $('#card1').css('height', '75%');
+        $('#card1').css('height', '75%');
         $('#card2').css('height', '75%');
         $('#card3').css('height', '75%');
         $('#card4').css('height', '75%');
