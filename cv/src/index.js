@@ -224,8 +224,7 @@ function mute() {
 }
 
 function reportWindowSize() {
-    resize();
-    
+    resize();    
 }
 
 function resize() {
@@ -234,7 +233,7 @@ function resize() {
     var height = document.getElementById('item0').offsetHeight;
     var width = document.getElementById('item0').offsetWidth;
     let height_if = document.getElementById('container').offsetHeight;
-    s_width_if = height_if / 1250;
+    s_width_if = height_if / 1400;
 
     $('.content7').css('height', height);
     $('.content7').css('width', width)
