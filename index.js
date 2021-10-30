@@ -37,9 +37,9 @@ function resize() {
     let height_if = document.getElementById('container').offsetHeight;
     let width_h = window.innerWidth;
 
-    s_width = height / 1.5;
+    s_width = height / 1.75;
     s_width_l = height_l / 1.75;
-    s_width_d = height_d / 1.5;
+    s_width_d = height_d / 1.75;
     s_width_if = height_if / 1250;
     s_width_h = width_h / 50;
     s_width_h1 = width_h / 1000;
