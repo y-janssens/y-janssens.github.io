@@ -479,7 +479,10 @@ $(".img").click(function (event) {
     let img_src = event.target.src;
     if (img_toggle == false) {
         img_toggle = true;
-        $('#show_img').css('display', 'initial');
+        $('#show_img').css('visibility', 'visible');
+        $('#show_img').css('opacity', '1');
+        $('#show_img').css('transform', 'translate(-50%, -50%) scale(1)');
+        $('#show_img').css('transition', '350ms all')
         $('.g_container').css('display', 'initial');
         $('.g_container').css('pointer-events', 'all');
         document.getElementById('show_img').src = img_src;
@@ -488,7 +491,10 @@ $(".img").click(function (event) {
 
 $(".g_container").click(function () {
     img_toggle = false;
-    $('#show_img').css('display', 'none');
+    $('#show_img').css('visibility', 'hidden');
+    $('#show_img').css('opacity', '0');
+    $('#show_img').css('transform', 'translate(-50%, -50%) scale(0)');
+    $('#show_img').css('transition', '350ms all')
     $('.g_container').css('display', 'none');
     $('.g_container').css('pointer-events', 'none');
 });
