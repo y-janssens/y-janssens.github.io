@@ -538,11 +538,11 @@ $("#card19").click(function () {
 
 
 $("#card_large1").click(function () {
-    window.open("./cv/site/3d/index.html");
+    window.open("./cv/site/3D/index.html");
 });
 
 $("#card_large2").click(function () {
-    window.open("./cv/site/remparts/index.html");
+    window.open("./cv/site/Remparts/index.html");
 });
 
 function texture() {
