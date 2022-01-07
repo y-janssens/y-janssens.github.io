@@ -5,7 +5,6 @@ body, html {
   margin: 0 auto;
   background-color: #bbbbbb;
   overflow: hidden;
-  cursor: url(./src/cursor.png), auto !important;
 }
 
 canvas {
@@ -67,7 +66,7 @@ p3 {
   padding-right: 0.8em;
   padding-bottom: 0.8em;
   margin: 0 !important;
-  
+
   z-index: 5;
 }
 
@@ -242,11 +241,11 @@ hr.htitle {
   width: 6em;
   height: 6em;
   border-radius: 0.8em;
-  border: none! important;
-  outline: none! important;
+  border: none ! important;
+  outline: none ! important;
   background-color: #303030;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
-  z-index: 4;  
+  z-index: 4;
 }
 
 .infos {
@@ -498,7 +497,7 @@ hr.htitle {
   width: 100%;
   padding-top: 0.3em;
   padding-left: 0.75em;
-  margin: 0!important;
+  margin: 0 !important;
   text-align: justify;
   font-family: 'Share Tech Mono', monospace;
   color: #5f5947;
@@ -577,7 +576,7 @@ hr.htitle {
   border: none;
   outline: none;
   cursor: pointer;
-  z-index: 30! important;
+  z-index: 30 ! important;
   transition: 250ms all;
 }
 
@@ -619,7 +618,6 @@ hr.htitle {
   margin-left: 9em;
   border-radius: 0.8em;
   border: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 3;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -636,7 +634,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -679,7 +676,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -722,7 +718,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -765,7 +760,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -808,7 +802,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -851,7 +844,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
@@ -894,7 +886,6 @@ hr.htitle {
   border-radius: 0.8em;
   border: none;
   background: none;
-  cursor: url(./src/cursor.png), auto !important;
   z-index: 4;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
