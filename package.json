@@ -1,8 +1,8 @@
 {
-  "name": "api",
+  "name": "api3d",
   "version": "1.0.0",
-  "description": "api",
-  "main": "index.js",
+  "description": "api3d",
+  "main": "scene.js",
   "scripts": {
     "start": "lite-server"
   },
