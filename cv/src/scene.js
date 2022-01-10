@@ -32,7 +32,7 @@ let domEvents = new THREEx.DomEvents(camera, renderer.domElement);
 
 // Objects
 
-const floorGeo = new THREE.PlaneGeometry(1000, 1000, 1000, 1000);
+const floorGeo = new THREE.PlaneGeometry(1000, 1000);
 const floorMat = new THREE.MeshStandardMaterial({ color: 0xc2bfb8 });
 floor = new THREE.Mesh(floorGeo, floorMat);
 floor.rotation.x -= 1.57;

@@ -3125,11 +3125,9 @@ dragControls.addEventListener('dragend', function (event) {
 	controls.touches.enabled = true;
 })
 dragControls.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.z = 0;
 })
 dragControls.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.y = 0;
 })
 
@@ -3137,7 +3135,6 @@ var min = new THREE.Vector3(-6, 0, 0);
 var max = new THREE.Vector3(0.7, 0, 0);
 
 dragControls.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.clamp(min, max);
 })
 
@@ -3163,16 +3160,13 @@ dragControls2.addEventListener('dragend', function (event) {
 	controls.touches.enabled = true;
 })
 dragControls2.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.z = 0;
 })
 dragControls2.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.y = 0;
 })
 
 dragControls2.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.clamp(min, max);
 })
 
@@ -3198,11 +3192,9 @@ dragControls3.addEventListener('dragend', function (event) {
 	controls.touches.enabled = true;
 })
 dragControls3.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.x = 0;
 })
 dragControls3.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.y = 0;
 })
 
@@ -3210,7 +3202,6 @@ var min2 = new THREE.Vector3(0, 0, -0.45);
 var max2 = new THREE.Vector3(0, 0, 8);
 
 dragControls3.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.clamp(min2, max2);
 })
 
@@ -3235,11 +3226,9 @@ dragControls4.addEventListener('dragend', function (event) {
 	controls.touches.enabled = true;
 })
 dragControls4.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.x = 0;
 })
 dragControls4.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.y = 0;
 })
 
@@ -3247,7 +3236,6 @@ var min3 = new THREE.Vector3(0, 0, -4.5);
 var max3 = new THREE.Vector3(0, 0, 4.5);
 
 dragControls4.addEventListener('drag', function (event) {
-	console.log('drag');
 	event.object.position.clamp(min3, max3);
 })
 

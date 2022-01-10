@@ -1,225 +1,23 @@
+const basic_material = new THREE.MeshStandardMaterial({ color: 0x808080 });
+const ground_material = new THREE.MeshPhysicalMaterial();
 const tower_material = new THREE.MeshPhysicalMaterial();
 
-wallTexture = new THREE.TextureLoader().load( './assets/textures/wallD2.jpg' );
-wallTexture.wrapS = wallTexture.wrapT = THREE.RepeatWrapping;
-wallTexture.repeat.set(10, 10);
+wallTexture = new texture('wallTexture', 'wallD2.jpg', [10, 10]).init();
+wallNorm = new texture('wallNorm', 'wallN2.jpg', [10, 10]).init();
+wallRough = new texture('wallRough', 'wallR2.jpg', [10, 10]).init();
 
-wallNorm = new THREE.TextureLoader().load( './assets/textures/wallN2.jpg' );
-wallNorm.wrapS = wallNorm.wrapT = THREE.RepeatWrapping;
-wallNorm.repeat.set(10, 10);
+const tower_1 = new object(1, 'tower', -20.195, -0.1, tower_material, wallTexture, wallNorm, wallRough, 0.05, 0.75, [0.25, 0.25], [0.5, 0.5, 0.5]).create();
 
-wallRough = new THREE.TextureLoader().load( './assets/textures/wallR2.jpg' );
-wallRough.wrapS = wallRough.wrapT = THREE.RepeatWrapping;
-wallRough.repeat.set(10, 10);
+const tower_2 = new object(2, 'tower2', -20.195, -0.1, tower_material, wallTexture, wallNorm, wallRough, 0.05, 0.75, [0.25, 0.25], [0.5, 0.5, 0.5]).create();
 
-loader.load(
-	'./assets/obj/tower.obj', function (object) {			
+const gate = new object(3, 'gate', -20.195, -0.1, basic_material, null, null, null, 0.05, 0.75, [0.25, 0.25], [0.5, 0.5, 0.5]).create();
 
-	object.traverse(function(child){child.castShadow = true;});
-	object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
+const bloc_1 = new object(4, 'bloc1', -20.195, -0.1, basic_material, null, null, null, 0.05, 0.75, [0.25, 0.25], [0.5, 0.5, 0.5]).create();
 
-	object.traverse( function( child ) {
-	if ( child instanceof THREE.Mesh ) {
+const bloc_2 = new object(5, 'bloc2', -20.195, -0.1, basic_material, null, null, null, 0.05, 0.75, [0.25, 0.25], [0.5, 0.5, 0.5]).create();
 
-	child.material = tower_material;
+terrTexture = new texture('terrTexture', 'terrasseD.jpg', [500, 500]).init();
+terrNorm = new texture('terrNorm', 'terrasseN.jpg', [500, 500]).init();
+terrSpec = new texture('terrSpec', 'terrasseS.jpg', [500, 500]).init();
 
-	child.material.map = wallTexture;
-	child.material.normalMap = wallNorm;
-	child.material.roughnessMap = wallRough;
-
-    child.material.envMapIntensity = 0.05; 
-    child.material.roughness = 0.75;
-    
-    child.material.normalScale = new THREE.Vector2(0.25, 0.25);
-		}
-	} );
-
-	tower = object ;
-    tower.scale.set (0.5, 0.5, 0.5);
-    scene.add (tower);
-
-	});
-
-loader.load(
-    './assets/obj/tower2.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-    //object.position.x -= 8;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = tower_material;
-
-        child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);
-        }
-    } );
-
-    tower2 = object ;
-    tower2.scale.set (0.5, 0.5, 0.5);
-    scene.add (tower2);
-
-    });
-
-loader.load(
-    './assets/obj/gate.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-    //object.position.x -= 8;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = basic_material;
-
-        /*child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-        
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);*/
-        }
-    } );
-
-    gate = object ;
-    gate.scale.set (0.5, 0.5, 0.5);
-    scene.add (gate);
-
-    });
-    
-loader.load(
-    './assets/obj/rempart1.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = basic_material;
-
-        /*child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-        
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);*/
-        }
-    } );
-
-    rempart1 = object ;
-    rempart1.scale.set (0.5, 0.5, 0.5);
-    //scene.add (rempart1);
-
-    });    
-    
-loader.load(
-    './assets/obj/rempart2.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = basic_material;
-
-        /*child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-        
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);*/
-        }
-    } );
-
-    rempart2 = object ;
-    rempart2.scale.set (0.5, 0.5, 0.5);
-    //scene.add (rempart2);
-
-    });    
-    
-loader.load(
-    './assets/obj/bloc1.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = basic_material;
-
-        /*child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-        
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);*/
-        }
-    } );
-
-    bloc1 = object ;
-    bloc1.scale.set (0.5, 0.5, 0.5);
-    scene.add (bloc1);
-
-    });  
-    
-loader.load(
-    './assets/obj/bloc2.obj', function (object) {			
-
-    object.traverse(function(child){child.castShadow = true;});
-    object.traverse(function(child){child.receiveShadow = true;});
-    object.position.z -= 20.195;
-    object.position.y -= 0.1;
-
-    object.traverse( function( child ) {
-    if ( child instanceof THREE.Mesh ) {
-
-        child.material = basic_material;
-
-        /*child.material.map = wallTexture;
-        child.material.normalMap = wallNorm;
-        child.material.roughnessMap = wallRough;
-        
-        child.material.envMapIntensity = 0.05; 
-        child.material.roughness = 0.75;
-        
-        child.material.normalScale = new THREE.Vector2(0.25, 0.25);*/
-        }
-    } );
-
-    bloc2 = object ;
-    bloc2.scale.set (0.5, 0.5, 0.5);
-    scene.add (bloc2);
-
-    });       
+const city_map = new object(6, 'city_map', 0, -51.275, ground_material, terrTexture, terrNorm, terrSpec, 0.01, 0.25, [1, 1], [1, 1, 1]).create();        
