@@ -4,11 +4,7 @@ let cardnumber = 24;
 let cardspace = cardnumber / 2;
 let number = Math.PI / cardspace;
 
-const renderer = new THREE.WebGLRenderer({
-  antialias: false,
-  preserveDrawingBuffer: true,
-  alpha: true,
-});
+const renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true, alpha: true });
 renderer.setSize(innerWidth, innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -19,12 +15,7 @@ scene = new THREE.Scene();
 scene.background = new THREE.Color(0xc2bfb8);
 scene.fog = new THREE.Fog(0xc2bfb8, 10, 70);
 
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(0, 2, 10);
 
 let loader = new THREE.OBJLoader();
@@ -36,7 +27,6 @@ const floorGeo = new THREE.PlaneGeometry(1000, 1000);
 const floorMat = new THREE.MeshStandardMaterial({ color: 0xc2bfb8 });
 floor = new THREE.Mesh(floorGeo, floorMat);
 floor.rotation.x -= 1.57;
-floor.castShadow = true;
 floor.receiveShadow = true;
 scene.add(floor);
 
@@ -78,13 +68,11 @@ const card13 = new Card(14, -6, 0x808080, 0x7d6290, 13).create();
 // Lights
 
 const hemilight = new THREE.HemisphereLight(0xc2bfb8, 0x808080, 1);
-hemilight.castShadow = false;
 scene.add(hemilight);
 
 const light = new THREE.PointLight(0xffffff, 0.15, 100, 3);
 light.position.set(0, 30, -25);
-light.castShadow = false;
-
+light.castShadow = true;
 scene.add(light);
 
 // Controls
@@ -103,7 +91,7 @@ controls.rotateSpeed = 0.15;
 controls.autoRotate = false;
 controls.enableDamping = false;
 controls.enablePan = false;
-controls.enableZoom = true;
+controls.enableZoom = false;
 controls.target.set(0, -3, -25);
 
 // Animation & render
