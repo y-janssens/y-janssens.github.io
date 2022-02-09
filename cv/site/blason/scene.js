@@ -77,7 +77,7 @@ scene.add(directionalLight);
 
 // Objects
 
-loader.load("./src/shield.obj", function (object) {
+testshield = loader.load("./src/shield.obj", function (object) {
   object.traverse(function (child) {
     child.castShadow = true;
   });
@@ -109,7 +109,11 @@ loader.load("./src/shield.obj", function (object) {
 
   fshield = object;
 
-  scene.add(fshield);
+  shield = new THREE.Group();
+
+  shield.add(fshield);
+
+  scene.add(shield);
 
   function animate() {
     requestAnimationFrame(animate);
