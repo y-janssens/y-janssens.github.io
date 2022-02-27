@@ -152,12 +152,9 @@ function shutdown6() {
     $('#weaponlistJ2').css('visibility', 'hidden');
 }
 
-function classes() {
+function classesJ1() {
     let Name1 = name1.value;
     let Classe1 = document.getElementById("classeJ1").value;
-
-    let Name2 = name2.value;
-    let Classe2 = document.getElementById("classeJ2").value;
 
     if (Classe1 == "Noblesse") {
         cName1 = Name1.fontcolor("#315CDE").fontsize(2.5).bold();
@@ -187,6 +184,13 @@ function classes() {
         cName1 = Name1.fontcolor("#ffffcc").fontsize(2.5).bold();
         name1.value = "Le fangeux";
     }
+
+}
+
+function classesJ2() {
+
+    let Name2 = name2.value;
+    let Classe2 = document.getElementById("classeJ2").value;
 
     if (Classe2 == "Noblesse") {
         cName2 = Name2.fontcolor("#315CDE").fontsize(2.5).bold();

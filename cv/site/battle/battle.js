@@ -12,7 +12,8 @@ function fight() {
     let iniINI1 = document.getElementById('INI1').value;
     let iniINI2 = document.getElementById('INI2').value;
 
-    classes();
+    classesJ1();
+    classesJ2();
     save();
     console.time('time');
 
